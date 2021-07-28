@@ -4,6 +4,8 @@
 @import url(../blocks/section-background/_light-blue/section-background_light-blue.css);
 @import url(../blocks/section-title/section-title.css);
 @import url(../blocks/section-title/_color/section-title_color_blue.css);
+@import url(../blocks/slider-page/slider-page.css);
+@import url(../blocks/slider-page/_hidden/slider-page_hidden.css);
 @import url(../blocks/publications/publications.css);
 @import url(../blocks/publications/__container/publications__container.css);
 @import url(../blocks/publications/__item/publications__item.css);
