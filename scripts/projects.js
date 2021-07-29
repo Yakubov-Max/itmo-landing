@@ -36,6 +36,7 @@ projectsMenuElements.forEach((element) => {
   element.addEventListener("click", handleHighlightProjectsMenu);
 });
 
+
 // Функция хайлайта элемента меню
 function handleHighlightProjectsMenu(event) {
   projectsMenuElements.forEach((element) => {
