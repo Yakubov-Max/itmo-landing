@@ -1,0 +1,8 @@
+.about__dots {
+  display: flex;
+  flex-direction: row;
+  margin-top: 26.5px;
+  width: 68px;
+  justify-content: space-between;
+  border: 1px solid red;
+}

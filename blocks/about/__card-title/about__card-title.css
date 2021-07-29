@@ -1,0 +1,18 @@
+.about__card-title {
+  padding: 0;
+  margin: 0;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  border: 1px solid red;
+  border-bottom: 1px solid #009FAC;
+}
+
+@media all and (max-width:320px) {
+  .about__card-title{
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+  }
+}

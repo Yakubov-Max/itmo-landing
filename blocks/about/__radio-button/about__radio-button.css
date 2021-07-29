@@ -1,0 +1,8 @@
+.about__radio-button {
+  background-image: url('../../../images/');
+  border: 1px solid red;
+}
+
+.about__radio-button:active {
+  background-image: url('');
+}

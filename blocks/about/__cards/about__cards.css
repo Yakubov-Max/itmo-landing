@@ -1,0 +1,29 @@
+.about__cards {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 1122px;
+  border: 1px solid green;
+  flex-wrap: nowrap;
+}
+
+@media all and (max-width:1122px) {
+  .about__cards{
+    left: calc(-50vw + 561px);
+  }
+}
+
+@media all and (max-width: 768px) {
+  .about__cards {
+    left:   calc(37.27vw - 99.28px);/*calc(561px - 384px + 50vw - 384px + 10px);*/
+    width: 1050px;
+  }
+}
+
+@media all and (max-width: 320px) {
+  .about__cards {
+    left: 0;
+    width: 894px;
+  }
+}

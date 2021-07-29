@@ -1,0 +1,3 @@
+.zeroTransition {
+  transition: transform 0.001s linear;
+}
