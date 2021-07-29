@@ -1,0 +1,15 @@
+.ai-research-lab__img-conteiner {
+  max-width: 540px;
+  display: flex;
+}
+
+@media screen and (max-width: 767px) {
+  .ai-research-lab__img-conteiner {
+    order: 1;
+    max-width: 288px;
+    max-height: 180px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+}

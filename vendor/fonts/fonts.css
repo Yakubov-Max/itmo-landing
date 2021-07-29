@@ -1,8 +1,16 @@
 @font-face {
   font-family: 'OpenSans';
+  src: url('./Open_Sans/OpenSans-Light.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'OpenSans';
   src: url('./Open_Sans/OpenSans-Regular.ttf') format('truetype');
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
 }
 
 @font-face {
@@ -10,6 +18,15 @@
   src: url('./Open_Sans/OpenSans-SemiBold.ttf') format('truetype');
   font-style: normal;
   font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('./Open_Sans/OpenSans-Bold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
 }
 
 @font-face {
@@ -17,4 +34,5 @@
   src: url('./Open_Sans/OpenSans-Italic.ttf') format('truetype');
   font-style: italic;
   font-weight: 400;
+  font-display: swap;
 }
