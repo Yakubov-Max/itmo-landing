@@ -1,3 +1,12 @@
+
+function include(url) {
+  var script = document.createElement('script');
+  script.src = url;
+  document.getElementsByTagName('head')[0].appendChild(script);
+}
+include("./scripts/about-script.js");
+//console.log('DOM loaded')
+
 const buttonPopupAiReseach1 = document.querySelector('#ai-research-button-one');
 const buttonPopupAiReseach2 = document.querySelector('#ai-research-button-two');
 const buttonPopupAiReseach3 = document.querySelector('#ai-research-button-three');

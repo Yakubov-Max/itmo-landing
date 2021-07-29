@@ -8,8 +8,88 @@
     <title>ITMO-landing</title>
 </head>
 <body class="page">
-  <header class="header"></header>
-  <section class="about"></section>
+  <header class="header">
+    <nav class="header__mobile-menu">
+      <input type="checkbox" id="checkbox" class="header__mobile-menu-checkbox">
+      <label for="checkbox" class="header__mobile-menu-btn"><div class="header__mobile-menu-icon"></div></label>
+      <div class="header__mobile-menu-container">
+        <ul class="header__mobile-menu-list">
+          <li class="header__mobile-menu-item"><a href="#" class="header__mobile-menu-link">О нас</a></li>
+          <li class="header__mobile-menu-item"><a href="#" class="header__mobile-menu-link">Лаборатория</a></li>
+          <li class="header__mobile-menu-item"><a href="#" class="header__mobile-menu-link">Проекты</a></li>
+          <li class="header__dropdown" id="educationDropDown">
+          <button class="header__mobile-menu-item header__dropbtn"><a href="#" class="header__mobile-menu-link ">Образование</a></button>
+          <div class="header__educationdropdown-content">
+            <a href="#">Магистратура</a>
+            <a href="#">Аспирантура</a>
+          </div>
+            </li>
+          <li class="header__mobile-menu-item"><a href="#" class="header__mobile-menu-link">Публикации</a></li>
+          <li class="header__mobile-menu-item"><a href="#" class="header__mobile-menu-link">Команда</a></li>
+          <li class="header__mobile-menu-item"><a href="#" class="header__mobile-menu-link">Связаться</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="header__container">
+      <img src="./images/Logo_AI1.svg" class="header__logo" alt="Логотип лаборатории">
+      <a class="header__link">О нас</a>
+      <a class="header__link">Лаборатория</a>
+      <a class="header__link">Проекты</a>
+      <a class="header__link">Образование</a>
+      <a class="header__link">Публикации</a>
+      <a class="header__link">Команда</a>
+      <a class="header__link">Связаться</a>
+    </div>
+  </header>
+  
+  <section class="about">
+    <div class="about__AI-window">
+      <h2 class="about__subtitle">Когнитивные технологии, машинное обучение</h2>
+      <p class="about__AI-window-text">
+        Системы прикладного искусственного интелекта
+      </p>
+      <button class="about__projects-button">
+        Наши проекты
+      </button>
+    </div>
+    <div class="about__cards-container">
+      <h2 class="section-title">
+        несколько слов о нас
+      </h2>
+      <p class="about__cards-container-text">
+        Национальный центр когнитивных разработок – центр национальной технологической инициативы
+        (НТИ), получивший государственную поддержку по направлению
+        «Технологии машинного обучения и когнитивные технологии».
+      </p>
+      <div class="about__cards" id="about__touchsurface">
+        <button class="about__roll-to-left"></button>
+        <button class="about__roll-to-right"></button>
+        <template id="about__card-template">
+          <div class="about__card-item">
+            <img src="./images/Niddle.svg" class="about__card-niddle">
+            <p class="about__card-date">
+            </p>
+            <h3 class="about__card-title">
+            </h3>
+            <p class="about__card-text">
+            </p>
+          </div>
+        </template>
+
+            </div>
+      <div class="about__dots">
+        <template id="about__dot-template">
+          <button class="about__dot"></button>
+        </template>
+        <!--
+  <button class="about__dot about__dot_active"></button>
+  <button class="about__dot"></button>
+  <button class="about__dot"></button>
+  <button class="about__dot"></button>
+    -->
+      </div>
+    </div>
+  </section>
   <section class="ai-research-lab">
     <h2 class="section-title section-title_color_dark-blue ai-research-lab__title">Industrial AI Research Lab</h2>
     <div class="ai-research-lab__about-conteiner">
@@ -71,7 +151,7 @@
       </div>
     </div>
   </template>
+  <script src="./scripts/scripts.js"></scripts>
   <script src="./scripts/ai-research-popups.js"></script>
-  <script type="module" src="./scripts/script.js"></script>
 </body>
 </html>
