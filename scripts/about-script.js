@@ -66,6 +66,25 @@ function sleep(milliseconds) {
   } while (currentDate - date < milliseconds);
 }
 
+for (let i = 0; i < 4; i++) {
+  sliderRounds[i].addEventListener('click', function () {
+    let indexOfThisRound = Array.from(sliderRounds).indexOf(this);
+    let tempVar = sliderRoundIndex;
+    if (indexOfThisRound >= sliderRoundIndex) {
+      for (let j = 0; j < indexOfThisRound - tempVar; j++) {      
+        setTimeout(() => {
+          rollRight();
+        }, 410*j);
+      }
+    } else {
+      for (let j = 0; j < -indexOfThisRound + tempVar; j++) {
+        setTimeout(() => {
+          rollLeft();
+        }, 410 * j);
+      }
+    }
+  });
+}
 
 function createCard(date,text,title) {
   clone = aboutTemplate.content.cloneNode(true);
@@ -81,19 +100,15 @@ function addCard(date, text, title) {
 
 for (let i = 0; i < 6; i++) {
   addCard(aboutCardsMassive[i].date, aboutCardsMassive[i].text, aboutCardsMassive[i].title);
-  console.log(aboutCardsMassive[i].title);
 }
 
 const addedCards = Array.from(document.querySelectorAll('.about__card-item'));
 for (let i = 0; i < 3; i++) {
   addedCards[i].classList.add('show');
 }
-//console.log(addedCards);
 
-let test = document.querySelector('.about__card-item');
 function rollRight() {
   if (lastIndex == 5) { } else {
-    console.log('rightelse');
     addedCards[firstIndex].classList.add('zeroOpacity');
     addedCards[firstIndex + 1].style.transform = 'translateX(' + -383 + 'px)';
     addedCards[firstIndex + 2].style.transform = 'translateX(' + -383 + 'px)';
@@ -112,6 +127,7 @@ function rollRight() {
         addedCards[lastIndex + 1].classList.remove('opacityTransition');
         lastIndex++;
         firstIndex++;
+        sliderRoundIndex++;
       },200);
       addedCards[lastIndex + 1].classList.add('opacityTransition');
       addedCards[lastIndex + 1].classList.remove('zeroOpacity');
@@ -124,7 +140,6 @@ function rollRight() {
 
 function rollLeft() {
   if (firstIndex == 0) { } else {
-    console.log('leftelse');
     addedCards[lastIndex].classList.add('zeroOpacity');
     addedCards[firstIndex].style.transform = 'translateX(' + 383 + 'px)';
     addedCards[firstIndex + 1].style.transform = 'translateX(' + 383 + 'px)';
@@ -143,17 +158,13 @@ function rollLeft() {
         addedCards[firstIndex-1].classList.remove('opacityTransition');
         lastIndex--;
         firstIndex--;
+        sliderRoundIndex--;
       }, 200);
       addedCards[firstIndex - 1].classList.add('opacityTransition');
       addedCards[firstIndex - 1].classList.remove('zeroOpacity');
       aboutDots[firstIndex].classList.remove('about__dot_active');
       aboutDots[firstIndex - 1].classList.add('about__dot_active');
-
     }, 200);
-   // addedCards[lastIndex].classList.remove('show');
-    //addedCards[firstIndex - 1].classList.add('show');
-   // lastIndex--;
-   // firstIndex--;
   }
 }
 

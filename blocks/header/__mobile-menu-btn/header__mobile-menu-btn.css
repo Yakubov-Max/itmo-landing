@@ -1,0 +1,10 @@
+.header__mobile-menu-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 12px;
+  cursor: pointer;
+  transition: 0.4s;
+}

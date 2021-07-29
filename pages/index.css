@@ -4,6 +4,14 @@
 @import url(../blocks/header/__container/header__container.css);
 @import url(../blocks/header/__logo/header__logo.css);
 @import url(../blocks/header/__link/header__link.css);
+@import url(../blocks/header/__mobile-menu/header__mobile-menu.css);
+@import url(../blocks/header/__mobile-menu-btn/header__mobile-menu-btn.css);
+@import url(../blocks/header/__mobile-menu-checkbox/header__mobile-menu-checkbox.css);
+@import url(../blocks/header/__mobile-menu-container/header__mobile-menu-container.css);
+@import url(../blocks/header/__mobile-menu-icon/header__mobile-menu-icon.css);
+@import url(../blocks/header/__mobile-menu-item/header__mobile-menu-item.css);
+@import url(../blocks/header/__mobile-menu-link/header__mobile-menu-link.css);
+@import url(../blocks/header/__mobile-menu-list/header__mobile-menu-list.css);
 @import url(../blocks/about/about.css);
 @import url(../blocks/about/__cards/about__cards.css);
 @import url(../blocks/about/__card-title/about__card-title.css);
@@ -20,165 +28,9 @@
 @import url(../blocks/about/__dot/about__dot.css);
 @import url(../blocks/about/__dots/about__dots.css);
 @import url(../blocks/about/__dot/about__dot_active.css);
-@import url(../blocks/about/__radio-button/about__radio-button.css);
 @import url(../blocks/about/__roll-to-left/about__roll-to-left.css);
 @import url(../blocks/about/__roll-to-right/about__roll-to-right.css);
 @import url(../blocks/show.css);
 @import url(../blocks/zeroOpacity.css);
 @import url(../blocks/zeroTransition.css);
 @import url(../blocks/opacityTransition.css);
-
-.mobile-menu {
-  position: fixed;
-  display: none;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 20px;
-  margin-top: 22.67px;
-  padding-left:20px;
-  z-index: 9999999;
-  border: 1px solid blue;
-}
-
-@media all and (max-width: 768px) {
-  .mobile-menu{
-    display:flex;
-  }
-}
-
-@media all and (max-width:320px){
-  .mobile-menu{
-    margin-top: 14.67px;
-    padding-left: 18px;
-  }
-}
-
-.mobile-menu__btn {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 20px;
-  height: 12px;
-  cursor: pointer;
-  transition: 0.4s;
-}
-
-.mobile-menu__icon {
-  display: block;
-  position: relative;
-  background: white;
-  width: 90%;
-  height: 1.33px;
-  transition: 0.4s;
-}
-
-.mobile-menu__icon::after, .mobile-menu__icon::before {
-  content: "";
-  display: block;
-  position: absolute;
-  background: white;
-  width: 100%;
-  height: 1.33px;
-  transition: 0.4s;
-}
-
-.mobile-menu__icon::after {
-  top: 8px;
-}
-
-.mobile-menu__icon::before {
-    top: -8px;
-}
-
-@media all and (max-width:768px) {
-  .mobile-menu__icon::before {
-
-  }
-}
-
-.mobile-menu__container {
-  position: fixed;
-  text-align: center;
-  display: flex;
-  top: 50px;
-  left: 0;
-  right: 0;
-  z-index: 999;
-  height: 0;
-  opacity: 1;
-  transition: 0.5s;
-  transition-delay: 0.2s;
-  overflow: hidden;
-  border: 1px solid green;
-}
-
-.mobile-menu__list {
-  width: 320px;
-  height: 448px;
-  margin: 0;
-  padding-top: 16px;
-  background-color: #000D26;
-  transition: 0.5s;
-  transition-delay: 0.5s;
-  list-style: none;
-  padding-left: 0;
-}
-
-.mobile-menu__item {
-  padding-top: 12.5px;
-  box-sizing: border-box;
-  font-family: Open Sans;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 19px;
-  letter-spacing: 0em;
-  margin-left: 16px;
-  text-align: left;
-  font-size: 14px;
-  padding-bottom: 15px;
-  height: 44px;
-  border: 1px solid #123456;
-}
-
-.mobile-menu__link {
-  text-decoration: none;
-  color: #fff;
-}
-
-.mobile-menu__checkbox {
-  display: none;
-}
-
-.mobile-menu__checkbox:checked ~ .mobile-menu__nav {
-  opacity: 1;
-  transition-delay: 0s;
-}
-
-.mobile-menu__checkbox:checked ~ .mobile-menu__container {
-  height: 100%;
-  transition-delay: 0s;
-}
-
-.mobile-menu__checkbox:checked ~ .mobile-menu__btn .mobile-menu__icon {
-  background: transparent;
-}
-
-.mobile-menu__checkbox:checked ~ .mobile-menu__btn .mobile-menu__icon::before, .mobile-menu__checkbox:checked ~ .mobile-menu__btn .mobile-menu__icon::after {
-   top: 0;
-}
-
-.mobile-menu__checkbox:checked ~ .mobile-menu__btn .mobile-menu__icon::after {
-   transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-}
-
-.mobile-menu__checkbox:checked ~ .mobile-menu__btn .mobile-menu__icon::before {
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-}

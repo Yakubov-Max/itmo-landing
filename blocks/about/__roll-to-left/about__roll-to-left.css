@@ -9,6 +9,7 @@
   border-radius: 36px;background-color: #001337; background-image: url('../../../images/Buttonround_left.svg'); */
   background-image: url('../../../images/arrow_left.svg');
   background-size: contain;
+  background-repeat: no-repeat;
   width: 60px;
   height: 60px;
   margin-left: -73px;
@@ -16,6 +17,11 @@
   left: 0;
   border: 2px solid red;
 }
+
+  .about__roll-to-left:hover {
+    cursor: pointer;
+    background-image: url('../../../images/arrow_left_hover.svg');
+  }
 
 @media all and (max-width:1122px) {
   .about__roll-to-left {
