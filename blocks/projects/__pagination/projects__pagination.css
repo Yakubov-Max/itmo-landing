@@ -1,0 +1,14 @@
+.projects__pagination {
+  display: flex;
+  padding-left: 0;
+  margin: 0;
+  list-style-type: none;
+  align-items: center;
+}
+
+@media screen and (max-width: 320px) {
+  .projects__pagination {
+    max-width: 154px;
+    max-height: 24px;
+  }
+}
