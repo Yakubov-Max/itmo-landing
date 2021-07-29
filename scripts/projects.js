@@ -11,7 +11,6 @@ const projectDropdownButton = projectDropdown.querySelector(
 
 projectDropdownButton.addEventListener("click", handleProjectsDropdown);
 
-
 // Функция открытия dropdown меню
 function handleProjectsDropdown() {
   projectDropdownContent.classList.toggle("projects__dropdown-content_opened");
@@ -128,11 +127,15 @@ function getCardsPerPage() {
 }
 
 let currentPage = 1;
-let cardsPerPage = getCardsPerPage();
-let totalPages = Math.ceil(CARDS.length / cardsPerPage);
-paginateLastPage.textContent = totalPages;
+
+function updateTotalPages() {
+  let totalPages = Math.ceil(CARDS.length / getCardsPerPage());
+  paginateLastPage.textContent = totalPages;
+}
 
 function paginateProjectsCards(currentPage) {
+  let totalPages = Math.ceil(CARDS.length / getCardsPerPage());
+  let cardsPerPage = getCardsPerPage();
   // краевые случаи пагинации
   if (currentPage <= 0) {
     currentPage = 1;
@@ -178,11 +181,12 @@ function createProjectsCard(cardData) {
   return cardElement;
 }
 
-// Функция создания начальных карточек
+// Функция создания начальных
 function renderInitialProjectsCards() {
   let cardsPerPage = getCardsPerPage();
   let cards = getCards(0, cardsPerPage);
   renderProjectsCards(cards);
+  updateTotalPages();
 }
 renderInitialProjectsCards();
 window.addEventListener("resize", renderInitialProjectsCards);
