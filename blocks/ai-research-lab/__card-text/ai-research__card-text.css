@@ -1,0 +1,17 @@
+.ai-research__card-text {
+  font-family: 'OpenSans', serif;
+  font-size: 14px;
+  line-height: 1.43;
+  text-align: center;
+  letter-spacing: 0.1px;
+  color: #001337;
+  margin: 0 0 50px;
+}
+
+@media screen and (max-width: 1200px) {
+  .ai-research__card-text {
+    font-size: 10px;
+    line-height: 1.4;
+    margin: 0 0 20px;
+  }
+}

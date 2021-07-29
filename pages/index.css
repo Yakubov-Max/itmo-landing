@@ -91,3 +91,35 @@
 .header__dropbtn_show {
   display: flex;
 }
+*/
+
+@import url(../blocks/ai-research-lab/ai-research-lab.css);
+@import url(../blocks/ai-research-lab/__title/ai-research-lab__title.css);
+@import url(../blocks/ai-research-lab/__about-conteiner/ai-research-lab__about-conteiner.css);
+@import url(../blocks/ai-research-lab/__text-intro/ai-research-lab__text-intro.css);
+@import url(../blocks/ai-research-lab/__text-details/ai-research-lab__text-details.css);
+@import url(../blocks/ai-research-lab/__text-conteiner/ai-research-lab__text-conteiner.css);
+@import url(../blocks/ai-research-lab/__img/ai-research-lab__img.css);
+@import url(../blocks/ai-research-lab/__img-conteiner/ai-research-lab__img-conteiner.css);
+@import url(../blocks/ai-research-lab/__molecular/ai-research-lab__molecular.css);
+@import url(../blocks/ai-research-lab/__cards-conteiner/ai-research-lab__cards-conteiner.css);
+@import url(../blocks/ai-research-lab/__card/ai-research-lab__card.css);
+@import url(../blocks/ai-research-lab/__card-title/ai-research-lab__card-title.css);
+@import url(../blocks/ai-research-lab/__card-circle/ai-research-lab__card-circle.css);
+@import url(../blocks/ai-research-lab/__card/_icon/ai-research-lab__card_icon_brain.css);
+@import url(../blocks/ai-research-lab/__card/_icon/ai-research-lab__card_icon_micro.css);
+@import url(../blocks/ai-research-lab/__card/_icon/ai-research-lab__card_icon_pen.css);
+@import url(../blocks/ai-research-lab/__card/_icon/ai-research-lab__card_icon_robo.css);
+@import url(../blocks/ai-research-lab/__card-text/ai-research__card-text.css);
+@import url(../blocks/ai-research-lab/__card-button/ai-research__card-button.css);
+
+@import url(../blocks/popup-ai-research/popup-ai-research.css);
+@import url(../blocks/popup-ai-research/__img/popup-ai-research__img.css);
+@import url(../blocks/popup-ai-research/__main-container/popup-ai-research__main-container.css);
+@import url(../blocks/popup-ai-research/__paragraph/popup-ai-research__paragraph.css);
+@import url(../blocks/popup-ai-research/__text-container/popup-ai-research__text-container.css);
+@import url(../blocks/popup-ai-research/__title/popup-ai-research__title.css);
+@import url(../blocks/popup-ai-research/__close/popup-ai-research__close.css);
+@import url(../blocks/popup-ai-research/__paragraph/_list/popup-ai-research__paragraph_list.css);
+@import url(../blocks/popup-ai-research/__list/popup-ai-research__list.css);
+@import url(../blocks/popup-ai-research/_active/popup-ai-research_active.css);
