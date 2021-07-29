@@ -10,7 +10,49 @@
 <body class="page">
   <header class="header"></header>
   <section class="about"></section>
-  <section class="ai-research-lab"></section>
+  <section class="ai-research-lab">
+    <h2 class="section-title section-title_color_dark-blue ai-research-lab__title">Industrial AI Research Lab</h2>
+    <div class="ai-research-lab__about-conteiner">
+      <div class="ai-research-lab__text-conteiner">
+        <p class="ai-research-lab__text-intro">Центр национальной технологической инициативы (НТИ), получивший государственную поддержку по направлению
+          «Технологии машинного обучения и когнитивные технологии».</p>
+        <p class="ai-research-lab__text-details">Мы изучаем проблемы и выявляем, когда мы работаем вместе с нашими клиентами, новые решения находят, не
+          задумываясь. Работая таким образом и проявляя гибкость, мы можем поддерживать новый подход для удовлетворения потребностей наших клиентов.
+          <img src="./images/lab/molecular.svg" alt="Модель молекулы." class="ai-research-lab__molecular">
+        </p>
+      </div>
+      <div class="ai-research-lab__img-conteiner">
+        <img src="./images/lab/image 1.png" alt="Мужчина в черной футболке сидя в офисе, смотрит на открытый ноутбук." class="ai-research-lab__img">
+        <img src="./images/lab/image2table.png" alt="Двое мужчин работаю в офисе за ноутбуками." class="ai-research-lab__img">
+      </div>
+    </div>
+    <div class="ai-research-lab__cards-conteiner">
+      <div class="ai-research-lab__card">
+        <h3 class="ai-research-lab__card-title">Анализ социальных данных</h3>
+        <div class="ai-research-lab__card-circle ai-research-lab__card_icon_pen"></div>
+        <p class="ai-research__card-text">Направление включает в себя исследования и разработки технологий МО и КТ</p>
+        <button type="button" class="ai-research__card-button" id="ai-research-button-one">Подробнее</button>
+      </div>
+      <div class="ai-research-lab__card">
+        <h3 class="ai-research-lab__card-title">Инфраструктура больших данных</h3>
+        <div class="ai-research-lab__card-circle ai-research-lab__card_icon_brain"></div>
+        <p class="ai-research__card-text">Направление включает в себя исследования и разработки технологий МО и КТ</p>
+        <button type="button" class="ai-research__card-button" id="ai-research-button-two">Подробнее</button>
+      </div>
+      <div class="ai-research-lab__card">
+        <h3 class="ai-research-lab__card-title">Облачные вычисления</h3>
+        <div class="ai-research-lab__card-circle ai-research-lab__card_icon_micro"></div>
+        <p class="ai-research__card-text">Направление включает в себя исследования и разработки технологий МО и КТ</p>
+        <button type="button" class="ai-research__card-button" id="ai-research-button-three">Подробнее</button>
+      </div>
+      <div class="ai-research-lab__card">
+        <h3 class="ai-research-lab__card-title">QA <br> системы</h3>
+        <div class="ai-research-lab__card-circle ai-research-lab__card_icon_robo"></div>
+        <p class="ai-research__card-text">Направление включает в себя исследования и разработки технологий МО и КТ</p>
+        <button type="button" class="ai-research__card-button" id="ai-research-button-four">Подробнее</button>
+      </div>
+    </div>
+  </section>
   <section class="projects"></section>
   <section class="education"></section>
   <section class="publications"></section>
@@ -18,6 +60,18 @@
   <section class="partners"></section>
   <section class="feedback"></section>
   <footer class="footer"></footer>
+  <template id="ai-reserch-popup-template">
+    <div class="popup-ai-research">
+      <div class="popup-ai-research__main-container">
+        <img src="" alt="" class="popup-ai-research__img">
+          <button type="button" class="popup-ai-research__close" aria-label="Закрыть окно просмотра."></button>
+          <h3 class="popup-ai-research__title"></h3>
+        <div class="popup-ai-research__text-container">
+        </div>
+      </div>
+    </div>
+  </template>
+  <script src="./scripts/ai-research-popups.js"></script>
   <script type="module" src="./scripts/script.js"></script>
 </body>
 </html>
