@@ -8,10 +8,16 @@
   border-radius: 50%;
   width: 8px;
   height: 8px;
-  border: 1px solid red;
   background-color: #FFFFFF;
 }
 
 .about__dot:hover {
   cursor: pointer;
+}
+
+@media all and (max-width:320px) {
+  .about__dot {
+    width: 4px;
+    height: 4px;
+  }
 }

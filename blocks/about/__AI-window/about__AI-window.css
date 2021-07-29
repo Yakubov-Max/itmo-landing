@@ -2,7 +2,6 @@
   max-width: 445px;
   margin-top: 92px;
   margin-left: calc(117.7vw - 865px);
-  border: 1px solid red;
 }
 
 @media all and (max-width:768px) {

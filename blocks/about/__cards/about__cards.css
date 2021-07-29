@@ -4,7 +4,6 @@
   flex-direction: row;
   justify-content: space-between;
   width: 1122px;
-  border: 1px solid green;
   flex-wrap: nowrap;
 }
 
@@ -23,7 +22,7 @@
 
 @media all and (max-width: 320px) {
   .about__cards {
-    left: 0;
+    left: 5px;
     width: 894px;
   }
 }

@@ -1,6 +1,5 @@
 .header__container {
   position: relative;
-  border: 1px solid red;
   width: 1110px;
   display: flex;
   flex-direction: row;

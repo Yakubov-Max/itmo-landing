@@ -1,3 +1,3 @@
-.zeroTransition {
+.about__card-item_zeroTransition {
   transition: transform 0.001s linear;
 }

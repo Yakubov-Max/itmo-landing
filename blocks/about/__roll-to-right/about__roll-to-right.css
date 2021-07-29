@@ -12,13 +12,12 @@
   margin-right: -73px;
   position: absolute;
   right: 0;
-  border: 2px solid red;
 }
 
-  .about__roll-to-right:hover {
-    cursor: pointer;
-    background-image: url('../../../images/arrow_right_hover.svg');
-  }
+.about__roll-to-right:hover {
+  cursor: pointer;
+  background-image: url('../../../images/arrow_right_hover.svg');
+}
 
 @media all and (max-width:1122px) {
   .about__roll-to-left {

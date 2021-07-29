@@ -4,9 +4,6 @@
   font: inherit;
   color: #FFFFFF;
   background-color: transparent;
-  /*  border-radius: 50%;
-  box-shadow: 0px 4px 30px rgba(224, 240, 255, 0.1);
-  border-radius: 36px;background-color: #001337; background-image: url('../../../images/Buttonround_left.svg'); */
   background-image: url('../../../images/arrow_left.svg');
   background-size: contain;
   background-repeat: no-repeat;
@@ -15,13 +12,12 @@
   margin-left: -73px;
   position: absolute;
   left: 0;
-  border: 2px solid red;
 }
 
-  .about__roll-to-left:hover {
-    cursor: pointer;
-    background-image: url('../../../images/arrow_left_hover.svg');
-  }
+.about__roll-to-left:hover {
+  cursor: pointer;
+  background-image: url('../../../images/arrow_left_hover.svg');
+}
 
 @media all and (max-width:1122px) {
   .about__roll-to-left {

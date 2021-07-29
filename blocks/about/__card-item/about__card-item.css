@@ -4,13 +4,11 @@
   color: black;
   width: 348px;
   box-sizing: border-box;
-  padding: 0;
   padding: 20px 20px 30px;
   border-radius: 10px;
   margin: 0;
-  border: 1px solid red;
   display: none;
-  transition: transform 0.2s linear;
+  transition: transform 0.1s linear;
 }
 
 @media all and (max-width: 768px) {

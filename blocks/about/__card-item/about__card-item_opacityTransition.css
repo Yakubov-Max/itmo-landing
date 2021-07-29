@@ -1,5 +1,5 @@
-.opacityTransition {
-  animation: showBlock 0.2s linear;
+.about__card-item_opacityTransition {
+  animation: showBlock 0.1s linear;
 }
 
 @keyframes showBlock {

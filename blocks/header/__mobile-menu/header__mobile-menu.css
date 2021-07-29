@@ -10,8 +10,7 @@
   height: 20px;
   margin-top: 22.67px;
   padding-left: 20px;
-  z-index: 9999999;
-  border: 1px solid blue;
+  z-index: 2;
 }
 
 @media all and (max-width: 768px) {

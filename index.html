@@ -17,7 +17,13 @@
           <li class="header__mobile-menu-item"><a href="#" class="header__mobile-menu-link">О нас</a></li>
           <li class="header__mobile-menu-item"><a href="#" class="header__mobile-menu-link">Лаборатория</a></li>
           <li class="header__mobile-menu-item"><a href="#" class="header__mobile-menu-link">Проекты</a></li>
-          <li class="header__mobile-menu-item"><a href="#" class="header__mobile-menu-link">Образование</a></li>
+          <li class="header__dropdown" id="educationDropDown">
+          <button class="header__mobile-menu-item header__dropbtn"><a href="#" class="header__mobile-menu-link ">Образование</a></button>
+          <div class="header__educationdropdown-content">
+            <a href="#">Магистратура</a>
+            <a href="#">Аспирантура</a>
+          </div>
+            </li>
           <li class="header__mobile-menu-item"><a href="#" class="header__mobile-menu-link">Публикации</a></li>
           <li class="header__mobile-menu-item"><a href="#" class="header__mobile-menu-link">Команда</a></li>
           <li class="header__mobile-menu-item"><a href="#" class="header__mobile-menu-link">Связаться</a></li>
@@ -55,7 +61,7 @@
         (НТИ), получивший государственную поддержку по направлению
         «Технологии машинного обучения и когнитивные технологии».
       </p>
-      <div class="about__cards">
+      <div class="about__cards" id="about__touchsurface">
         <button class="about__roll-to-left"></button>
         <button class="about__roll-to-right"></button>
         <template id="about__card-template">
@@ -72,10 +78,15 @@
 
             </div>
       <div class="about__dots">
-        <button class="about__dot about__dot_active"></button>
-        <button class="about__dot"></button>
-        <button class="about__dot"></button>
-        <button class="about__dot"></button>
+        <template id="about__dot-template">
+          <button class="about__dot"></button>
+        </template>
+        <!--
+  <button class="about__dot about__dot_active"></button>
+  <button class="about__dot"></button>
+  <button class="about__dot"></button>
+  <button class="about__dot"></button>
+    -->
       </div>
     </div>
   </section>
