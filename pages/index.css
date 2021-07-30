@@ -13,6 +13,12 @@
 @import url(../blocks/header/__mobile-menu-item/header__mobile-menu-item.css);
 @import url(../blocks/header/__mobile-menu-link/header__mobile-menu-link.css);
 @import url(../blocks/header/__mobile-menu-list/header__mobile-menu-list.css);
+@import url(../blocks/header/__dropbtn/header__dropbtn.css);
+@import url(../blocks/header/__dropbtn/header__dropbtn.css);
+@import url(../blocks/header/__dropdown/header__dropdown.css);
+@import url(../blocks/header/__educationdropdown-content/header__educationdropdown-content.css);
+@import url(../blocks/header/__dropbtn/header__dropbtn_show.css);
+
 @import url(../blocks/about/about.css);
 @import url(../blocks/about/__cards/about__cards.css);
 @import url(../blocks/about/__card-title/about__card-title.css);
@@ -35,64 +41,6 @@
 @import url(../blocks/about/__dot/about__dot_active.css);
 @import url(../blocks/about/__roll-to-left/about__roll-to-left.css);
 @import url(../blocks/about/__roll-to-right/about__roll-to-right.css);
-@import url(../blocks/header/__dropbtn/header__dropbtn.css);
-@import url(../blocks/header/__dropbtn/header__dropbtn.css);
-@import url(../blocks/header/__dropdown/header__dropdown.css);
-@import url(../blocks/header/__educationdropdown-content/header__educationdropdown-content.css);
-@import url(../blocks/header/__dropbtn/header__dropbtn_show.css);
-/*
-.header__dropbtn {
-  padding: 0;
-  border: none;
-  font: inherit;
-  color: inherit;
-  background-color: transparent;
-  cursor: pointer;
-  text-align: left;
-  width: 304px;
-  font-size: 14px;
-  font-family: Open-Sans;
-}
-
-.header__dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.header__educationdropdown-content {
-  display: none;
-  position: relative;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-  flex-direction: column;
-  transition: 0.4s;
-}
-
-  .header__educationdropdown-content a {
-    color: white;
-    background-color: #000D26;
-    text-decoration: none;
-    display: block;
-    padding-top: 12.5px;
-    box-sizing: border-box;
-    font-family: Open Sans;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 19px;
-    letter-spacing: 0em;
-    margin-left: 16px;
-    text-align: left;
-    padding-bottom: 15px;
-    height: 44px;
-    transition: 0.4s;
-  }
-
-.header__dropbtn_show {
-  display: flex;
-}
-*/
 
 @import url(../blocks/ai-research-lab/ai-research-lab.css);
 @import url(../blocks/ai-research-lab/__title/ai-research-lab__title.css);
@@ -191,3 +139,25 @@
 @import url(../blocks/education/__button-change-info/_active/education__button-change-info_active.css);
 @import url(../blocks/education/__flex-container/_visible/education__flex-container_visible.css);
 @import url(../blocks/education/__wraper/education__wraper.css);
+
+@import url(../blocks/footer/footer.css);
+@import url(../blocks/footer/__aboutCenter/footer__aboutCenter.css);
+@import url(../blocks/footer/__adress/footer__adress.css);
+@import url(../blocks/footer/__city/footer__city.css);
+@import url(../blocks/footer/__contacts/footer__contacts.css);
+@import url(../blocks/footer/__content/footer__content.css);
+@import url(../blocks/footer/__copyright/footer__copyright.css);
+@import url(../blocks/footer/__development/footer__development.css);
+@import url(../blocks/footer/__doneBy/footer__doneBy.css);
+@import url(../blocks/footer/__doneBy-formobile/footer__doneBy-formobile.css);
+@import url(../blocks/footer/__email/footer__email.css);
+@import url(../blocks/footer/__information/footer__information.css);
+@import url(../blocks/footer/__information-text/footer__information-text.css);
+@import url(../blocks/footer/__link/footer__link.css);
+@import url(../blocks/footer/__logo/footer__logo.css);
+@import url(../blocks/footer/__navigation/footer__navigation.css);
+@import url(../blocks/footer/__navigation-header/footer__navigation-header.css);
+@import url(../blocks/footer/__social-logo/footer__social-logo.css);
+@import url(../blocks/footer/__social-link/footer__social-link.css);
+@import url(../blocks/footer/__social-logotips/footer__social-logotips.css);
+@import url(../blocks/footer/__telephone/footer__telephone.css);
