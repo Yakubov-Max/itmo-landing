@@ -1,14 +1,163 @@
 @import url(../vendor/normalize/normalize.css);
 @import url(../fonts/fonts.css);
 
-@import url(../blocks/section-background/_light-blue/section-background_light-blue.css);
+@import url(../blocks/header/header.css);
+@import url(../blocks/header/__container/header__container.css);
+@import url(../blocks/header/__logo/header__logo.css);
+@import url(../blocks/header/__link/header__link.css);
+@import url(../blocks/header/__mobile-menu/header__mobile-menu.css);
+@import url(../blocks/header/__mobile-menu-btn/header__mobile-menu-btn.css);
+@import url(../blocks/header/__mobile-menu-checkbox/header__mobile-menu-checkbox.css);
+@import url(../blocks/header/__mobile-menu-container/header__mobile-menu-container.css);
+@import url(../blocks/header/__mobile-menu-icon/header__mobile-menu-icon.css);
+@import url(../blocks/header/__mobile-menu-item/header__mobile-menu-item.css);
+@import url(../blocks/header/__mobile-menu-link/header__mobile-menu-link.css);
+@import url(../blocks/header/__mobile-menu-list/header__mobile-menu-list.css);
+@import url(../blocks/about/about.css);
+@import url(../blocks/about/__cards/about__cards.css);
+@import url(../blocks/about/__card-title/about__card-title.css);
+@import url(../blocks/about/__card-niddle/about__card-niddle.css);
+@import url(../blocks/about/__AI-window/about__AI-window.css);
+@import url(../blocks/about/__AI-window-text/about__AI-window-text.css);
+@import url(../blocks/about/__card-date/about__card-date.css);
+@import url(../blocks/about/__cards-container/about__cards-container.css);
+@import url(../blocks/about/__cards-container-text/about__cards-container-text.css);
+@import url(../blocks/about/__card-item/about__card-item.css);
+@import url(../blocks/about/__card-item/about__card-item_opacityTransition.css);
+@import url(../blocks/about/__card-item/about__card-item_show.css);
+@import url(../blocks/about/__card-item/about__card-item_zeroOpacity.css);
+@import url(../blocks/about/__card-item/about__card-item_zeroTransition.css);
+@import url(../blocks/about/__card-text/about__card-text.css);
+@import url(../blocks/about/__projects-button/about__projects-button.css);
+@import url(../blocks/about/__subtitle/about__subtitle.css);
+@import url(../blocks/about/__dot/about__dot.css);
+@import url(../blocks/about/__dots/about__dots.css);
+@import url(../blocks/about/__dot/about__dot_active.css);
+@import url(../blocks/about/__roll-to-left/about__roll-to-left.css);
+@import url(../blocks/about/__roll-to-right/about__roll-to-right.css);
+@import url(../blocks/header/__dropbtn/header__dropbtn.css);
+@import url(../blocks/header/__dropbtn/header__dropbtn.css);
+@import url(../blocks/header/__dropdown/header__dropdown.css);
+@import url(../blocks/header/__educationdropdown-content/header__educationdropdown-content.css);
+@import url(../blocks/header/__dropbtn/header__dropbtn_show.css);
+/*
+.header__dropbtn {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+  text-align: left;
+  width: 304px;
+  font-size: 14px;
+  font-family: Open-Sans;
+}
+
+.header__dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.header__educationdropdown-content {
+  display: none;
+  position: relative;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  flex-direction: column;
+  transition: 0.4s;
+}
+
+  .header__educationdropdown-content a {
+    color: white;
+    background-color: #000D26;
+    text-decoration: none;
+    display: block;
+    padding-top: 12.5px;
+    box-sizing: border-box;
+    font-family: Open Sans;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    margin-left: 16px;
+    text-align: left;
+    padding-bottom: 15px;
+    height: 44px;
+    transition: 0.4s;
+  }
+
+.header__dropbtn_show {
+  display: flex;
+}
+*/
+
+@import url(../blocks/ai-research-lab/ai-research-lab.css);
+@import url(../blocks/ai-research-lab/__title/ai-research-lab__title.css);
+@import url(../blocks/ai-research-lab/__about-conteiner/ai-research-lab__about-conteiner.css);
+@import url(../blocks/ai-research-lab/__text-intro/ai-research-lab__text-intro.css);
+@import url(../blocks/ai-research-lab/__text-details/ai-research-lab__text-details.css);
+@import url(../blocks/ai-research-lab/__text-conteiner/ai-research-lab__text-conteiner.css);
+@import url(../blocks/ai-research-lab/__img/ai-research-lab__img.css);
+@import url(../blocks/ai-research-lab/__img-conteiner/ai-research-lab__img-conteiner.css);
+@import url(../blocks/ai-research-lab/__molecular/ai-research-lab__molecular.css);
+@import url(../blocks/ai-research-lab/__cards-conteiner/ai-research-lab__cards-conteiner.css);
+@import url(../blocks/ai-research-lab/__card/ai-research-lab__card.css);
+@import url(../blocks/ai-research-lab/__card-title/ai-research-lab__card-title.css);
+@import url(../blocks/ai-research-lab/__card-circle/ai-research-lab__card-circle.css);
+@import url(../blocks/ai-research-lab/__card/_icon/ai-research-lab__card_icon_brain.css);
+@import url(../blocks/ai-research-lab/__card/_icon/ai-research-lab__card_icon_micro.css);
+@import url(../blocks/ai-research-lab/__card/_icon/ai-research-lab__card_icon_pen.css);
+@import url(../blocks/ai-research-lab/__card/_icon/ai-research-lab__card_icon_robo.css);
+@import url(../blocks/ai-research-lab/__card-text/ai-research__card-text.css);
+@import url(../blocks/ai-research-lab/__card-button/ai-research__card-button.css);
+
+@import url(../blocks/popup-ai-research/popup-ai-research.css);
+@import url(../blocks/popup-ai-research/__img/popup-ai-research__img.css);
+@import url(../blocks/popup-ai-research/__main-container/popup-ai-research__main-container.css);
+@import url(../blocks/popup-ai-research/__paragraph/popup-ai-research__paragraph.css);
+@import url(../blocks/popup-ai-research/__text-container/popup-ai-research__text-container.css);
+@import url(../blocks/popup-ai-research/__title/popup-ai-research__title.css);
+@import url(../blocks/popup-ai-research/__close/popup-ai-research__close.css);
+@import url(../blocks/popup-ai-research/__paragraph/_list/popup-ai-research__paragraph_list.css);
+@import url(../blocks/popup-ai-research/__list/popup-ai-research__list.css);
+@import url(../blocks/popup-ai-research/_active/popup-ai-research_active.css);
+
+@import url(../blocks/projects/projects.css);
 @import url(../blocks/section-title/section-title.css);
+@import url(../blocks/projects/__menu/projects__menu.css);
+@import url(../blocks/projects/__menu-item/projects__menu-item.css);
+@import url(../blocks/projects/__menu-item-link/projects__menu-item-link.css);
+@import url(../blocks/projects/__menu-item/_active/projects__menu-item_active.css);
+@import url(../blocks/projects/__container/projects__container.css);
+@import url(../blocks/projects/__item/projects__item.css);
+@import url(../blocks/projects/__item-logo/projects__item-logo.css);
+@import url(../blocks/projects/__item-about/projects__item-about.css);
+@import url(../blocks/projects/__item-details/projects__item-details.css);
+@import url(../blocks/projects/__pagination/projects__pagination.css);
+@import url(../blocks/projects/__pagination-item/projects__pagination-item.css);
+@import url(../blocks/projects/__pagination-left-arrow/projects__pagination-left-arrow.css);
+@import url(../blocks/projects/__pagination-right-arrow/projects__pagination-right-arrow.css);
+@import url(../blocks/projects/__pagination-link/projects__pagination-link.css);
+@import url(../blocks/projects/__pagination-current-page/projects__pagination-current-page.css);
+@import url(../blocks/projects/__pagination-last-page/projects__pagination-last-page.css);
+@import url(../blocks/projects/__pagination-link/_active/projects__pagination-link_active.css);
+@import url(../blocks/projects/__dropdown/projects__dropdown.css);
+@import url(../blocks/projects/__dropdown-content/projects__dropdown-content.css);
+@import url(../blocks/projects/__dropdown-menu/projects__dropdown-menu.css);
+@import url(../blocks/projects/__dropdown-menu-item/projects__dropdown-menu-item.css);
+@import url(../blocks/projects/__dropdown-menu-link/projects__dropdown-menu-link.css);
+@import url(../blocks/projects/__menu-dropdown-button/projects__menu-dropdown-button.css);
+@import url(../blocks/projects/__dropdown-content/_opened/projects__dropdown-content_opened.css);
+
+@import url(../blocks/section-background/_light-blue/section-background_light-blue.css);
 @import url(../blocks/section-title/_color/section-title_color_blue.css);
 
 @import url(../blocks/slider/slider.css);
 @import url(../blocks/slider/__page/slider__page.css);
 @import url(../blocks/slider/__page/_hidden/slider__page_hidden.css);
-
 @import url(../blocks/publications/publications.css);
 @import url(../blocks/publications/__container/publications__container.css);
 @import url(../blocks/publications/__item/publications__item.css);
@@ -17,7 +166,6 @@
 @import url(../blocks/publications/__article-heading/publications__article-heading.css);
 @import url(../blocks/publications/__article-autors/publications__article-autors.css);
 @import url(../blocks/publications/__article/publications__article.css);
-
 @import url(../blocks/slider/__arrow/slider__arrow.css);
 @import url(../blocks/slider/__arrow/slider__arrow_left.css);
 @import url(../blocks/slider/__arrow/slider__arrow_right.css);

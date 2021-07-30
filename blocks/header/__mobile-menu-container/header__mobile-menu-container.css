@@ -1,0 +1,14 @@
+.header__mobile-menu-container {
+  position: fixed;
+  text-align: center;
+  display: flex;
+  top: 50px;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  height: 0;
+  opacity: 1;
+  transition: 0.5s;
+  transition-delay: 0.2s;
+  overflow: hidden;
+}
