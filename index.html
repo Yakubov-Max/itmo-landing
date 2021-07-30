@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./pages/index.css" />
-    <title>ITMO-landing</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./pages/index.css" />
+  <title>ITMO-landing</title>
 </head>
+
 <body class="page">
   <header class="header">
     <nav class="header__mobile-menu">
@@ -75,7 +77,6 @@
             </p>
           </div>
         </template>
-
             </div>
       <div class="about__dots">
         <template id="about__dot-template">
@@ -175,7 +176,79 @@
     </template>
  </section>
   <section class="education"></section>
-  <section class="publications"></section>
+      <section class="publications section-background section-background_light-blue">
+      <h2 class="section-title section-title_color_blue">Публикации</h2>
+      <div class="slider" id="slider-publications">
+        <div class="slider__page">
+          <ul class="publications__container">
+            <li class="publications__item">
+              <img class="publications__item-image" src="images/publication/publication_Convolutional neural networks with hierarchical context transfe….png" alt="">
+              <div class="publications__item-text">
+                <h3 class="publications__article-heading">Convolutional neural networks with hierarchical context transfe…</h3>
+                <p class="publications__article-autors">Ksenia D Mukhina, Alexander A Visheratin, Denis Nasonov</p>
+                <p class="publications__article">In this work, we consider a problem of predicting the next state of a given area using retrospective information. The proposed concept of hierarchical context transfer (HCT) operates on several spatial levels of the input data to overcome
+                  major issues of next state prediction problems - density variability, a sig…</p>
+              </div>
+            </li>
+            <li class="publications__item">
+              <img class="publications__item-image" src="images/publication/publication_Convolutional neural networks with hierarchical context transfe….png" alt="">
+              <div class="publications__item-text">
+                <h3 class="publications__article-heading">Convolutional neural networks with hierarchical context transfe…</h3>
+                <p class="publications__article-autors">Ksenia D Mukhina, Alexander A Visheratin, Denis Nasonov</p>
+                <p class="publications__article">In this work, we consider a problem of predicting the next state of a given area using retrospective information. The proposed concept of hierarchical context transfer (HCT) operates on several spatial levels of the input data to overcome
+                  major issues of next state prediction problems - density variability, a sig…</p>
+              </div>
+            </li>
+            <li class="publications__item">
+              <img class="publications__item-image" src="images/publication/publication_Convolutional neural networks with hierarchical context transfe….png" alt="">
+              <div class="publications__item-text">
+                <h3 class="publications__article-heading">Convolutional neural networks with hierarchical context transfe…</h3>
+                <p class="publications__article-autors">Ksenia D Mukhina, Alexander A Visheratin, Denis Nasonov</p>
+                <p class="publications__article">In this work, we consider a problem of predicting the next state of a given area using retrospective information. The proposed concept of hierarchical context transfer (HCT) operates on several spatial levels of the input data to overcome
+                  major issues of next state prediction problems - density variability, a sig…</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="slider__page">
+          <ul class="publications__container">
+            <li class="publications__item">
+              <img class="publications__item-image" src="images/publication/publication_Convolutional neural networks with hierarchical context transfe….png" alt="">
+              <div class="publications__item-text">
+                <h3 class="publications__article-heading">Convolutional neural networks with hierarchical context transfe…</h3>
+                <p class="publications__article-autors">Ksenia D Mukhina, Alexander A Visheratin, Denis Nasonov</p>
+                <p class="publications__article">In this work, we consider a problem of predicting the next state of a given area using retrospective information. The proposed concept of hierarchical context transfer (HCT) operates on several spatial levels of the input data to overcome
+                  major issues of next state prediction problems - density variability, a sig…</p>
+              </div>
+            </li>
+            <li class="publications__item">
+              <img class="publications__item-image" src="images/publication/publication_Convolutional neural networks with hierarchical context transfe….png" alt="">
+              <div class="publications__item-text">
+                <h3 class="publications__article-heading">Convolutional neural networks with hierarchical context transfe…</h3>
+                <p class="publications__article-autors">Ksenia D Mukhina, Alexander A Visheratin, Denis Nasonov</p>
+                <p class="publications__article">In this work, we consider a problem of predicting the next state of a given area using retrospective information. The proposed concept of hierarchical context transfer (HCT) operates on several spatial levels of the input data to overcome
+                  major issues of next state prediction problems - density variability, a sig…</p>
+              </div>
+            </li>
+            <li class="publications__item">
+              <img class="publications__item-image" src="images/publication/publication_Convolutional neural networks with hierarchical context transfe….png" alt="">
+              <div class="publications__item-text">
+                <h3 class="publications__article-heading">Convolutional neural networks with hierarchical context transfe…</h3>
+                <p class="publications__article-autors">Ksenia D Mukhina, Alexander A Visheratin, Denis Nasonov</p>
+                <p class="publications__article"></p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <button class="slider__arrow slider__arrow_left" id="left-arrow"></button>
+        <button class=" slider__arrow slider__arrow_right " id="right-arrow"></button>
+        <div class="slider__dots-container">
+        </div>
+        <template id="dots-template">
+          <div class="slider__dots"></div>
+        </template>
+      </div>
+    </section>
   <section class="team"></section>
   <section class="partners"></section>
   <section class="feedback"></section>
@@ -193,5 +266,6 @@
   </template>
   <script src="./scripts/script.js"></script>
   <script src="./scripts/ai-research-popups.js"></script>
+  <script src="./scripts/script_slider.js"></script>
 </body>
 </html>
