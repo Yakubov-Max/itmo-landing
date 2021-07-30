@@ -5,6 +5,22 @@ const buttonPopupAiReseach4 = document.querySelector('#ai-research-button-four')
 const blockAiResearch = document.querySelector('.ai-research-lab');
 const widthWindow = window.innerWidth;
 let indArrayForCreatePopup = widthWindow < 1200 ? widthWindow < 768 ? 2 : 1 : 0; // Индекс необходимого объекта в массиве для попапа AiResearch в зависимости от размера экрана.
+const buttonChangeEducation = document.querySelector('.education__buttons-container');  // Кнопка переключения образования.
+const aspirantePartButton = document.querySelector('#aspirante');                       // Часть кнопки аспирантов.
+const magistracyPartButton = document.querySelector('#magistracy');                     // Часть кнопки магистратуры.
+const aspiranteContent = document.querySelector('.education__flex-container_absolute'); // Основной меняющийся контент про обучение.
+
+// Смена контента про виды обучения.
+const handleChangeEducation = () => {
+  aspirantePartButton.classList.toggle('education__button-change-info_active');
+  magistracyPartButton.classList.toggle('education__button-change-info_active');
+  handleChangeVisibleContent();
+}
+
+// Смена видимости блока с обучением.
+const handleChangeVisibleContent = () => {
+  aspiranteContent.classList.toggle('education__flex-container_visible');
+}
 
 const handleCloseAiResearchPopup = () => {
   const popupAiResearch = document.querySelector('.popup-ai-research');
@@ -77,6 +93,7 @@ buttonPopupAiReseach1.addEventListener('click', () => handleCreateAiResearchPopu
 buttonPopupAiReseach2.addEventListener('click', () => handleCreateAiResearchPopup(popupSecondCard[indArrayForCreatePopup]));
 buttonPopupAiReseach3.addEventListener('click', () => handleCreateAiResearchPopup(popupThirdCard[indArrayForCreatePopup]));
 buttonPopupAiReseach4.addEventListener('click', () => handleCreateAiResearchPopup(popupFourthCard[indArrayForCreatePopup]));
+buttonChangeEducation.addEventListener('click', handleChangeEducation);
 window.addEventListener('click', e => {
   const target = e.target;
   target.getAttribute('class') === 'popup-ai-research popup-ai-research_active' ? handleCloseAiResearchPopup() : '';

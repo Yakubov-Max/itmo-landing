@@ -2,6 +2,8 @@
 @import url(../vendor/fonts/fonts.css);
 
 @import url(../blocks/section-title/section-title.css);
+@import url(../blocks/section-title/_color/section-title_color_dark-blue.css);
+@import url(../blocks/section-title/_color/section-title_color_white.css);
 
 @import url(../blocks/ai-research-lab/ai-research-lab.css);
 @import url(../blocks/ai-research-lab/__title/ai-research-lab__title.css);
@@ -34,4 +36,22 @@
 @import url(../blocks/popup-ai-research/__list/popup-ai-research__list.css);
 @import url(../blocks/popup-ai-research/_active/popup-ai-research_active.css);
 
+@import url(../blocks/education/education.css);
+@import url(../blocks/education/__flex-container/_absolute/education__flex-container_absolute.css);
+@import url(../blocks/education/__title/education__title.css);
+@import url(../blocks/education/__main-text/education__main-text.css);
+@import url(../blocks/education/__flex-container/education__flex-container.css);
+@import url(../blocks/education/__text-container/education__text-container.css);
+@import url(../blocks/education/__img-container/education__img-container.css);
+@import url(../blocks/education/__about-subtitle/education__about-subtitle.css);
+@import url(../blocks/education/__list/education__list.css);
+@import url(../blocks/education/__list-elem/education__list-elem.css);
+@import url(../blocks/education/__img/education__img.css);
+@import url(../blocks/education/__link/education__link.css);
+@import url(../blocks/education/__arrow/education__arrow.css);
+@import url(../blocks/education/__buttons-container/education__buttons-container.css);
+@import url(../blocks/education/__button-change-info/education__button-change-info.css);
+@import url(../blocks/education/__button-change-info/_active/education__button-change-info_active.css);
+@import url(../blocks/education/__flex-container/_visible/education__flex-container_visible.css);
+@import url(../blocks/education/__wraper/education__wraper.css);
 
