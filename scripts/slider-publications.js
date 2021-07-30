@@ -4,7 +4,7 @@ const slide = sliderPublications.querySelectorAll('.slider__page');
 const buttonPblctLeft = sliderPublications.querySelector('#left-arrow');
 const buttonPblctRight = sliderPublications.querySelector('#right-arrow');
 let dots = [];
-const dotsContainer = sliderPublications.querySelector('.slider__dots-container');
+const dotsContainerPublications = sliderPublications.querySelector('.slider__dots-container');
 
 window.onload = function () {
   addDots();
@@ -20,7 +20,7 @@ function addDots() {
     if (dotsIndex === 0) {
       dot.classList.add('slider__dots_active');
     }
-    dotsContainer.append(dot);
+    dotsContainerPublications.append(dot);
     dot.addEventListener('click', () => {
       currentSlide(dotsIndex);
     });
@@ -28,7 +28,7 @@ function addDots() {
 }
 
 function getDots() {
-  dots = dotsContainer.querySelectorAll('.slider__dots');
+  dots = dotsContainerPublications.querySelectorAll('.slider__dots');
 }
 
 /* Индекс слайда по умолчанию */
