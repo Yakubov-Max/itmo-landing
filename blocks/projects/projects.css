@@ -1,7 +1,5 @@
 .projects {
   background-color: #001337;
-  min-height: 715px;
-  max-width: 1440px;
   color: white;
   z-index: -1;
   display: flex;
@@ -9,17 +7,3 @@
   align-items: center;
   margin: 0 auto;
 }
-
-@media screen and (max-width: 768px) {
-  .projects {
-    min-height: 587px;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .projects {
-    max-width: 320px;
-    min-height: 438px;
-  }
-}
-
