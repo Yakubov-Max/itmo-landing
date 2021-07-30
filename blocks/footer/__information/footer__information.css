@@ -1,0 +1,13 @@
+.footer__information {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 241px;
+}
+
+@media all and (max-width: 320px) {
+  .footer__information {
+    flex-direction: row;
+    width: 287px;
+  }
+}

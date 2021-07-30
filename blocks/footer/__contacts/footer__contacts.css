@@ -1,0 +1,18 @@
+.footer__contacts {
+  margin-top: 91.5px;
+  border: 1px solid red;
+  max-width: 206px;
+  height: 270px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+@media all and (max-width: 320px) {
+  .footer__contacts {
+    max-width: 231px;
+    margin-top: 40px;
+    margin-bottom: 46px;
+    height: auto;
+  }
+}
