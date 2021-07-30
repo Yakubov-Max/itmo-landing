@@ -1,0 +1,9 @@
+.publications__container {
+  margin: 0 auto;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 348px);
+  gap: 33px 30px;
+  justify-content: center;
+  max-width: 1262px;
+}

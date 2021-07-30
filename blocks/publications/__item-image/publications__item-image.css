@@ -1,0 +1,9 @@
+.publications__item-image {
+  padding: 20px 19px 0;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 10px;
+}
