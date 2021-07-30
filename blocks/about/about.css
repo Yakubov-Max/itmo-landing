@@ -1,0 +1,14 @@
+.about {
+  color: #FFFFFF;
+  background-image: url('../../images/Background.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #001337;
+  overflow: hidden;
+}
+
+@media all and (max-width: 768px) {
+  .about {
+    background-image: url('../../images/Background-image-mirror-reflected.png');
+  }
+}

@@ -1,0 +1,23 @@
+.about__dot {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: #FFFFFF;
+  background-color: transparent;
+  opacity: 0.5;
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  background-color: #FFFFFF;
+}
+
+.about__dot:hover {
+  cursor: pointer;
+}
+
+@media all and (max-width:320px) {
+  .about__dot {
+    width: 4px;
+    height: 4px;
+  }
+}

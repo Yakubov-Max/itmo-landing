@@ -1,0 +1,8 @@
+.slider__dots-container {
+  align-self: center;
+  padding-top: 21px;
+  display: flex;
+  justify-content: center;
+  min-width: 128px;
+  min-height: 8px;
+}
