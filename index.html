@@ -1,211 +1,494 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./pages/index.css" />
-  <title>ITMO-landing</title>
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./pages/index.css"/>
+    <title>ITMO-landing</title>
+  </head>
 
-<body class="page">
-  <header class="header">
-    <nav class="header__mobile-menu">
-      <input type="checkbox" id="checkbox" class="header__mobile-menu-checkbox">
-      <label for="checkbox" class="header__mobile-menu-btn"><div class="header__mobile-menu-icon"></div></label>
-      <div class="header__mobile-menu-container">
-        <ul class="header__mobile-menu-list">
-          <li class="header__mobile-menu-item"><a href="#" class="header__mobile-menu-link">О нас</a></li>
-          <li class="header__mobile-menu-item"><a href="#" class="header__mobile-menu-link">Лаборатория</a></li>
-          <li class="header__mobile-menu-item"><a href="#" class="header__mobile-menu-link">Проекты</a></li>
-          <li class="header__dropdown" id="educationDropDown">
-          <button class="header__mobile-menu-item header__dropbtn"><a href="#" class="header__mobile-menu-link ">Образование</a></button>
-          <div class="header__educationdropdown-content">
-            <a href="#">Магистратура</a>
-            <a href="#">Аспирантура</a>
-          </div>
+  <body class="page">
+    <header class="header">
+      <nav class="header__mobile-menu">
+        <input type="checkbox" id="checkbox" class="header__mobile-menu-checkbox">
+        <label for="checkbox" class="header__mobile-menu-btn">
+          <div class="header__mobile-menu-icon"></div>
+        </label>
+        <div class="header__mobile-menu-container">
+          <ul class="header__mobile-menu-list">
+            <li class="header__mobile-menu-item"><a href="#" class="header__mobile-menu-link">О нас</a></li>
+            <li class="header__mobile-menu-item"><a href="#" class="header__mobile-menu-link">Лаборатория</a></li>
+            <li class="header__mobile-menu-item"><a href="#" class="header__mobile-menu-link">Проекты</a></li>
+            <li class="header__dropdown" id="educationDropDown">
+              <button class="header__mobile-menu-item header__dropbtn"><a href="#" class="header__mobile-menu-link ">Образование</a>
+              </button>
+              <div class="header__educationdropdown-content">
+                <a href="#">Магистратура</a>
+                <a href="#">Аспирантура</a>
+              </div>
             </li>
-          <li class="header__mobile-menu-item"><a href="#" class="header__mobile-menu-link">Публикации</a></li>
-          <li class="header__mobile-menu-item"><a href="#" class="header__mobile-menu-link">Команда</a></li>
-          <li class="header__mobile-menu-item"><a href="#" class="header__mobile-menu-link">Связаться</a></li>
-        </ul>
+            <li class="header__mobile-menu-item"><a href="#" class="header__mobile-menu-link">Публикации</a></li>
+            <li class="header__mobile-menu-item"><a href="#" class="header__mobile-menu-link">Команда</a></li>
+            <li class="header__mobile-menu-item"><a href="#" class="header__mobile-menu-link">Связаться</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="header__container">
+        <img src="./images/Logo_AI1.svg" class="header__logo" alt="Логотип лаборатории">
+        <a class="header__link">О нас</a>
+        <a class="header__link">Лаборатория</a>
+        <a class="header__link">Проекты</a>
+        <a class="header__link">Образование</a>
+        <a class="header__link">Публикации</a>
+        <a class="header__link">Команда</a>
+        <a class="header__link">Связаться</a>
       </div>
-    </nav>
-    <div class="header__container">
-      <img src="./images/Logo_AI1.svg" class="header__logo" alt="Логотип лаборатории">
-      <a class="header__link">О нас</a>
-      <a class="header__link">Лаборатория</a>
-      <a class="header__link">Проекты</a>
-      <a class="header__link">Образование</a>
-      <a class="header__link">Публикации</a>
-      <a class="header__link">Команда</a>
-      <a class="header__link">Связаться</a>
-    </div>
-  </header>
+    </header>
 
-  <section class="about">
-    <div class="about__AI-window">
-      <h2 class="about__subtitle">Когнитивные технологии, машинное обучение</h2>
-      <p class="about__AI-window-text">
-        Системы прикладного искусственного интелекта
-      </p>
-      <button class="about__projects-button">
-        Наши проекты
-      </button>
-    </div>
-    <div class="about__cards-container">
-      <h2 class="section-title">
-        несколько слов о нас
-      </h2>
-      <p class="about__cards-container-text">
-        Национальный центр когнитивных разработок – центр национальной технологической инициативы
-        (НТИ), получивший государственную поддержку по направлению
-        «Технологии машинного обучения и когнитивные технологии».
-      </p>
-      <div class="about__cards" id="about__touchsurface">
-        <button class="about__roll-to-left"></button>
-        <button class="about__roll-to-right"></button>
-        <template id="about__card-template">
-          <div class="about__card-item">
-            <img src="./images/Niddle.svg" class="about__card-niddle">
-            <p class="about__card-date">
-            </p>
-            <h3 class="about__card-title">
-            </h3>
-            <p class="about__card-text">
-            </p>
-          </div>
-        </template>
-            </div>
-      <div class="about__dots">
-        <template id="about__dot-template">
-          <button class="about__dot"></button>
-        </template>
-        <!--
-  <button class="about__dot about__dot_active"></button>
-  <button class="about__dot"></button>
-  <button class="about__dot"></button>
-  <button class="about__dot"></button>
-    -->
-      </div>
-    </div>
-  </section>
-  <section class="ai-research-lab">
-    <h2 class="section-title section-title_color_dark-blue ai-research-lab__title">Industrial AI Research Lab</h2>
-    <div class="ai-research-lab__about-conteiner">
-      <div class="ai-research-lab__text-conteiner">
-        <p class="ai-research-lab__text-intro">Центр национальной технологической инициативы (НТИ), получивший государственную поддержку по направлению
-          «Технологии машинного обучения и когнитивные технологии».</p>
-        <p class="ai-research-lab__text-details">Мы изучаем проблемы и выявляем, когда мы работаем вместе с нашими клиентами, новые решения находят, не
-          задумываясь. Работая таким образом и проявляя гибкость, мы можем поддерживать новый подход для удовлетворения потребностей наших клиентов.
-          <img src="./images/lab/molecular.svg" alt="Модель молекулы." class="ai-research-lab__molecular">
+    <section class="about">
+      <div class="about__AI-window">
+        <h2 class="about__subtitle">Когнитивные технологии, машинное обучение</h2>
+        <p class="about__AI-window-text">
+          Системы прикладного искусственного интелекта
         </p>
+        <button class="about__projects-button">
+          Наши проекты
+        </button>
       </div>
-      <div class="ai-research-lab__img-conteiner">
-        <img src="./images/lab/image 1.png" alt="Мужчина в черной футболке сидя в офисе, смотрит на открытый ноутбук." class="ai-research-lab__img">
-        <img src="./images/lab/image2table.png" alt="Двое мужчин работаю в офисе за ноутбуками." class="ai-research-lab__img">
+      <div class="about__cards-container">
+        <h2 class="section-title">
+          несколько слов о нас
+        </h2>
+        <p class="about__cards-container-text">
+          Национальный центр когнитивных разработок – центр национальной технологической инициативы
+          (НТИ), получивший государственную поддержку по направлению
+          «Технологии машинного обучения и когнитивные технологии».
+        </p>
+        <div class="about__cards" id="about__touchsurface">
+          <button class="about__roll-to-left"></button>
+          <button class="about__roll-to-right"></button>
+          <template id="about__card-template">
+            <div class="about__card-item">
+              <img src="./images/Niddle.svg" class="about__card-niddle">
+              <p class="about__card-date">
+              </p>
+              <h3 class="about__card-title">
+              </h3>
+              <p class="about__card-text">
+              </p>
+            </div>
+          </template>
+        </div>
+        <div class="about__dots">
+          <template id="about__dot-template">
+            <button class="about__dot"></button>
+          </template>
+          <!--
+    <button class="about__dot about__dot_active"></button>
+    <button class="about__dot"></button>
+    <button class="about__dot"></button>
+    <button class="about__dot"></button>
+      -->
+        </div>
       </div>
-    </div>
-    <div class="ai-research-lab__cards-conteiner">
-      <div class="ai-research-lab__card">
-        <h3 class="ai-research-lab__card-title">Анализ социальных данных</h3>
-        <div class="ai-research-lab__card-circle ai-research-lab__card_icon_pen"></div>
-        <p class="ai-research__card-text">Направление включает в себя исследования и разработки технологий МО и КТ</p>
-        <button type="button" class="ai-research__card-button" id="ai-research-button-one">Подробнее</button>
+    </section>
+    <section class="ai-research-lab">
+      <h2 class="section-title section-title_color_dark-blue ai-research-lab__title">Industrial AI Research Lab</h2>
+      <div class="ai-research-lab__about-conteiner">
+        <div class="ai-research-lab__text-conteiner">
+          <p class="ai-research-lab__text-intro">Центр национальной технологической инициативы (НТИ), получивший
+            государственную поддержку по направлению
+            «Технологии машинного обучения и когнитивные технологии».</p>
+          <p class="ai-research-lab__text-details">Мы изучаем проблемы и выявляем, когда мы работаем вместе с нашими
+            клиентами, новые решения находят, не
+            задумываясь. Работая таким образом и проявляя гибкость, мы можем поддерживать новый подход для
+            удовлетворения
+            потребностей наших клиентов.
+            <img src="./images/lab/molecular.svg" alt="Модель молекулы." class="ai-research-lab__molecular">
+          </p>
+        </div>
+        <div class="ai-research-lab__img-conteiner">
+          <img src="./images/lab/image 1.png" alt="Мужчина в черной футболке сидя в офисе, смотрит на открытый ноутбук."
+               class="ai-research-lab__img">
+          <img src="./images/lab/image2table.png" alt="Двое мужчин работаю в офисе за ноутбуками."
+               class="ai-research-lab__img">
+        </div>
       </div>
-      <div class="ai-research-lab__card">
-        <h3 class="ai-research-lab__card-title">Инфраструктура больших данных</h3>
-        <div class="ai-research-lab__card-circle ai-research-lab__card_icon_brain"></div>
-        <p class="ai-research__card-text">Направление включает в себя исследования и разработки технологий МО и КТ</p>
-        <button type="button" class="ai-research__card-button" id="ai-research-button-two">Подробнее</button>
+      <div class="ai-research-lab__cards-conteiner">
+        <div class="ai-research-lab__card">
+          <h3 class="ai-research-lab__card-title">Анализ социальных данных</h3>
+          <div class="ai-research-lab__card-circle ai-research-lab__card_icon_pen"></div>
+          <p class="ai-research__card-text">Направление включает в себя исследования и разработки технологий МО и КТ</p>
+          <button type="button" class="ai-research__card-button" id="ai-research-button-one">Подробнее</button>
+        </div>
+        <div class="ai-research-lab__card">
+          <h3 class="ai-research-lab__card-title">Инфраструктура больших данных</h3>
+          <div class="ai-research-lab__card-circle ai-research-lab__card_icon_brain"></div>
+          <p class="ai-research__card-text">Направление включает в себя исследования и разработки технологий МО и КТ</p>
+          <button type="button" class="ai-research__card-button" id="ai-research-button-two">Подробнее</button>
+        </div>
+        <div class="ai-research-lab__card">
+          <h3 class="ai-research-lab__card-title">Облачные вычисления</h3>
+          <div class="ai-research-lab__card-circle ai-research-lab__card_icon_micro"></div>
+          <p class="ai-research__card-text">Направление включает в себя исследования и разработки технологий МО и КТ</p>
+          <button type="button" class="ai-research__card-button" id="ai-research-button-three">Подробнее</button>
+        </div>
+        <div class="ai-research-lab__card">
+          <h3 class="ai-research-lab__card-title">QA <br> системы</h3>
+          <div class="ai-research-lab__card-circle ai-research-lab__card_icon_robo"></div>
+          <p class="ai-research__card-text">Направление включает в себя исследования и разработки технологий МО и КТ</p>
+          <button type="button" class="ai-research__card-button" id="ai-research-button-four">Подробнее</button>
+        </div>
       </div>
-      <div class="ai-research-lab__card">
-        <h3 class="ai-research-lab__card-title">Облачные вычисления</h3>
-        <div class="ai-research-lab__card-circle ai-research-lab__card_icon_micro"></div>
-        <p class="ai-research__card-text">Направление включает в себя исследования и разработки технологий МО и КТ</p>
-        <button type="button" class="ai-research__card-button" id="ai-research-button-three">Подробнее</button>
-      </div>
-      <div class="ai-research-lab__card">
-        <h3 class="ai-research-lab__card-title">QA <br> системы</h3>
-        <div class="ai-research-lab__card-circle ai-research-lab__card_icon_robo"></div>
-        <p class="ai-research__card-text">Направление включает в себя исследования и разработки технологий МО и КТ</p>
-        <button type="button" class="ai-research__card-button" id="ai-research-button-four">Подробнее</button>
-      </div>
-    </div>
-  </section>
-  <section class="projects">
-    <h2 class="section-title section-title_color_white">Наши проекты</h2>
-    <ul class="projects__menu">
-       <li class="projects__menu-item projects__menu-item_active">
+    </section>
+    <section class="projects">
+      <h2 class="section-title section-title_color_white">Наши проекты</h2>
+      <ul class="projects__menu">
+        <li class="projects__menu-item projects__menu-item_active">
           <a href="#" class="projects__menu-item-link">Все проекты</a>
           <div class="projects__dropdown">
-             <button class="projects__menu-dropdown-button"></button>
-             <div class="projects__dropdown-content">
-                <ul class="projects__dropdown-menu">
-                   <li class="projects__dropdown-menu-item"><a href="#" class="projects__dropdown-menu-link">Все проекты</a></li>
-                   <li class="projects__dropdown-menu-item"><a href="#" class="projects__dropdown-menu-link">Гос. проекты</a></li>
-                   <li class="projects__dropdown-menu-item"><a href="#" class="projects__dropdown-menu-link">Спецпрограммы</a></li>
-                   <li class="projects__dropdown-menu-item"><a href="#" class="projects__dropdown-menu-link">В разработке</a></li>
-                </ul>
-             </div>
+            <button class="projects__menu-dropdown-button"></button>
+            <div class="projects__dropdown-content">
+              <ul class="projects__dropdown-menu">
+                <li class="projects__dropdown-menu-item"><a href="#" class="projects__dropdown-menu-link">Все
+                  проекты</a>
+                </li>
+                <li class="projects__dropdown-menu-item"><a href="#" class="projects__dropdown-menu-link">Гос.
+                  проекты</a>
+                </li>
+                <li class="projects__dropdown-menu-item"><a href="#"
+                                                            class="projects__dropdown-menu-link">Спецпрограммы</a>
+                </li>
+                <li class="projects__dropdown-menu-item"><a href="#" class="projects__dropdown-menu-link">В
+                  разработке</a>
+                </li>
+              </ul>
+            </div>
           </div>
-       </li>
-       <li class="projects__menu-item"><a href="#" class="projects__menu-item-link">Гос. проекты</a></li>
-       <li class="projects__menu-item"><a href="#" class="projects__menu-item-link">Спецпрограммы</a></li>
-       <li class="projects__menu-item"><a href="#" class="projects__menu-item-link">В разработке</a></li>
-    </ul>
-    <div class="projects__container">
-    </div>
-    <ul class="projects__pagination">
-       <li class="projects__pagination-item"><a href="#" class="projects__pagination-left-arrow"></a></li>
-       <li class="projects__pagination-item projects__pagination-current-page"><a href="#" class="projects__pagination-link projects__pagination-link_active">1</a></li>
-       <li class="projects__pagination-item">/</li>
-       <li class="projects__pagination-item projects__pagination-last-page"><a href="#" class="projects__pagination-link">30</a></li>
-       <li class="projects__pagination-item"><a href="#" class="projects__pagination-link"><span class="projects__pagination-right-arrow"></span></a></li>
-    </ul>
-    <template id="projects__item">
-       <div class="projects__item">
-          <svg class="projects__item-logo"  width="112" height="48" viewBox="0 0 112 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-             <path class="projects__item-logo" fill-rule="evenodd" clip-rule="evenodd" d="M25.4589 0.581502C22.7146 4.38073 21.1707 8.23573 20.6581 12.5691C20.4593 14.2498 20.5677 17.909 20.8607 19.4075C21.5221 22.7891 22.9626 26.2348 24.8622 28.9789C25.8547 30.4126 25.8512 30.4114 26.491 29.5703C29.6105 25.4695 31.501 19.4272 31.255 14.343C31.0133 9.34735 29.3829 4.82104 26.2949 0.572227L25.8791 0L25.4589 0.581502ZM27.3431 4.82421C29.1979 8.39694 30.0428 11.815 30.0428 15.7464C30.0428 17.1618 29.7208 20.4613 29.5699 20.5931C29.5424 20.6171 29.4762 19.9071 29.4229 19.0153C29.2423 15.9889 28.7011 13.5115 27.669 10.983C27.0845 9.55152 26.0005 7.44798 25.847 7.44798C25.6924 7.44798 24.6659 9.45243 24.1286 10.804C23.0092 13.6193 22.5226 15.759 22.4081 18.3702C22.318 20.4221 22.2132 20.9571 22.0615 20.1397C22.0054 19.8377 21.8826 18.6508 21.7888 17.502C21.4953 13.9122 21.9876 10.6785 23.3527 7.23052C24.0101 5.56948 25.1673 3.23713 25.6594 2.58131L25.8771 2.29098L26.2933 2.94742C26.5223 3.3084 26.9947 4.15301 27.3431 4.82421ZM35.3574 22.9466V31.245H37.1057H38.8539V23.9839V16.7227H40.5322H42.2105V15.6854V14.6481H38.784H35.3574V22.9466ZM44.3084 14.8203C44.3084 14.915 43.9918 17.7294 43.6049 21.0747C42.7084 28.8252 42.4912 30.7666 42.4907 31.0315C42.4902 31.2233 42.6656 31.245 44.2194 31.245H45.9485L46.0421 29.9331C46.0935 29.2115 46.1737 28.2232 46.2203 27.7365L46.305 26.8517H47.1789H48.0528L48.1337 27.3704C48.1781 27.6556 48.2567 28.6442 48.3082 29.567L48.4021 31.245H50.1925H51.983L51.9173 30.8484C51.881 30.6302 51.4768 27.1568 51.019 23.1296C50.5611 19.1024 50.1481 15.5467 50.1013 15.2278L50.0163 14.6481H47.1623C44.7989 14.6481 44.3084 14.6776 44.3084 14.8203ZM55.6372 14.775C54.8789 14.9134 54.403 15.2046 54.0286 15.7592C53.7876 16.1162 53.7423 16.4398 53.7016 18.0956L53.6543 20.0177H55.4148H57.1754L57.1775 18.7058C57.1796 17.3295 57.3365 16.8188 57.78 16.7442C58.371 16.645 58.4341 16.8798 58.4341 19.1783C58.4341 21.8923 58.4629 21.8482 56.6859 21.8482H55.4971V22.7635V23.6788H56.5553C57.5691 23.6788 58.1057 23.8045 58.3271 24.0937C58.3836 24.1675 58.4308 25.274 58.432 26.5527C58.4343 29.0159 58.3954 29.1704 57.7733 29.1704C57.2922 29.1704 57.1754 28.7518 57.1754 27.0268V25.5093H55.4158H53.6563L53.7027 27.6755C53.7543 30.0793 53.8442 30.3729 54.6908 30.8998C55.1221 31.1683 55.288 31.1861 57.6887 31.222C60.0334 31.257 60.274 31.2404 60.7987 31.0068C61.1745 30.8395 61.4748 30.5782 61.684 30.2366C61.9818 29.7502 62.0029 29.5568 62.0404 26.9738C62.0756 24.5354 62.0521 24.1804 61.8306 23.8033C61.5146 23.2657 60.7661 22.8245 60.1699 22.8245C59.5101 22.8245 59.4538 22.6166 60.0886 22.523C60.8976 22.4037 61.4945 22.0282 61.7958 21.4491C62.0265 21.0057 62.0646 20.6407 62.0665 18.8584C62.0707 15.1377 61.7139 14.751 58.2243 14.6929C57.1474 14.6748 55.9832 14.7118 55.6372 14.775ZM64.5879 22.9466V31.245H66.4061H68.2242V23.9839V16.7227H68.8536H69.483V23.9839V31.245H71.2312H72.9794V22.9466V14.6481H68.7837H64.5879V22.9466ZM75.6018 14.7178C75.544 14.7689 75.4969 18.5085 75.4969 23.028V31.245H77.315H79.1332V28.4382V25.6314H80.5721C82.4375 25.6314 83.0863 25.3836 83.6087 24.472C83.9575 23.8632 83.9583 23.8537 83.9583 20.3228C83.9583 18.3763 83.9087 16.5795 83.8478 16.3296C83.7175 15.7937 83.1895 15.2086 82.5781 14.9227C82.2143 14.7526 81.5961 14.71 78.9234 14.6713C77.1542 14.6457 75.6595 14.6667 75.6018 14.7178ZM88.504 14.7743C87.678 14.9259 87.2443 15.2153 86.8604 15.8709L86.5457 16.4084V23.0076V29.6068L86.8604 30.1443C87.4351 31.1257 87.6124 31.1786 90.4665 31.2222C92.6984 31.2562 93.0356 31.2346 93.5828 31.0234C94.0683 30.8361 94.2665 30.6624 94.5319 30.1921L94.8673 29.5975V22.9466V16.2956L94.5508 15.7785C94.0287 14.926 93.4363 14.7406 91.0911 14.6961C90.0142 14.6756 88.85 14.7108 88.504 14.7743ZM97.4547 22.9436V31.245H99.2729H101.091L101.095 26.028C101.099 21.2118 101.181 20.1795 101.431 21.7872C101.483 22.1228 101.868 24.27 102.287 26.5587C102.706 28.8474 103.049 30.8382 103.049 30.9825C103.049 31.2345 103.108 31.245 104.515 31.245C105.921 31.245 105.984 31.2338 106.052 30.9704C106.149 30.5953 106.552 28.4068 107.259 24.411C107.586 22.5652 107.905 21.0028 107.968 20.9391C108.032 20.8754 108.084 23.1681 108.084 26.0341V31.245H109.902H111.72V22.9466V14.6481H109.421C108.156 14.6481 107.092 14.6894 107.057 14.7396C107.022 14.7899 106.7 16.259 106.342 18.0041C105.984 19.7492 105.541 21.891 105.358 22.7635C105.175 23.6361 104.946 24.7756 104.849 25.2958C104.752 25.8159 104.632 26.2415 104.583 26.2415C104.533 26.2415 104.413 25.8435 104.317 25.3568C104.22 24.8701 103.994 23.7581 103.814 22.8855C103.635 22.013 103.261 20.1733 102.982 18.7973C102.704 17.4214 102.399 15.9386 102.303 15.5024L102.13 14.7091L99.7922 14.6757L97.4547 14.6423V22.9436ZM17.1059 14.8987C8.46289 15.673 1.60478 21.3014 0.17724 28.7921C-0.110869 30.3034 -0.0367448 33.4497 0.319895 34.8451C2.04855 41.6106 7.97688 46.5786 15.7772 47.7984C17.5151 48.0701 20.4436 48.0667 22.2107 47.7909C25.7865 47.2327 29.2365 45.7507 31.7748 43.6823L32.84 42.8143V37.1517V31.4891H25.917H18.994V34.0054V36.5215L19.4859 36.1942C22.1069 34.4497 25.9581 35.1658 27.4961 37.6835C28.7613 39.7547 28.2846 41.8456 26.151 43.5843C24.2759 45.1123 21.626 46.0122 19.0066 46.0105C10.5973 46.0052 5.47718 38.0988 9.78357 31.7687C10.4612 30.7727 11.8907 29.4917 13.0932 28.8028C14.2666 28.1308 16.0246 27.5311 17.1758 27.4104C17.5989 27.366 18.1826 27.2995 18.473 27.2625L19.001 27.1954L18.9625 21.0133L18.924 14.8312L18.5744 14.8148C18.3821 14.8058 17.7213 14.8435 17.1059 14.8987ZM47.452 18.1567C47.5037 18.9454 47.6353 20.6614 47.7444 21.9703C47.8535 23.2791 47.9432 24.5284 47.9437 24.7466L47.9447 25.1432H47.1643H46.384L46.4636 24.3805C46.5074 23.9611 46.6414 22.1899 46.7614 20.4448C46.8814 18.6997 47.0091 17.1484 47.0453 16.9973C47.1996 16.3519 47.3642 16.8211 47.452 18.1567ZM80.1742 16.994C80.3574 17.2221 80.3919 17.7555 80.3919 20.35C80.3919 23.3027 80.3796 23.4455 80.1037 23.6862C79.943 23.8264 79.6798 23.921 79.5093 23.8998C79.2033 23.8618 79.2031 23.86 79.1661 20.2923L79.129 16.7227H79.5427C79.8118 16.7227 80.0326 16.8175 80.1742 16.994ZM91.1331 16.8692C91.3749 17.0802 91.3749 28.813 91.1331 29.024C90.8762 29.2481 90.3488 29.1982 90.1869 28.9344C90.0929 28.7811 90.0422 26.6643 90.0422 22.9023C90.0422 17.7959 90.0683 17.0835 90.2619 16.9144C90.5237 16.6861 90.9008 16.6665 91.1331 16.8692ZM26.4816 19.3466C27.8286 22.4694 27.6614 26.3743 26.0669 29.0297L25.8814 29.3385L25.6371 28.926C24.4563 26.9336 24.011 23.7934 24.5725 21.4195C24.8219 20.3648 25.4476 18.7877 25.748 18.4566C25.9486 18.2355 26.061 18.3719 26.4816 19.3466ZM35.2176 42.2893V47.964H73.6088H112V42.2893V36.6146H73.6088H35.2176V42.2893ZM40.2223 40.0621L40.262 41.374H41.2363H42.2105V40.0316V38.6892H42.9797H43.749V42.2283V45.7673H42.9797H42.2105V44.1808V42.5944H41.2315H40.2525V44.1808V45.7673H39.4133H38.5742V42.2222V38.677L39.3784 38.7136L40.1826 38.7502L40.2223 40.0621ZM58.9936 39.2994V39.9096H57.595H56.1964V40.6418V41.374H57.4551H58.7138V41.9842V42.5944H57.4551H56.1964V43.6317V44.669H57.595H58.9936V45.2182V45.7673H56.8257H54.6579V42.2283V38.6892H56.8257H58.9936V39.2994ZM74.212 39.1469C74.253 39.5169 74.291 39.5435 74.7791 39.5435C75.1156 39.5435 75.5295 39.6692 75.9388 39.8958C76.8027 40.3738 77.2004 41.0963 77.2065 42.1993C77.2157 43.8427 76.2398 44.9131 74.7321 44.9131C74.2608 44.9131 74.2382 44.9327 74.2382 45.3402V45.7673H73.399H72.5599V45.3402C72.5599 44.9205 72.5498 44.9131 71.9778 44.9131C71.1806 44.9131 70.3357 44.4586 69.901 43.7962C69.4367 43.0884 69.4017 41.5727 69.8326 40.8327C70.2505 40.1151 71.0084 39.6424 71.8551 39.5715C72.551 39.5132 72.5599 39.5072 72.5599 39.0947V38.677L73.364 38.7136C74.1591 38.7499 74.1688 38.7548 74.212 39.1469ZM92.6296 39.2994V39.8486L91.6855 39.8847L90.7415 39.9207V42.8441V45.7673H89.9723H89.203V42.8385V39.9096H88.224H87.245V39.2967V38.684L89.9373 38.717L92.6296 38.7502V39.2994ZM104.727 40.0149V41.3406L105.63 41.4038C106.759 41.4829 107.34 41.772 107.759 42.4626C108.352 43.4413 108.074 44.8841 107.174 45.5024C106.823 45.7432 106.623 45.7673 104.988 45.7673H103.189V42.2283V38.6892H103.958H104.727V40.0149ZM71.5852 40.9429C71.3666 41.1459 71.2392 41.442 71.1941 41.8513C71.0627 43.0449 71.461 43.8147 72.2102 43.8147H72.5599V42.2283C72.5599 40.6491 72.5583 40.6418 72.2345 40.6418C72.0557 40.6418 71.7635 40.7773 71.5852 40.9429ZM74.2382 42.2283V43.8147H74.5776C75.3321 43.8147 75.7953 42.7035 75.4953 41.6126C75.3254 40.9942 74.9591 40.6418 74.4867 40.6418C74.2612 40.6418 74.2382 40.7893 74.2382 42.2283ZM104.757 43.6622L104.797 44.73L105.413 44.7181C106.174 44.7034 106.406 44.4649 106.406 43.6965C106.406 42.8895 106.121 42.5944 105.343 42.5944H104.716L104.757 43.6622Z" fill="white"/>
+        </li>
+        <li class="projects__menu-item"><a href="#" class="projects__menu-item-link">Гос. проекты</a></li>
+        <li class="projects__menu-item"><a href="#" class="projects__menu-item-link">Спецпрограммы</a></li>
+        <li class="projects__menu-item"><a href="#" class="projects__menu-item-link">В разработке</a></li>
+      </ul>
+      <div class="projects__container">
+      </div>
+      <ul class="projects__pagination">
+        <li class="projects__pagination-item"><a href="#" class="projects__pagination-left-arrow"></a></li>
+        <li class="projects__pagination-item projects__pagination-current-page"><a href="#"
+                                                                                   class="projects__pagination-link projects__pagination-link_active">1</a>
+        </li>
+        <li class="projects__pagination-item">/</li>
+        <li class="projects__pagination-item projects__pagination-last-page"><a href="#"
+                                                                                class="projects__pagination-link">30</a>
+        </li>
+        <li class="projects__pagination-item"><a href="#" class="projects__pagination-link"><span
+          class="projects__pagination-right-arrow"></span></a></li>
+      </ul>
+      <template id="projects__item">
+        <div class="projects__item">
+          <svg class="projects__item-logo" width="112" height="48" viewBox="0 0 112 48" fill="none"
+               xmlns="http://www.w3.org/2000/svg">
+            <path class="projects__item-logo" fill-rule="evenodd" clip-rule="evenodd"
+                  d="M25.4589 0.581502C22.7146 4.38073 21.1707 8.23573 20.6581 12.5691C20.4593 14.2498 20.5677 17.909 20.8607 19.4075C21.5221 22.7891 22.9626 26.2348 24.8622 28.9789C25.8547 30.4126 25.8512 30.4114 26.491 29.5703C29.6105 25.4695 31.501 19.4272 31.255 14.343C31.0133 9.34735 29.3829 4.82104 26.2949 0.572227L25.8791 0L25.4589 0.581502ZM27.3431 4.82421C29.1979 8.39694 30.0428 11.815 30.0428 15.7464C30.0428 17.1618 29.7208 20.4613 29.5699 20.5931C29.5424 20.6171 29.4762 19.9071 29.4229 19.0153C29.2423 15.9889 28.7011 13.5115 27.669 10.983C27.0845 9.55152 26.0005 7.44798 25.847 7.44798C25.6924 7.44798 24.6659 9.45243 24.1286 10.804C23.0092 13.6193 22.5226 15.759 22.4081 18.3702C22.318 20.4221 22.2132 20.9571 22.0615 20.1397C22.0054 19.8377 21.8826 18.6508 21.7888 17.502C21.4953 13.9122 21.9876 10.6785 23.3527 7.23052C24.0101 5.56948 25.1673 3.23713 25.6594 2.58131L25.8771 2.29098L26.2933 2.94742C26.5223 3.3084 26.9947 4.15301 27.3431 4.82421ZM35.3574 22.9466V31.245H37.1057H38.8539V23.9839V16.7227H40.5322H42.2105V15.6854V14.6481H38.784H35.3574V22.9466ZM44.3084 14.8203C44.3084 14.915 43.9918 17.7294 43.6049 21.0747C42.7084 28.8252 42.4912 30.7666 42.4907 31.0315C42.4902 31.2233 42.6656 31.245 44.2194 31.245H45.9485L46.0421 29.9331C46.0935 29.2115 46.1737 28.2232 46.2203 27.7365L46.305 26.8517H47.1789H48.0528L48.1337 27.3704C48.1781 27.6556 48.2567 28.6442 48.3082 29.567L48.4021 31.245H50.1925H51.983L51.9173 30.8484C51.881 30.6302 51.4768 27.1568 51.019 23.1296C50.5611 19.1024 50.1481 15.5467 50.1013 15.2278L50.0163 14.6481H47.1623C44.7989 14.6481 44.3084 14.6776 44.3084 14.8203ZM55.6372 14.775C54.8789 14.9134 54.403 15.2046 54.0286 15.7592C53.7876 16.1162 53.7423 16.4398 53.7016 18.0956L53.6543 20.0177H55.4148H57.1754L57.1775 18.7058C57.1796 17.3295 57.3365 16.8188 57.78 16.7442C58.371 16.645 58.4341 16.8798 58.4341 19.1783C58.4341 21.8923 58.4629 21.8482 56.6859 21.8482H55.4971V22.7635V23.6788H56.5553C57.5691 23.6788 58.1057 23.8045 58.3271 24.0937C58.3836 24.1675 58.4308 25.274 58.432 26.5527C58.4343 29.0159 58.3954 29.1704 57.7733 29.1704C57.2922 29.1704 57.1754 28.7518 57.1754 27.0268V25.5093H55.4158H53.6563L53.7027 27.6755C53.7543 30.0793 53.8442 30.3729 54.6908 30.8998C55.1221 31.1683 55.288 31.1861 57.6887 31.222C60.0334 31.257 60.274 31.2404 60.7987 31.0068C61.1745 30.8395 61.4748 30.5782 61.684 30.2366C61.9818 29.7502 62.0029 29.5568 62.0404 26.9738C62.0756 24.5354 62.0521 24.1804 61.8306 23.8033C61.5146 23.2657 60.7661 22.8245 60.1699 22.8245C59.5101 22.8245 59.4538 22.6166 60.0886 22.523C60.8976 22.4037 61.4945 22.0282 61.7958 21.4491C62.0265 21.0057 62.0646 20.6407 62.0665 18.8584C62.0707 15.1377 61.7139 14.751 58.2243 14.6929C57.1474 14.6748 55.9832 14.7118 55.6372 14.775ZM64.5879 22.9466V31.245H66.4061H68.2242V23.9839V16.7227H68.8536H69.483V23.9839V31.245H71.2312H72.9794V22.9466V14.6481H68.7837H64.5879V22.9466ZM75.6018 14.7178C75.544 14.7689 75.4969 18.5085 75.4969 23.028V31.245H77.315H79.1332V28.4382V25.6314H80.5721C82.4375 25.6314 83.0863 25.3836 83.6087 24.472C83.9575 23.8632 83.9583 23.8537 83.9583 20.3228C83.9583 18.3763 83.9087 16.5795 83.8478 16.3296C83.7175 15.7937 83.1895 15.2086 82.5781 14.9227C82.2143 14.7526 81.5961 14.71 78.9234 14.6713C77.1542 14.6457 75.6595 14.6667 75.6018 14.7178ZM88.504 14.7743C87.678 14.9259 87.2443 15.2153 86.8604 15.8709L86.5457 16.4084V23.0076V29.6068L86.8604 30.1443C87.4351 31.1257 87.6124 31.1786 90.4665 31.2222C92.6984 31.2562 93.0356 31.2346 93.5828 31.0234C94.0683 30.8361 94.2665 30.6624 94.5319 30.1921L94.8673 29.5975V22.9466V16.2956L94.5508 15.7785C94.0287 14.926 93.4363 14.7406 91.0911 14.6961C90.0142 14.6756 88.85 14.7108 88.504 14.7743ZM97.4547 22.9436V31.245H99.2729H101.091L101.095 26.028C101.099 21.2118 101.181 20.1795 101.431 21.7872C101.483 22.1228 101.868 24.27 102.287 26.5587C102.706 28.8474 103.049 30.8382 103.049 30.9825C103.049 31.2345 103.108 31.245 104.515 31.245C105.921 31.245 105.984 31.2338 106.052 30.9704C106.149 30.5953 106.552 28.4068 107.259 24.411C107.586 22.5652 107.905 21.0028 107.968 20.9391C108.032 20.8754 108.084 23.1681 108.084 26.0341V31.245H109.902H111.72V22.9466V14.6481H109.421C108.156 14.6481 107.092 14.6894 107.057 14.7396C107.022 14.7899 106.7 16.259 106.342 18.0041C105.984 19.7492 105.541 21.891 105.358 22.7635C105.175 23.6361 104.946 24.7756 104.849 25.2958C104.752 25.8159 104.632 26.2415 104.583 26.2415C104.533 26.2415 104.413 25.8435 104.317 25.3568C104.22 24.8701 103.994 23.7581 103.814 22.8855C103.635 22.013 103.261 20.1733 102.982 18.7973C102.704 17.4214 102.399 15.9386 102.303 15.5024L102.13 14.7091L99.7922 14.6757L97.4547 14.6423V22.9436ZM17.1059 14.8987C8.46289 15.673 1.60478 21.3014 0.17724 28.7921C-0.110869 30.3034 -0.0367448 33.4497 0.319895 34.8451C2.04855 41.6106 7.97688 46.5786 15.7772 47.7984C17.5151 48.0701 20.4436 48.0667 22.2107 47.7909C25.7865 47.2327 29.2365 45.7507 31.7748 43.6823L32.84 42.8143V37.1517V31.4891H25.917H18.994V34.0054V36.5215L19.4859 36.1942C22.1069 34.4497 25.9581 35.1658 27.4961 37.6835C28.7613 39.7547 28.2846 41.8456 26.151 43.5843C24.2759 45.1123 21.626 46.0122 19.0066 46.0105C10.5973 46.0052 5.47718 38.0988 9.78357 31.7687C10.4612 30.7727 11.8907 29.4917 13.0932 28.8028C14.2666 28.1308 16.0246 27.5311 17.1758 27.4104C17.5989 27.366 18.1826 27.2995 18.473 27.2625L19.001 27.1954L18.9625 21.0133L18.924 14.8312L18.5744 14.8148C18.3821 14.8058 17.7213 14.8435 17.1059 14.8987ZM47.452 18.1567C47.5037 18.9454 47.6353 20.6614 47.7444 21.9703C47.8535 23.2791 47.9432 24.5284 47.9437 24.7466L47.9447 25.1432H47.1643H46.384L46.4636 24.3805C46.5074 23.9611 46.6414 22.1899 46.7614 20.4448C46.8814 18.6997 47.0091 17.1484 47.0453 16.9973C47.1996 16.3519 47.3642 16.8211 47.452 18.1567ZM80.1742 16.994C80.3574 17.2221 80.3919 17.7555 80.3919 20.35C80.3919 23.3027 80.3796 23.4455 80.1037 23.6862C79.943 23.8264 79.6798 23.921 79.5093 23.8998C79.2033 23.8618 79.2031 23.86 79.1661 20.2923L79.129 16.7227H79.5427C79.8118 16.7227 80.0326 16.8175 80.1742 16.994ZM91.1331 16.8692C91.3749 17.0802 91.3749 28.813 91.1331 29.024C90.8762 29.2481 90.3488 29.1982 90.1869 28.9344C90.0929 28.7811 90.0422 26.6643 90.0422 22.9023C90.0422 17.7959 90.0683 17.0835 90.2619 16.9144C90.5237 16.6861 90.9008 16.6665 91.1331 16.8692ZM26.4816 19.3466C27.8286 22.4694 27.6614 26.3743 26.0669 29.0297L25.8814 29.3385L25.6371 28.926C24.4563 26.9336 24.011 23.7934 24.5725 21.4195C24.8219 20.3648 25.4476 18.7877 25.748 18.4566C25.9486 18.2355 26.061 18.3719 26.4816 19.3466ZM35.2176 42.2893V47.964H73.6088H112V42.2893V36.6146H73.6088H35.2176V42.2893ZM40.2223 40.0621L40.262 41.374H41.2363H42.2105V40.0316V38.6892H42.9797H43.749V42.2283V45.7673H42.9797H42.2105V44.1808V42.5944H41.2315H40.2525V44.1808V45.7673H39.4133H38.5742V42.2222V38.677L39.3784 38.7136L40.1826 38.7502L40.2223 40.0621ZM58.9936 39.2994V39.9096H57.595H56.1964V40.6418V41.374H57.4551H58.7138V41.9842V42.5944H57.4551H56.1964V43.6317V44.669H57.595H58.9936V45.2182V45.7673H56.8257H54.6579V42.2283V38.6892H56.8257H58.9936V39.2994ZM74.212 39.1469C74.253 39.5169 74.291 39.5435 74.7791 39.5435C75.1156 39.5435 75.5295 39.6692 75.9388 39.8958C76.8027 40.3738 77.2004 41.0963 77.2065 42.1993C77.2157 43.8427 76.2398 44.9131 74.7321 44.9131C74.2608 44.9131 74.2382 44.9327 74.2382 45.3402V45.7673H73.399H72.5599V45.3402C72.5599 44.9205 72.5498 44.9131 71.9778 44.9131C71.1806 44.9131 70.3357 44.4586 69.901 43.7962C69.4367 43.0884 69.4017 41.5727 69.8326 40.8327C70.2505 40.1151 71.0084 39.6424 71.8551 39.5715C72.551 39.5132 72.5599 39.5072 72.5599 39.0947V38.677L73.364 38.7136C74.1591 38.7499 74.1688 38.7548 74.212 39.1469ZM92.6296 39.2994V39.8486L91.6855 39.8847L90.7415 39.9207V42.8441V45.7673H89.9723H89.203V42.8385V39.9096H88.224H87.245V39.2967V38.684L89.9373 38.717L92.6296 38.7502V39.2994ZM104.727 40.0149V41.3406L105.63 41.4038C106.759 41.4829 107.34 41.772 107.759 42.4626C108.352 43.4413 108.074 44.8841 107.174 45.5024C106.823 45.7432 106.623 45.7673 104.988 45.7673H103.189V42.2283V38.6892H103.958H104.727V40.0149ZM71.5852 40.9429C71.3666 41.1459 71.2392 41.442 71.1941 41.8513C71.0627 43.0449 71.461 43.8147 72.2102 43.8147H72.5599V42.2283C72.5599 40.6491 72.5583 40.6418 72.2345 40.6418C72.0557 40.6418 71.7635 40.7773 71.5852 40.9429ZM74.2382 42.2283V43.8147H74.5776C75.3321 43.8147 75.7953 42.7035 75.4953 41.6126C75.3254 40.9942 74.9591 40.6418 74.4867 40.6418C74.2612 40.6418 74.2382 40.7893 74.2382 42.2283ZM104.757 43.6622L104.797 44.73L105.413 44.7181C106.174 44.7034 106.406 44.4649 106.406 43.6965C106.406 42.8895 106.121 42.5944 105.343 42.5944H104.716L104.757 43.6622Z"
+                  fill="white"/>
           </svg>
           <p class="projects__item-about"></p>
           <a href="#" class="projects__item-details">Подробнее</a>
           <span class="test-span"></span>
-       </div>
-    </template>
- </section>
-  <section class="education"></section>
-      <section class="publications section-background section-background_light-blue">
+        </div>
+      </template>
+    </section>
+    <section class="education"></section>
+
+    <section class="publications section-background section-background_light-blue">
       <h2 class="section-title section-title_color_blue">Публикации</h2>
       <div class="slider" id="slider-publications">
         <div class="slider__page">
           <ul class="publications__container">
             <li class="publications__item">
-              <img class="publications__item-image" src="images/publication/publication_Convolutional neural networks with hierarchical context transfe….png" alt="">
+              <div class="publications__image-container publications__item-image_shrank">
+                <img
+                  class="publications__item-image"
+                  src="images/publication/publication_Topic-driven%20Ensemble%20for%20Online%20Advertising%20Generation.png"
+                  alt="Иллюстрация к статье">
+              </div>
               <div class="publications__item-text">
-                <h3 class="publications__article-heading">Convolutional neural networks with hierarchical context transfe…</h3>
-                <p class="publications__article-autors">Ksenia D Mukhina, Alexander A Visheratin, Denis Nasonov</p>
-                <p class="publications__article">In this work, we consider a problem of predicting the next state of a given area using retrospective information. The proposed concept of hierarchical context transfer (HCT) operates on several spatial levels of the input data to overcome
-                  major issues of next state prediction problems - density variability, a sig…</p>
+                <h3 class="publications__article-heading">Topic-driven Ensemble for Online Advertising Generation</h3>
+                <p class="publications__article-autors">Egor Nevezhin, Nikolay Butakov, Maria Khodorchenko, Maxim
+                  Petrov, Denis Nasonov</p>
+                <p class="publications__article">Online advertising is one of the most widespread ways to reach and
+                  increase a target audience for those selling products. Usually having a form of a banner, advertising
+                  engages users into visiting a corresponding webpage. Professional generation of banners requires
+                  creative and writing skills and a basi…</p>
+              </div>
+              <div class="tooltip-details">
+                <a
+                  href="https://scholar.google.ru/citations?view_op=view_citation&hl=ru&user=r5WYVCIAAAAJ&sortby=pubdate&citation_for_view=r5WYVCIAAAAJ:O3NaXMp0MMsC"
+                  class="publications__link-to-article" type="button"
+                  target="_blank">
+                  <p class="tooltip-details__heading">Читать полностью</p>
+                  <button class="tooltip-details__arrow"></button>
+                </a>
+                <button class="tooltip-details__share-icon"></button>
+
+                <div class="tooltip-social">
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/vk_emerald.svg"
+                                                                                alt="иконка ВКонтакте"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/facebook_emerald.svg"
+                                                                                alt="иконка Facebook"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/telegram_emerald.svg"
+                                                                                alt="иконка Телеграм"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/insta_emerald.svg"
+                                                                                alt="иконка Инстаграм"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/youtube_emerald.svg"
+                                                                                alt="иконка YouTube"
+                                                                                class="tooltip-social__icon"></a>
+                </div>
               </div>
             </li>
             <li class="publications__item">
-              <img class="publications__item-image" src="images/publication/publication_Convolutional neural networks with hierarchical context transfe….png" alt="">
+              <div class="publications__image-container publications__item-image_shrank">
+                <img
+                  class="publications__item-image"
+                  src="images/publication/publication_Convolutional neural networks with hierarchical context transfe….png"
+                  alt="Иллюстрация к статье">
+              </div>
               <div class="publications__item-text">
-                <h3 class="publications__article-heading">Convolutional neural networks with hierarchical context transfe…</h3>
+                <h3 class="publications__article-heading">Convolutional neural networks with hierarchical context
+                  transfe…</h3>
                 <p class="publications__article-autors">Ksenia D Mukhina, Alexander A Visheratin, Denis Nasonov</p>
-                <p class="publications__article">In this work, we consider a problem of predicting the next state of a given area using retrospective information. The proposed concept of hierarchical context transfer (HCT) operates on several spatial levels of the input data to overcome
+                <p class="publications__article">In this work, we consider a problem of predicting the next state of a
+                  given
+                  area using retrospective information. The proposed concept of hierarchical context transfer (HCT)
+                  operates
+                  on several spatial levels of the input data to overcome
                   major issues of next state prediction problems - density variability, a sig…</p>
+              </div>
+
+
+              <div class="tooltip-details">
+                <a
+                  href="https://scholar.google.ru/citations?view_op=view_citation&hl=ru&user=r5WYVCIAAAAJ&sortby=pubdate&citation_for_view=r5WYVCIAAAAJ:GnPB-g6toBAC"
+                  class="publications__link-to-article" type="button"
+                  target="_blank">
+                  <p class="tooltip-details__heading">Читать полностью</p>
+                  <button class="tooltip-details__arrow"></button>
+                </a>
+                <button class="tooltip-details__share-icon"></button>
+
+                <div class="tooltip-social">
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/vk_emerald.svg"
+                                                                                alt="иконка ВКонтакте"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/facebook_emerald.svg"
+                                                                                alt="иконка Facebook"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/telegram_emerald.svg"
+                                                                                alt="иконка Телеграм"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/insta_emerald.svg"
+                                                                                alt="иконка Инстаграм"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/youtube_emerald.svg"
+                                                                                alt="иконка YouTube"
+                                                                                class="tooltip-social__icon"></a>
+                </div>
               </div>
             </li>
             <li class="publications__item">
-              <img class="publications__item-image" src="images/publication/publication_Convolutional neural networks with hierarchical context transfe….png" alt="">
+              <div class="publications__image-container publications__item-image_shrank">
+                <img
+                  class="publications__item-image"
+                  src="images/publication/publication_Spatiotemporal%20Filtering%20Pipeline%20for%20Efficient%20Social%20Networks%20Dat….png"
+                  alt="Иллюстрация к статье">
+              </div>
               <div class="publications__item-text">
-                <h3 class="publications__article-heading">Convolutional neural networks with hierarchical context transfe…</h3>
-                <p class="publications__article-autors">Ksenia D Mukhina, Alexander A Visheratin, Denis Nasonov</p>
-                <p class="publications__article">In this work, we consider a problem of predicting the next state of a given area using retrospective information. The proposed concept of hierarchical context transfer (HCT) operates on several spatial levels of the input data to overcome
-                  major issues of next state prediction problems - density variability, a sig…</p>
+                <h3 class="publications__article-heading">Spatiotemporal Filtering Pipeline for Efficient Social
+                  Networks Dat…</h3>
+                <p class="publications__article-autors">Ksenia Mukhina, Alexander Visheratin, Denis Nasonov</p>
+                <p class="publications__article">One of the areas that gathers momentum is the investigation of
+                  location-based social networks (LBSNs) because the understanding of citizens’ behavior on various
+                  scales can help to improve quality of living, enhance urban management, and advance the development of
+                  smart cities. But it is widely known that the…</p>
+              </div>
+
+
+              <div class="tooltip-details">
+                <a
+                  href="https://scholar.google.ru/citations?view_op=view_citation&hl=ru&user=r5WYVCIAAAAJ&sortby=pubdate&citation_for_view=r5WYVCIAAAAJ:blknAaTinKkC"
+                  class="publications__link-to-article" type="button"
+                  target="_blank">
+                  <p class="tooltip-details__heading">Читать полностью</p>
+                  <button class="tooltip-details__arrow"></button>
+                </a>
+                <button class="tooltip-details__share-icon"></button>
+
+                <div class="tooltip-social">
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/vk_emerald.svg"
+                                                                                alt="иконка ВКонтакте"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/facebook_emerald.svg"
+                                                                                alt="иконка Facebook"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/telegram_emerald.svg"
+                                                                                alt="иконка Телеграм"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/insta_emerald.svg"
+                                                                                alt="иконка Инстаграм"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/youtube_emerald.svg"
+                                                                                alt="иконка YouTube"
+                                                                                class="tooltip-social__icon"></a>
+                </div>
+              </div>
+            </li>
+            <li class="publications__item">
+              <div class="publications__image-container publications__item-image_shrank">
+                <img
+                  class="publications__item-image"
+                  src="images/publication/publication_Hybrid%20Intellectual%20Scheme%20for%20Scheduling%20of%20Heterogeneous%20Wo….png"
+                  alt="Иллюстрация к статье">
+              </div>
+              <div class="publications__item-text">
+                <h3 class="publications__article-heading">Hybrid Intellectual Scheme for Scheduling of Heterogeneous
+                  Wo…</h3>
+                <p class="publications__article-autors">Mikhail Melnik, Ivan Dolgov, Denis
+                  Nasonov</p>
+                <p class="publications__article">Scheduling of workload in distributed computing systems is a well-known
+                  optimization proble. A workload
+                  may include single independent software packages. However, the computational process in scientific and
+                  industrial fields is often organized as composite applications or workflows which are represented by
+                  collection of interconnected...</p>
+              </div>
+
+
+              <div class="tooltip-details">
+                <a
+                  href="https://scholar.google.ru/citations?view_op=view_citation&hl=ru&user=r5WYVCIAAAAJ&sortby=pubdate&citation_for_view=r5WYVCIAAAAJ:J_g5lzvAfSwC"
+                  class="publications__link-to-article" type="button"
+                  target="_blank">
+                  <p class="tooltip-details__heading">Читать полностью</p>
+                  <button class="tooltip-details__arrow"></button>
+                </a>
+                <button class="tooltip-details__share-icon"></button>
+
+                <div class="tooltip-social">
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/vk_emerald.svg"
+                                                                                alt="иконка ВКонтакте"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/facebook_emerald.svg"
+                                                                                alt="иконка Facebook"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/telegram_emerald.svg"
+                                                                                alt="иконка Телеграм"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/insta_emerald.svg"
+                                                                                alt="иконка Инстаграм"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/youtube_emerald.svg"
+                                                                                alt="иконка YouTube"
+                                                                                class="tooltip-social__icon"></a>
+                </div>
+              </div>
+            </li>
+            <li class="publications__item">
+              <div class="publications__image-container publications__item-image_shrank">
+                <img
+                  class="publications__item-image"
+                  src="images/publication/publication_Detection%20of%20housing%20and%20utility%20problems%20in%20districts%20through%20soc.png"
+                  alt="Иллюстрация к статье">
+              </div>
+              <div class="publications__item-text">
+                <h3 class="publications__article-heading">Detection of housing and utility problems in districts through
+                  soc…</h3>
+                <p class="publications__article-autors">Alexandr Zamiralov, Maria Khodorchenko, Denis Nasonov</p>
+                <p class="publications__article">Social media stores a significant amount of information which can be
+                  used for extraction of specific knowledge. A variety of topics that arise there concerns a lot of
+                  everyday life aspects, including urban-related problems. In this work, we demonstrate the way of using
+                  the texts from social media on the topic of ho…</p>
+              </div>
+
+
+              <div class="tooltip-details">
+                <a
+                  href="https://scholar.google.ru/citations?view_op=view_citation&hl=ru&user=r5WYVCIAAAAJ&sortby=pubdate&citation_for_view=r5WYVCIAAAAJ:RGFaLdJalmkC"
+                  class="publications__link-to-article" type="button"
+                  target="_blank">
+                  <p class="tooltip-details__heading">Читать полностью</p>
+                  <button class="tooltip-details__arrow"></button>
+                </a>
+                <button class="tooltip-details__share-icon"></button>
+
+                <div class="tooltip-social">
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/vk_emerald.svg"
+                                                                                alt="иконка ВКонтакте"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/facebook_emerald.svg"
+                                                                                alt="иконка Facebook"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/telegram_emerald.svg"
+                                                                                alt="иконка Телеграм"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/insta_emerald.svg"
+                                                                                alt="иконка Инстаграм"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/youtube_emerald.svg"
+                                                                                alt="иконка YouTube"
+                                                                                class="tooltip-social__icon"></a>
+                </div>
+              </div>
+            </li>
+            <li class="publications__item">
+              <div class="publications__image-container publications__item-image_shrank">
+                <img
+                  class="publications__item-image"
+                  src="images/publication/publication_Decoupling%20graph%20convolutional%20networks%20for%20large-scale%20supervis….png"
+                  alt="Иллюстрация к статье">
+              </div>
+              <div class="publications__item-text">
+                <h3 class="publications__article-heading">Decoupling graph convolutional networks for large-scale
+                  supervis…</h3>
+                <p class="publications__article-autors">Mariia Koreneva, Alexander A Visheratin, Denis Nasonov</p>
+                <p class="publications__article">We present a new approach to large-scale supervised heterogeneous graph
+                  classification. We decouple a large heterogeneous graph into smaller homogeneous ones. In this paper,
+                  we show that our model provides results close to the state-of-the-art model while greatly simplifying
+                  calculations and makes it possible…</p>
+              </div>
+
+
+              <div class="tooltip-details">
+                <a
+                  href="https://scholar.google.ru/citations?view_op=view_citation&hl=ru&user=r5WYVCIAAAAJ&sortby=pubdate&citation_for_view=r5WYVCIAAAAJ:ns9cj8rnVeAC"
+                  class="publications__link-to-article" type="button"
+                  target="_blank">
+                  <p class="tooltip-details__heading">Читать полностью</p>
+                  <button class="tooltip-details__arrow"></button>
+                </a>
+                <button class="tooltip-details__share-icon"></button>
+
+                <div class="tooltip-social">
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/vk_emerald.svg"
+                                                                                alt="иконка ВКонтакте"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/facebook_emerald.svg"
+                                                                                alt="иконка Facebook"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/telegram_emerald.svg"
+                                                                                alt="иконка Телеграм"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/insta_emerald.svg"
+                                                                                alt="иконка Инстаграм"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/youtube_emerald.svg"
+                                                                                alt="иконка YouTube"
+                                                                                class="tooltip-social__icon"></a>
+                </div>
               </div>
             </li>
           </ul>
@@ -213,33 +496,1158 @@
         <div class="slider__page">
           <ul class="publications__container">
             <li class="publications__item">
-              <img class="publications__item-image" src="images/publication/publication_Convolutional neural networks with hierarchical context transfe….png" alt="">
+              <div class="publications__image-container publications__item-image_shrank">
+                <img
+                  class="publications__item-image"
+                  src="images/publication/publication_Peregreen–modular%20database%20for%20efficient%20storage%20of%20historical%20tim….png"
+                  alt="Иллюстрация к статье">
+              </div>
               <div class="publications__item-text">
-                <h3 class="publications__article-heading">Convolutional neural networks with hierarchical context transfe…</h3>
-                <p class="publications__article-autors">Ksenia D Mukhina, Alexander A Visheratin, Denis Nasonov</p>
-                <p class="publications__article">In this work, we consider a problem of predicting the next state of a given area using retrospective information. The proposed concept of hierarchical context transfer (HCT) operates on several spatial levels of the input data to overcome
-                  major issues of next state prediction problems - density variability, a sig…</p>
+                <h3 class="publications__article-heading">Peregreen–modular database for efficient storage of historical
+                  tim…</h3>
+                <p class="publications__article-autors">Ksenia D Mukhina, Alexander A Visheratin, Denis Nasonov, Lev
+                  Manovich</p>
+                <p class="publications__article">In this work, we show how social media data can be used for the
+                  improvement of touristic experience. We present an algorithm for automated touristic paths
+                  construction. Score function for location depends on three components: location's social media
+                  popularity and rating, distances of place from others in r…</p>
+              </div>
+
+
+              <div class="tooltip-details">
+                <a
+                  href="https://scholar.google.ru/citations?view_op=view_citation&hl=ru&user=r5WYVCIAAAAJ&sortby=pubdate&citation_for_view=r5WYVCIAAAAJ:hMod-77fHWUC"
+                  class="publications__link-to-article" type="button"
+                  target="_blank">
+                  <p class="tooltip-details__heading">Читать полностью</p>
+                  <button class="tooltip-details__arrow"></button>
+                </a>
+                <button class="tooltip-details__share-icon"></button>
+
+                <div class="tooltip-social">
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/vk_emerald.svg"
+                                                                                alt="иконка ВКонтакте"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/facebook_emerald.svg"
+                                                                                alt="иконка Facebook"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/telegram_emerald.svg"
+                                                                                alt="иконка Телеграм"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/insta_emerald.svg"
+                                                                                alt="иконка Инстаграм"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/youtube_emerald.svg"
+                                                                                alt="иконка YouTube"
+                                                                                class="tooltip-social__icon"></a>
+                </div>
               </div>
             </li>
             <li class="publications__item">
-              <img class="publications__item-image" src="images/publication/publication_Convolutional neural networks with hierarchical context transfe….png" alt="">
+              <div class="publications__image-container publications__item-image_shrank">
+                <img
+                  class="publications__item-image"
+                  src="images/publication/publication_Intelligent%20sightseeing%20in%20immensely%20manifold%20cities.png"
+                  alt="Иллюстрация к статье">
+              </div>
               <div class="publications__item-text">
-                <h3 class="publications__article-heading">Convolutional neural networks with hierarchical context transfe…</h3>
-                <p class="publications__article-autors">Ksenia D Mukhina, Alexander A Visheratin, Denis Nasonov</p>
-                <p class="publications__article">In this work, we consider a problem of predicting the next state of a given area using retrospective information. The proposed concept of hierarchical context transfer (HCT) operates on several spatial levels of the input data to overcome
-                  major issues of next state prediction problems - density variability, a sig…</p>
+                <h3 class="publications__article-heading">Intelligent sightseeing in immensely manifold cities: Case
+                  …</h3>
+                <p class="publications__article-autors">Ksenia D Mukhina, Alexander A Visheratin, Denis Nasonov, Lev
+                  Manovich</p>
+                <p class="publications__article">In this work, we show how social media data can be used for the
+                  improvement of touristic experience. We present an algorithm for automated touristic paths
+                  construction. Score function for location depends on three components: location's social media
+                  popularity and rating, distances of place from others in r…</p>
+              </div>
+
+
+              <div class="tooltip-details">
+                <a
+                  href="https://scholar.google.ru/citations?view_op=view_citation&hl=ru&user=r5WYVCIAAAAJ&sortby=pubdate&citation_for_view=r5WYVCIAAAAJ:k_IJM867U9cC"
+                  class="publications__link-to-article" type="button"
+                  target="_blank">
+                  <p class="tooltip-details__heading">Читать полностью</p>
+                  <button class="tooltip-details__arrow"></button>
+                </a>
+                <button class="tooltip-details__share-icon"></button>
+
+                <div class="tooltip-social">
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/vk_emerald.svg"
+                                                                                alt="иконка ВКонтакте"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/facebook_emerald.svg"
+                                                                                alt="иконка Facebook"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/telegram_emerald.svg"
+                                                                                alt="иконка Телеграм"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/insta_emerald.svg"
+                                                                                alt="иконка Инстаграм"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/youtube_emerald.svg"
+                                                                                alt="иконка YouTube"
+                                                                                class="tooltip-social__icon"></a>
+                </div>
               </div>
             </li>
             <li class="publications__item">
-              <img class="publications__item-image" src="images/publication/publication_Convolutional neural networks with hierarchical context transfe….png" alt="">
+              <div class="publications__image-container publications__item-image_shrank">
+                <img
+                  class="publications__item-image"
+                  src="images/publication/publication_User%20Profiles%20Matching%20for%20Different%20Social%20Networks%20Based.png"
+                  alt="Иллюстрация к статье">
+              </div>
               <div class="publications__item-text">
-                <h3 class="publications__article-heading">Convolutional neural networks with hierarchical context transfe…</h3>
+                <h3 class="publications__article-heading">User Profiles Matching for Different Social Networks Based
+                  …</h3>
+                <p class="publications__article-autors">Timur Sokhin, Nikolay Butakov, Denis Nasonov</p>
+                <p class="publications__article">It is common practice nowadays to use multiple social networks for
+                  different social roles. Although this, these networks assume differences in content type,
+                  communications and style of speech. If we intend to understand human behaviour as a key-feature for
+                  recommender systems, banking risk assessm…</p>
+              </div>
+
+
+              <div class="tooltip-details">
+                <a
+                  href="https://scholar.google.ru/citations?view_op=view_citation&hl=ru&user=r5WYVCIAAAAJ&sortby=pubdate&citation_for_view=r5WYVCIAAAAJ:4JMBOYKVnBMC"
+                  class="publications__link-to-article" type="button"
+                  target="_blank">
+                  <p class="tooltip-details__heading">Читать полностью</p>
+                  <button class="tooltip-details__arrow"></button>
+                </a>
+                <button class="tooltip-details__share-icon"></button>
+
+                <div class="tooltip-social">
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/vk_emerald.svg"
+                                                                                alt="иконка ВКонтакте"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/facebook_emerald.svg"
+                                                                                alt="иконка Facebook"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/telegram_emerald.svg"
+                                                                                alt="иконка Телеграм"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/insta_emerald.svg"
+                                                                                alt="иконка Инстаграм"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/youtube_emerald.svg"
+                                                                                alt="иконка YouTube"
+                                                                                class="tooltip-social__icon"></a>
+                </div>
+              </div>
+            </li>
+            <li class="publications__item">
+              <div class="publications__image-container publications__item-image_shrank">
+                <img
+                  class="publications__item-image"
+                  src="images/publication/publication_Orienteering%20Problem%20with%20Functional%20Profits%20for%20multi-sourc.png"
+                  alt="Иллюстрация к статье">
+              </div>
+              <div class="publications__item-text">
+                <h3 class="publications__article-heading">Orienteering Problem with Functional Profits for
+                  multi-sourc…</h3>
                 <p class="publications__article-autors">Ksenia D Mukhina, Alexander A Visheratin, Denis Nasonov</p>
-                <p class="publications__article"></p>
+                <p class="publications__article">Orienteering problem (OP) is a routing problem, where the aim is to
+                  generate a path through set of nodes, which would maximize total score and would not exceed the
+                  budget. In this paper, we present an extension of classic OP—Orienteering Problem with Functional
+                  Profits (OPFP), where the score of …</p>
+              </div>
+
+
+              <div class="tooltip-details">
+                <a
+                  href="https://scholar.google.ru/citations?view_op=view_citation&hl=ru&user=r5WYVCIAAAAJ&sortby=pubdate&citation_for_view=r5WYVCIAAAAJ:RHpTSmoSYBkC"
+                  class="publications__link-to-article" type="button"
+                  target="_blank">
+                  <p class="tooltip-details__heading">Читать полностью</p>
+                  <button class="tooltip-details__arrow"></button>
+                </a>
+                <button class="tooltip-details__share-icon"></button>
+
+                <div class="tooltip-social">
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/vk_emerald.svg"
+                                                                                alt="иконка ВКонтакте"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/facebook_emerald.svg"
+                                                                                alt="иконка Facebook"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/telegram_emerald.svg"
+                                                                                alt="иконка Телеграм"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/insta_emerald.svg"
+                                                                                alt="иконка Инстаграм"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/youtube_emerald.svg"
+                                                                                alt="иконка YouTube"
+                                                                                class="tooltip-social__icon"></a>
+                </div>
+              </div>
+            </li>
+            <li class="publications__item">
+              <div class="publications__image-container publications__item-image_shrank">
+                <img
+                  class="publications__item-image"
+                  src="images/publication/publication_Intellectual%20Execution%20Scheme%20of%20Iterative%20Computational%20Models%20….png"
+                  alt="Иллюстрация к статье">
+              </div>
+              <div class="publications__item-text">
+                <h3 class="publications__article-heading">Intellectual Execution Scheme of Iterative Computational
+                  Models …</h3>
+                <p class="publications__article-autors">Mikhail Melnik, Denis A Nasonov,
+                  Alexey Liniov</p>
+                <p class="publications__article">In the modern world, with the growth of the volume of processed data
+                  arrays, the logic of solving problems also
+                  becomes more complex. This leads more and more often to the need to use high-performance computational
+                  clusters, such as supercomputers. Created m…</p>
+              </div>
+
+
+              <div class="tooltip-details">
+                <a
+                  href="https://scholar.google.ru/citations?view_op=view_citation&hl=ru&user=r5WYVCIAAAAJ&sortby=pubdate&citation_for_view=r5WYVCIAAAAJ:maZDTaKrznsC"
+                  class="publications__link-to-article" type="button"
+                  target="_blank">
+                  <p class="tooltip-details__heading">Читать полностью</p>
+                  <button class="tooltip-details__arrow"></button>
+                </a>
+                <button class="tooltip-details__share-icon"></button>
+
+                <div class="tooltip-social">
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/vk_emerald.svg"
+                                                                                alt="иконка ВКонтакте"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/facebook_emerald.svg"
+                                                                                alt="иконка Facebook"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/telegram_emerald.svg"
+                                                                                alt="иконка Телеграм"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/insta_emerald.svg"
+                                                                                alt="иконка Инстаграм"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/youtube_emerald.svg"
+                                                                                alt="иконка YouTube"
+                                                                                class="tooltip-social__icon"></a>
+                </div>
+              </div>
+            </li>
+            <li class="publications__item">
+              <div class="publications__image-container publications__item-image_shrank">
+                <img
+                  class="publications__item-image"
+                  src="images/publication/publication_Urban%20events%20prediction%20via%20convolutional%20neural%20networks%20a….png"
+                  alt="Иллюстрация к статье">
+              </div>
+              <div class="publications__item-text">
+                <h3 class="publications__article-heading">Urban events prediction via convolutional neural networks
+                  a…</h3>
+                <p class="publications__article-autors">Ksenia D Mukhina, Alexander A Visheratin, Denis Nasonov</p>
+                <p class="publications__article">In today’s world, it is crucial to be proactive and be prepared for
+                  events which are not happening yet. Thus, there is no surprise that in the field of social media
+                  analysis the research agenda has moved from the development of event detection methods to a brand new
+                  area - event prediction models...</p>
+              </div>
+
+
+              <div class="tooltip-details">
+                <a
+                  href="https://scholar.google.ru/citations?view_op=view_citation&hl=ru&user=r5WYVCIAAAAJ&sortby=pubdate&citation_for_view=r5WYVCIAAAAJ:TFP_iSt0sucC"
+                  class="publications__link-to-article" type="button"
+                  target="_blank">
+                  <p class="tooltip-details__heading">Читать полностью</p>
+                  <button class="tooltip-details__arrow"></button>
+                </a>
+                <button class="tooltip-details__share-icon"></button>
+
+                <div class="tooltip-social">
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/vk_emerald.svg"
+                                                                                alt="иконка ВКонтакте"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/facebook_emerald.svg"
+                                                                                alt="иконка Facebook"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/telegram_emerald.svg"
+                                                                                alt="иконка Телеграм"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/insta_emerald.svg"
+                                                                                alt="иконка Инстаграм"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/youtube_emerald.svg"
+                                                                                alt="иконка YouTube"
+                                                                                class="tooltip-social__icon"></a>
+                </div>
               </div>
             </li>
           </ul>
         </div>
+
+        <div class="slider__page">
+          <ul class="publications__container">
+            <li class="publications__item">
+              <div class="publications__image-container publications__item-image_shrank">
+                <img
+                  class="publications__item-image"
+                  src="images/publication/publication_Ensemble-based%20method%20of%20answers%20retrieval%20for%20domain%20spe.png"
+                  alt="Иллюстрация к статье">
+              </div>
+              <div class="publications__item-text">
+                <h3 class="publications__article-heading">Ensemble-based method of answers retrieval for domain
+                  spe…</h3>
+                <p class="publications__article-autors">Iskander Safiulin, Nikolay Butakov, Dmitriy Alexandrov, Denis
+                  Nasonov</p>
+                <p class="publications__article">Many companies want or prefer to use chatbot systems to provide smart
+                  assistants for accompanying human specialists especially newbies with automatic consulting.
+                  Implementation of a really useful smart assistant for a specific domain requires a knowledge base for
+                  this domain, that often e…</p>
+              </div>
+              <div class="tooltip-details">
+                <a
+                  href="https://scholar.google.ru/citations?view_op=view_citation&hl=ru&user=r5WYVCIAAAAJ&sortby=pubdate&citation_for_view=r5WYVCIAAAAJ:bEWYMUwI8FkC"
+                  class="publications__link-to-article" type="button"
+                  target="_blank">
+                  <p class="tooltip-details__heading">Читать полностью</p>
+                  <button class="tooltip-details__arrow"></button>
+                </a>
+                <button class="tooltip-details__share-icon"></button>
+
+                <div class="tooltip-social">
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/vk_emerald.svg"
+                                                                                alt="иконка ВКонтакте"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/facebook_emerald.svg"
+                                                                                alt="иконка Facebook"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/telegram_emerald.svg"
+                                                                                alt="иконка Телеграм"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/insta_emerald.svg"
+                                                                                alt="иконка Инстаграм"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/youtube_emerald.svg"
+                                                                                alt="иконка YouTube"
+                                                                                class="tooltip-social__icon"></a>
+                </div>
+              </div>
+            </li>
+            <li class="publications__item">
+              <div class="publications__image-container publications__item-image_shrank">
+                <img
+                  class="publications__item-image"
+                  src="images/publication/publication_Evaluation%20of%20modern%20tools%20and%20techniques%20for%20storing%20time-serie.png"
+                  alt="Иллюстрация к статье">
+              </div>
+              <div class="publications__item-text">
+                <h3 class="publications__article-heading">Evaluation of modern tools and techniques for storing
+                  time-serie…</h3>
+                <p class="publications__article-autors">Alexey Struckov, Semen Yufa, Alexander A Visheratin, Denis
+                  Nasonov</p>
+                <p class="publications__article">Time series data as its analysis and applications recently have become
+                  increasingly important in different areas and domains. Many fields of science and industry rely on
+                  storing and processing large amounts of time series - economics and finance, medicine, the Internet of
+                  Things, environmental protection, …</p>
+              </div>
+
+
+              <div class="tooltip-details">
+                <a
+                  href="https://scholar.google.ru/citations?view_op=view_citation&hl=ru&user=r5WYVCIAAAAJ&sortby=pubdate&citation_for_view=r5WYVCIAAAAJ:iH-uZ7U-co4C"
+                  class="publications__link-to-article" type="button"
+                  target="_blank">
+                  <p class="tooltip-details__heading">Читать полностью</p>
+                  <button class="tooltip-details__arrow"></button>
+                </a>
+                <button class="tooltip-details__share-icon"></button>
+
+                <div class="tooltip-social">
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/vk_emerald.svg"
+                                                                                alt="иконка ВКонтакте"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/facebook_emerald.svg"
+                                                                                alt="иконка Facebook"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/telegram_emerald.svg"
+                                                                                alt="иконка Телеграм"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/insta_emerald.svg"
+                                                                                alt="иконка Инстаграм"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/youtube_emerald.svg"
+                                                                                alt="иконка YouTube"
+                                                                                class="tooltip-social__icon"></a>
+                </div>
+              </div>
+            </li>
+            <li class="publications__item">
+              <div class="publications__image-container publications__item-image_shrank">
+                <img
+                  class="publications__item-image"
+                  src="images/publication/publication_Workflow%20scheduling%20using%20neural%20networks%20and%20reinforcement%20lear.png"
+                  alt="Иллюстрация к статье">
+              </div>
+              <div class="publications__item-text">
+                <h3 class="publications__article-heading">Workflow scheduling using neural networks and reinforcement
+                  lear…</h3>
+                <p class="publications__article-autors">Mikhail Melnik, Denis Nasonov</p>
+                <p class="publications__article">The development of information technologies entails a nonlinear growth
+                  of both volumes of data and the complexity of data processing itself. Scheduling is one of the main
+                  components for optimizing the operation of the computing system. Currently, there are a large number
+                  of scheduling algorithms. However, even in spite of existing hybrid sch…</p>
+              </div>
+
+
+              <div class="tooltip-details">
+                <a
+                  href="https://scholar.google.ru/citations?view_op=view_citation&hl=ru&user=r5WYVCIAAAAJ&sortby=pubdate&citation_for_view=r5WYVCIAAAAJ:r0BpntZqJG4C"
+                  class="publications__link-to-article" type="button"
+                  target="_blank">
+                  <p class="tooltip-details__heading">Читать полностью</p>
+                  <button class="tooltip-details__arrow"></button>
+                </a>
+                <button class="tooltip-details__share-icon"></button>
+
+                <div class="tooltip-social">
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/vk_emerald.svg"
+                                                                                alt="иконка ВКонтакте"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/facebook_emerald.svg"
+                                                                                alt="иконка Facebook"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/telegram_emerald.svg"
+                                                                                alt="иконка Телеграм"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/insta_emerald.svg"
+                                                                                alt="иконка Инстаграм"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/youtube_emerald.svg"
+                                                                                alt="иконка YouTube"
+                                                                                class="tooltip-social__icon"></a>
+                </div>
+              </div>
+            </li>
+            <li class="publications__item">
+              <div class="publications__image-container publications__item-image_shrank">
+                <img
+                  class="publications__item-image"
+                  src="images/publication/publication_Building%20City-Scale%20Walking%20Itineraries%20Using%20Large%20Geospatia.png"
+                  alt="Иллюстрация к статье">
+              </div>
+              <div class="publications__item-text">
+                <h3 class="publications__article-heading">Building City-Scale Walking Itineraries Using Large
+                  Geospatia…</h3>
+                <p class="publications__article-autors">Ksenia D Mukhina, Alexander A Visheratin, Denis Nasonov</p>
+                <p class="publications__article">Nowadays, social networks play an important role in many aspects of
+                  people's life and in traveling in particular. People share their experience and opinions not only on
+                  specialized sites, like TripAdvisor, but also in social networks, e.g. Instagram. Combining
+                  information from different sources we can ge…</p>
+              </div>
+
+
+              <div class="tooltip-details">
+                <a
+                  href="https://scholar.google.ru/citations?view_op=view_citation&hl=ru&user=r5WYVCIAAAAJ&sortby=pubdate&citation_for_view=r5WYVCIAAAAJ:R3hNpaxXUhUC"
+                  class="publications__link-to-article" type="button"
+                  target="_blank">
+                  <p class="tooltip-details__heading">Читать полностью</p>
+                  <button class="tooltip-details__arrow"></button>
+                </a>
+                <button class="tooltip-details__share-icon"></button>
+
+                <div class="tooltip-social">
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/vk_emerald.svg"
+                                                                                alt="иконка ВКонтакте"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/facebook_emerald.svg"
+                                                                                alt="иконка Facebook"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/telegram_emerald.svg"
+                                                                                alt="иконка Телеграм"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/insta_emerald.svg"
+                                                                                alt="иконка Инстаграм"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/youtube_emerald.svg"
+                                                                                alt="иконка YouTube"
+                                                                                class="tooltip-social__icon"></a>
+                </div>
+              </div>
+            </li>
+            <li class="publications__item">
+              <div class="publications__image-container publications__item-image_shrank">
+                <img
+                  class="publications__item-image"
+                  src="images/publication/publication_Forecasting%20of%20the%20Urban%20Area%20State%20Using%20Convolutional%20Neural.png"
+                  alt="Иллюстрация к статье">
+              </div>
+              <div class="publications__item-text">
+                <h3 class="publications__article-heading">Forecasting of the Urban Area State Using Convolutional
+                  Neural…</h3>
+                <p class="publications__article-autors">Ksenia D Mukhina, Alexander A Visheratin, Gali-Ketema Mbogo,
+                  Denis Nasonov</p>
+                <p class="publications__article">Active development of modern cities requires not only efficient
+                  monitoring systems but furthermore forecasting systems that can predict future state of the urban area
+                  with high accuracy. In this work we present a method for urban area prediction based on geospatial
+                  activity of users in social network. One of the …</p>
+              </div>
+
+
+              <div class="tooltip-details">
+                <a
+                  href="https://scholar.google.ru/citations?view_op=view_citation&hl=ru&user=r5WYVCIAAAAJ&sortby=pubdate&citation_for_view=r5WYVCIAAAAJ:TQgYirikUcIC"
+                  class="publications__link-to-article" type="button"
+                  target="_blank">
+                  <p class="tooltip-details__heading">Читать полностью</p>
+                  <button class="tooltip-details__arrow"></button>
+                </a>
+                <button class="tooltip-details__share-icon"></button>
+
+                <div class="tooltip-social">
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/vk_emerald.svg"
+                                                                                alt="иконка ВКонтакте"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/facebook_emerald.svg"
+                                                                                alt="иконка Facebook"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/telegram_emerald.svg"
+                                                                                alt="иконка Телеграм"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/insta_emerald.svg"
+                                                                                alt="иконка Инстаграм"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/youtube_emerald.svg"
+                                                                                alt="иконка YouTube"
+                                                                                class="tooltip-social__icon"></a>
+                </div>
+              </div>
+            </li>
+            <li class="publications__item">
+              <div class="publications__image-container publications__item-image_shrank">
+                <img
+                  class="publications__item-image"
+                  src="images/publication/publication_Multiscale%20event%20detection%20using%20convolutional%20quadtrees%20and%20ada.png"
+                  alt="Иллюстрация к статье">
+              </div>
+              <div class="publications__item-text">
+                <h3 class="publications__article-heading">Multiscale event detection using convolutional quadtrees and
+                  ada…</h3>
+                <p class="publications__article-autors">A A Visheratin, K D Mukhina, A K Visheratina, D Nasonov, A V
+                  Boukhanovsky</p>
+                <p class="publications__article">Increasing popularity of social networks made them a viable data source
+                  for many data mining applications and event detection is no exception. Researchers aim not only to
+                  find events that happen in networks but more importantly to identify and locate events occurring in
+                  the real world. In this paper, we …</p>
+              </div>
+
+
+              <div class="tooltip-details">
+                <a
+                  href="https://scholar.google.ru/citations?view_op=view_citation&hl=ru&user=r5WYVCIAAAAJ&sortby=pubdate&citation_for_view=r5WYVCIAAAAJ:HDshCWvjkbEC"
+                  class="publications__link-to-article" type="button"
+                  target="_blank">
+                  <p class="tooltip-details__heading">Читать полностью</p>
+                  <button class="tooltip-details__arrow"></button>
+                </a>
+                <button class="tooltip-details__share-icon"></button>
+
+                <div class="tooltip-social">
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/vk_emerald.svg"
+                                                                                alt="иконка ВКонтакте"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/facebook_emerald.svg"
+                                                                                alt="иконка Facebook"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/telegram_emerald.svg"
+                                                                                alt="иконка Телеграм"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/insta_emerald.svg"
+                                                                                alt="иконка Инстаграм"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/youtube_emerald.svg"
+                                                                                alt="иконка YouTube"
+                                                                                class="tooltip-social__icon"></a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="slider__page">
+          <ul class="publications__container">
+            <li class="publications__item">
+              <div class="publications__image-container publications__item-image_shrank">
+                <img
+                  class="publications__item-image"
+                  src="images/publication/publication_Unified%20domain-specific%20language%20for%20collecting%20and%20processing%20dat.png"
+                  alt="Иллюстрация к статье">
+              </div>
+              <div class="publications__item-text">
+                <h3 class="publications__article-heading">Unified domain-specific language for collecting and
+                  processing…</h3>
+                <p class="publications__article-autors">Nikolay Butakov, Maxim Petrov, Ksenia Mukhina, Denis Nasonov,
+                  Sergey Kovalchuk</p>
+                <p class="publications__article">Data provided by social media becomes an increasingly important
+                  analysis material for social scientists, market analysts, and other stakeholders. Diversity of
+                  interests leads to the emergence of a variety of crawling techniques and programming solutions.
+                  Nevertheless, these solutions have a lack of flexibility to sati…</p>
+              </div>
+              <div class="tooltip-details">
+                <a
+                  href="https://scholar.google.ru/citations?view_op=view_citation&hl=ru&user=r5WYVCIAAAAJ&cstart=20&pagesize=80&sortby=pubdate&citation_for_view=r5WYVCIAAAAJ:7PzlFSSx8tAC"
+                  class="publications__link-to-article" type="button"
+                  target="_blank">
+                  <p class="tooltip-details__heading">Читать полностью</p>
+                  <button class="tooltip-details__arrow"></button>
+                </a>
+                <button class="tooltip-details__share-icon"></button>
+
+                <div class="tooltip-social">
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/vk_emerald.svg"
+                                                                                alt="иконка ВКонтакте"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/facebook_emerald.svg"
+                                                                                alt="иконка Facebook"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/telegram_emerald.svg"
+                                                                                alt="иконка Телеграм"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/insta_emerald.svg"
+                                                                                alt="иконка Инстаграм"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/youtube_emerald.svg"
+                                                                                alt="иконка YouTube"
+                                                                                class="tooltip-social__icon"></a>
+                </div>
+              </div>
+            </li>
+            <li class="publications__item">
+              <div class="publications__image-container publications__item-image_shrank">
+                <img
+                  class="publications__item-image"
+                  src="images/publication/publication_The%20multi-level%20adaptive%20approach%20for%20efficient%20execution%20of%20multi-sc.png"
+                  alt="Иллюстрация к статье">
+              </div>
+              <div class="publications__item-text">
+                <h3 class="publications__article-heading">The multi-level adaptive approach for efficient execution of
+                  multi-sc…</h3>
+                <p class="publications__article-autors">D Nasonov, N Butakov, M Melnik, A Visheratin, A Linev, P Shvets,
+                  S Sobolev, K Mukhina</p>
+                <p class="publications__article">Today advanced research is based on complex simulations which require a
+                  lot of computational resources that usually are organized in a very complicated way from technical
+                  part of the view. It means that a scientist from physics, biology or even sociology should struggle
+                  with all technical is…</p>
+              </div>
+
+
+              <div class="tooltip-details">
+                <a
+                  href="https://scholar.google.ru/citations?view_op=view_citation&hl=ru&user=r5WYVCIAAAAJ&cstart=20&pagesize=80&sortby=pubdate&citation_for_view=r5WYVCIAAAAJ:-f6ydRqryjwC"
+                  class="publications__link-to-article" type="button"
+                  target="_blank">
+                  <p class="tooltip-details__heading">Читать полностью</p>
+                  <button class="tooltip-details__arrow"></button>
+                </a>
+                <button class="tooltip-details__share-icon"></button>
+
+                <div class="tooltip-social">
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/vk_emerald.svg"
+                                                                                alt="иконка ВКонтакте"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/facebook_emerald.svg"
+                                                                                alt="иконка Facebook"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/telegram_emerald.svg"
+                                                                                alt="иконка Телеграм"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/insta_emerald.svg"
+                                                                                alt="иконка Инстаграм"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/youtube_emerald.svg"
+                                                                                alt="иконка YouTube"
+                                                                                class="tooltip-social__icon"></a>
+                </div>
+              </div>
+            </li>
+            <li class="publications__item">
+              <div class="publications__image-container publications__item-image_shrank">
+                <img
+                  class="publications__item-image"
+                  src="images/publication/publication_Precedent-Based%20Approach%20for%20the%20Identification%20of%20Deviant%20Behavio.png"
+                  alt="Иллюстрация к статье">
+              </div>
+              <div class="publications__item-text">
+                <h3 class="publications__article-heading">Precedent-Based Approach for the Identification of Deviant
+                  Behavio…</h3>
+                <p class="publications__article-autors">Anna V Kalyuzhnaya, Nikolay O Nikitin, Nikolay Butakov, Denis
+                  Nasonov</p>
+                <p class="publications__article">The current paper is devoted to a problem of deviant users’
+                  identification in social media. For this purpose, each user of social media source should be described
+                  through a profile that aggregates open information about him/her within the special structure.
+                  Aggregated user profiles are formally describ…</p>
+              </div>
+
+
+              <div class="tooltip-details">
+                <a
+                  href="https://scholar.google.ru/citations?view_op=view_citation&hl=ru&user=r5WYVCIAAAAJ&cstart=20&pagesize=80&sortby=pubdate&citation_for_view=r5WYVCIAAAAJ:IWHjjKOFINEC"
+                  class="publications__link-to-article" type="button"
+                  target="_blank">
+                  <p class="tooltip-details__heading">Читать полностью</p>
+                  <button class="tooltip-details__arrow"></button>
+                </a>
+                <button class="tooltip-details__share-icon"></button>
+
+                <div class="tooltip-social">
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/vk_emerald.svg"
+                                                                                alt="иконка ВКонтакте"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/facebook_emerald.svg"
+                                                                                alt="иконка Facebook"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/telegram_emerald.svg"
+                                                                                alt="иконка Телеграм"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/insta_emerald.svg"
+                                                                                alt="иконка Инстаграм"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/youtube_emerald.svg"
+                                                                                alt="иконка YouTube"
+                                                                                class="tooltip-social__icon"></a>
+                </div>
+              </div>
+            </li>
+            <li class="publications__item">
+              <div class="publications__image-container publications__item-image_shrank">
+                <img
+                  class="publications__item-image"
+                  src="images/publication/publication_Blockchain-based%20transaction%20integrity%20in%20distributed%20big%20data.png"
+                  alt="Иллюстрация к статье">
+              </div>
+              <div class="publications__item-text">
+                <h3 class="publications__article-heading">Blockchain-based transaction integrity in distributed big data
+                  …</h3>
+                <p class="publications__article-autors">Denis Nasonov, Alexander A Visheratin, Alexander
+                  Boukhanovsky</p>
+                <p class="publications__article">Today Big Data occupies a crucial part of scientific research areas as
+                  well as in the business analysis of large companies. Each company tries to find the best way to make
+                  generated Big Data sets valuable and profitable. However, in most cases, companies have not enough
+                  opportunities and budget t…</p>
+              </div>
+
+
+              <div class="tooltip-details">
+                <a
+                  href="https://scholar.google.ru/citations?view_op=view_citation&hl=ru&user=r5WYVCIAAAAJ&cstart=20&pagesize=80&sortby=pubdate&citation_for_view=r5WYVCIAAAAJ:ZeXyd9-uunAC"
+                  class="publications__link-to-article" type="button"
+                  target="_blank">
+                  <p class="tooltip-details__heading">Читать полностью</p>
+                  <button class="tooltip-details__arrow"></button>
+                </a>
+                <button class="tooltip-details__share-icon"></button>
+
+                <div class="tooltip-social">
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/vk_emerald.svg"
+                                                                                alt="иконка ВКонтакте"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/facebook_emerald.svg"
+                                                                                alt="иконка Facebook"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/telegram_emerald.svg"
+                                                                                alt="иконка Телеграм"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/insta_emerald.svg"
+                                                                                alt="иконка Инстаграм"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/youtube_emerald.svg"
+                                                                                alt="иконка YouTube"
+                                                                                class="tooltip-social__icon"></a>
+                </div>
+              </div>
+            </li>
+            <li class="publications__item">
+              <div class="publications__image-container publications__item-image_shrank">
+                <img
+                  class="publications__item-image"
+                  src="images/publication/publication_Towards%20a%20scenario-based%20solution%20for%20extreme%20metocean%20event%20sim.png"
+                  alt="Иллюстрация к статье">
+              </div>
+              <div class="publications__item-text">
+                <h3 class="publications__article-heading">Towards a scenario-based solution for extreme metocean event
+                  sim…</h3>
+                <p class="publications__article-autors">A Kalyuzhnaya, D Nasonov, S Ivanov, S Kosukhin, A
+                  Boukhanovsky</p>
+                <p class="publications__article">Today, metocean investigations, combined with forecasts and analysis of
+                  extreme events, require new design and development approaches because of their complexity. Extreme
+                  metocean events forecasting and prevention is an urgent computing task from decision-making and for
+                  reaction point of view.</p>
+              </div>
+
+
+              <div class="tooltip-details">
+                <a
+                  href="https://scholar.google.ru/citations?view_op=view_citation&hl=ru&user=r5WYVCIAAAAJ&cstart=20&pagesize=80&sortby=pubdate&citation_for_view=r5WYVCIAAAAJ:qxL8FJ1GzNcC"
+                  class="publications__link-to-article" type="button"
+                  target="_blank">
+                  <p class="tooltip-details__heading">Читать полностью</p>
+                  <button class="tooltip-details__arrow"></button>
+                </a>
+                <button class="tooltip-details__share-icon"></button>
+
+                <div class="tooltip-social">
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/vk_emerald.svg"
+                                                                                alt="иконка ВКонтакте"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/facebook_emerald.svg"
+                                                                                alt="иконка Facebook"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/telegram_emerald.svg"
+                                                                                alt="иконка Телеграм"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/insta_emerald.svg"
+                                                                                alt="иконка Инстаграм"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/youtube_emerald.svg"
+                                                                                alt="иконка YouTube"
+                                                                                class="tooltip-social__icon"></a>
+                </div>
+              </div>
+            </li>
+            <li class="publications__item">
+              <div class="publications__image-container publications__item-image_shrank">
+                <img
+                  class="publications__item-image"
+                  src="images/publication/publication_Storage%20tier-aware%20replicative%20data%20reorganization%20with%20prioritization.png"
+                  alt="Иллюстрация к статье">
+              </div>
+              <div class="publications__item-text">
+                <h3 class="publications__article-heading">Storage tier-aware replicative data reorganization with
+                  prioritization…</h3>
+                <p class="publications__article-autors">Anton Spivak, Andrew Razumovskiy, Denis Nasonov, Alexander
+                  Boukhanovsky, Anton Redice</p>
+                <p class="publications__article">The importance of data collection, processing, and analysis is rapidly
+                  growing. Big Data technologies are in high demand in many fields, including bio-informatics,
+                  hydrometeorology, and high energy physics. One of the most popular computational paradigms used in
+                  large data processing fra…</p>
+              </div>
+
+
+              <div class="tooltip-details">
+                <a
+                  href="https://scholar.google.ru/citations?view_op=view_citation&hl=ru&user=r5WYVCIAAAAJ&cstart=20&pagesize=80&sortby=pubdate&citation_for_view=r5WYVCIAAAAJ:YOwf2qJgpHMC"
+                  class="publications__link-to-article" type="button"
+                  target="_blank">
+                  <p class="tooltip-details__heading">Читать полностью</p>
+                  <button class="tooltip-details__arrow"></button>
+                </a>
+                <button class="tooltip-details__share-icon"></button>
+
+                <div class="tooltip-social">
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/vk_emerald.svg"
+                                                                                alt="иконка ВКонтакте"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/facebook_emerald.svg"
+                                                                                alt="иконка Facebook"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/telegram_emerald.svg"
+                                                                                alt="иконка Телеграм"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/insta_emerald.svg"
+                                                                                alt="иконка Инстаграм"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/youtube_emerald.svg"
+                                                                                alt="иконка YouTube"
+                                                                                class="tooltip-social__icon"></a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="slider__page">
+          <ul class="publications__container">
+            <li class="publications__item">
+              <div class="publications__image-container publications__item-image_shrank">
+                <img
+                  class="publications__item-image"
+                  src="images/publication/publication_Hybrid%20scheduling%20algorithm%20in%20early%20warning%20systems.png"
+                  alt="Иллюстрация к статье">
+              </div>
+              <div class="publications__item-text">
+                <h3 class="publications__article-heading">Hybrid scheduling algorithm in early warning systems</h3>
+                <p class="publications__article-autors">A Visheratin, M Melnik, D Nasonov, N Butakov, A Boukhanovsky</p>
+                <p class="publications__article">The development of an efficient Early Warning System (EWS) is essential
+                  for the prediction and prevention of imminent natural hazards. In addition to providing a
+                  computationally intensive infrastructure with extensive data transfer, high-execution reliability and
+                  hard-deadline satisfaction are important req…</p>
+              </div>
+              <div class="tooltip-details">
+                <a
+                  href="https://scholar.google.ru/citations?view_op=view_citation&hl=ru&user=r5WYVCIAAAAJ&cstart=20&pagesize=80&sortby=pubdate&citation_for_view=r5WYVCIAAAAJ:ULOm3_A8WrAC"
+                  class="publications__link-to-article" type="button"
+                  target="_blank">
+                  <p class="tooltip-details__heading">Читать полностью</p>
+                  <button class="tooltip-details__arrow"></button>
+                </a>
+                <button class="tooltip-details__share-icon"></button>
+
+                <div class="tooltip-social">
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/vk_emerald.svg"
+                                                                                alt="иконка ВКонтакте"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/facebook_emerald.svg"
+                                                                                alt="иконка Facebook"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/telegram_emerald.svg"
+                                                                                alt="иконка Телеграм"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/insta_emerald.svg"
+                                                                                alt="иконка Инстаграм"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/youtube_emerald.svg"
+                                                                                alt="иконка YouTube"
+                                                                                class="tooltip-social__icon"></a>
+                </div>
+              </div>
+            </li>
+            <li class="publications__item">
+              <div class="publications__image-container publications__item-image_shrank">
+                <img
+                  class="publications__item-image"
+                  src="images/publication/publication_Distributed%20data-driven%20platform%20for%20urgent%20decision%20making%20in%20car.png"
+                  alt="Иллюстрация к статье">
+              </div>
+              <div class="publications__item-text">
+                <h3 class="publications__article-heading">Distributed data-driven platform for urgent decision making in
+                  car…</h3>
+                <p class="publications__article-autors">Sergey V Kovalchuk, Evgeniy Krotov, Pavel A Smirnov, Denis A
+                  Nasonov, Alexey N Yakovlev</p>
+                <p class="publications__article">his paper presents ongoing research aimed at developing a data-driven
+                  platform for clinical decision support systems (DSSs) that require integration and processing of
+                  various data sources within a single solution. Resource management is developed within a framework of
+                  an urgent computing approach to address …</p>
+              </div>
+
+
+              <div class="tooltip-details">
+                <a
+                  href="https://scholar.google.ru/citations?view_op=view_citation&hl=ru&user=r5WYVCIAAAAJ&cstart=20&pagesize=80&sortby=pubdate&citation_for_view=r5WYVCIAAAAJ:0EnyYjriUFMC"
+                  class="publications__link-to-article" type="button"
+                  target="_blank">
+                  <p class="tooltip-details__heading">Читать полностью</p>
+                  <button class="tooltip-details__arrow"></button>
+                </a>
+                <button class="tooltip-details__share-icon"></button>
+
+                <div class="tooltip-social">
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/vk_emerald.svg"
+                                                                                alt="иконка ВКонтакте"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/facebook_emerald.svg"
+                                                                                alt="иконка Facebook"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/telegram_emerald.svg"
+                                                                                alt="иконка Телеграм"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/insta_emerald.svg"
+                                                                                alt="иконка Инстаграм"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/youtube_emerald.svg"
+                                                                                alt="иконка YouTube"
+                                                                                class="tooltip-social__icon"></a>
+                </div>
+              </div>
+            </li>
+            <li class="publications__item">
+              <div class="publications__image-container publications__item-image_shrank">
+                <img
+                  class="publications__item-image"
+                  src="images/publication/publication_Byzantine%20fault-tolerant%20and%20semantic-driven%20consensus%20proto.png"
+                  alt="Иллюстрация к статье">
+              </div>
+              <div class="publications__item-text">
+                <h3 class="publications__article-heading">Byzantine fault-tolerant and semantic-driven consensus
+                  proto…</h3>
+                <p class="publications__article-autors">Stepan Rakitin, Alexander A Visheratin, Denis Nasonov</p>
+                <p class="publications__article">To provide fault tolerance, modern distributed storage systems use
+                  specialized network topologies and consensus protocols that create high overheads. The main
+                  disadvantage of existing specialized topologies is a difficulty to implement an efficient data
+                  placement that takes into account locality of the data. In scie…</p>
+              </div>
+
+
+              <div class="tooltip-details">
+                <a
+                  href="https://scholar.google.ru/citations?view_op=view_citation&hl=ru&user=r5WYVCIAAAAJ&cstart=20&pagesize=80&sortby=pubdate&citation_for_view=r5WYVCIAAAAJ:hC7cP41nSMkC"
+                  class="publications__link-to-article" type="button"
+                  target="_blank">
+                  <p class="tooltip-details__heading">Читать полностью</p>
+                  <button class="tooltip-details__arrow"></button>
+                </a>
+                <button class="tooltip-details__share-icon"></button>
+
+                <div class="tooltip-social">
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/vk_emerald.svg"
+                                                                                alt="иконка ВКонтакте"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/facebook_emerald.svg"
+                                                                                alt="иконка Facebook"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/telegram_emerald.svg"
+                                                                                alt="иконка Телеграм"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/insta_emerald.svg"
+                                                                                alt="иконка Инстаграм"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/youtube_emerald.svg"
+                                                                                alt="иконка YouTube"
+                                                                                class="tooltip-social__icon"></a>
+                </div>
+              </div>
+            </li>
+            <li class="publications__item">
+              <div class="publications__image-container publications__item-image_shrank">
+                <img
+                  class="publications__item-image"
+                  src="images/publication/publication_Adaptive%20performance%20model%20for%20dynamic%20scaling%20Apache%20Spark%20St.png"
+                  alt="Иллюстрация к статье">
+              </div>
+              <div class="publications__item-text">
+                <h3 class="publications__article-heading">Adaptive performance model for dynamic scaling Apache Spark
+                  St…</h3>
+                <p class="publications__article-autors">Max Petrov, Nikolay Butakov, Denis Nasonov, Mikhail Melnik</p>
+                <p class="publications__article">Nowadays, data volumes increase exceptionally, a lot of information
+                  comes from different sources, for example, from mobile phones, sensors, traffic, etc. All information
+                  from these sources can be represented as a data streams, which can grow up and fall in time in their
+                  size. In the first case, data proce…</p>
+              </div>
+
+
+              <div class="tooltip-details">
+                <a
+                  href="https://scholar.google.ru/citations?view_op=view_citation&hl=ru&user=r5WYVCIAAAAJ&cstart=20&pagesize=80&sortby=pubdate&citation_for_view=r5WYVCIAAAAJ:qUcmZB5y_30C"
+                  class="publications__link-to-article" type="button"
+                  target="_blank">
+                  <p class="tooltip-details__heading">Читать полностью</p>
+                  <button class="tooltip-details__arrow"></button>
+                </a>
+                <button class="tooltip-details__share-icon"></button>
+
+                <div class="tooltip-social">
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/vk_emerald.svg"
+                                                                                alt="иконка ВКонтакте"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/facebook_emerald.svg"
+                                                                                alt="иконка Facebook"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/telegram_emerald.svg"
+                                                                                alt="иконка Телеграм"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/insta_emerald.svg"
+                                                                                alt="иконка Инстаграм"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/youtube_emerald.svg"
+                                                                                alt="иконка YouTube"
+                                                                                class="tooltip-social__icon"></a>
+                </div>
+              </div>
+            </li>
+            <li class="publications__item">
+              <div class="publications__image-container publications__item-image_shrank">
+                <img
+                  class="publications__item-image"
+                  src="images/publication/publication_Hybrid%20evolutionary%20workflow%20scheduling%20algorithm%20for%20dynami.png"
+                  alt="Иллюстрация к статье">
+              </div>
+              <div class="publications__item-text">
+                <h3 class="publications__article-heading">Hybrid evolutionary workflow scheduling algorithm for
+                  dynami…</h3>
+                <p class="publications__article-autors">D Nasonov, A Visheratin, N Butakov, N Shindyapina, M Melnik, A
+                  Boukhanovsky</p>
+                <p class="publications__article">he optimal workflow scheduling is one of the most important issues in
+                  heterogeneous distributed computational environments. Existing heuristic and evolutionary scheduling
+                  algorithms have their advantages and disadvantages. In this work we propose a hybrid algorithm based
+                  on heuristic methods…</p>
+              </div>
+
+              <div class="tooltip-details">
+                <a
+                  href="https://scholar.google.ru/citations?view_op=view_citation&hl=ru&user=r5WYVCIAAAAJ&cstart=20&pagesize=80&sortby=pubdate&citation_for_view=r5WYVCIAAAAJ:QIV2ME_5wuYC"
+                  class="publications__link-to-article" type="button"
+                  target="_blank">
+                  <p class="tooltip-details__heading">Читать полностью</p>
+                  <button class="tooltip-details__arrow"></button>
+                </a>
+                <button class="tooltip-details__share-icon"></button>
+
+                <div class="tooltip-social">
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/vk_emerald.svg"
+                                                                                alt="иконка ВКонтакте"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/facebook_emerald.svg"
+                                                                                alt="иконка Facebook"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/telegram_emerald.svg"
+                                                                                alt="иконка Телеграм"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/insta_emerald.svg"
+                                                                                alt="иконка Инстаграм"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/youtube_emerald.svg"
+                                                                                alt="иконка YouTube"
+                                                                                class="tooltip-social__icon"></a>
+                </div>
+              </div>
+            </li>
+            <li class="publications__item">
+              <div class="publications__image-container publications__item-image_shrank">
+                <img
+                  class="publications__item-image"
+                  src="images/publication/publication_Execution%20time%20estimation%20for%20workflow%20scheduling.png"
+                  alt="Иллюстрация к статье">
+              </div>
+              <div class="publications__item-text">
+                <h3 class="publications__article-heading">Execution time estimation for workflow scheduling</h3>
+                <p class="publications__article-autors">A Chirkin, Adam SZ Belloum, S Kovalchuk, Marc X Makkes, M
+                  Melnik, A Visheratin, D Nasonov</p>
+                <p class="publications__article">Estimation of the execution time is an important part of the workflow
+                  scheduling problem. The aim of this paper is to highlight common problems in estimating the workflow
+                  execution time and propose a solution that takes into account the complexity and the stochastic
+                  aspects of the workflow compone…</p>
+              </div>
+
+
+              <div class="tooltip-details">
+                <a
+                  href="https://scholar.google.ru/citations?view_op=view_citation&hl=ru&user=r5WYVCIAAAAJ&cstart=20&pagesize=80&sortby=pubdate&citation_for_view=r5WYVCIAAAAJ:kNdYIx-mwKoC"
+                  class="publications__link-to-article" type="button"
+                  target="_blank">
+                  <p class="tooltip-details__heading">Читать полностью</p>
+                  <button class="tooltip-details__arrow"></button>
+                </a>
+                <button class="tooltip-details__share-icon"></button>
+
+                <div class="tooltip-social">
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/vk_emerald.svg"
+                                                                                alt="иконка ВКонтакте"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/facebook_emerald.svg"
+                                                                                alt="иконка Facebook"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/telegram_emerald.svg"
+                                                                                alt="иконка Телеграм"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/insta_emerald.svg"
+                                                                                alt="иконка Инстаграм"
+                                                                                class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/youtube_emerald.svg"
+                                                                                alt="иконка YouTube"
+                                                                                class="tooltip-social__icon"></a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
         <button class="slider__arrow slider__arrow_left" id="left-arrow"></button>
         <button class=" slider__arrow slider__arrow_right " id="right-arrow"></button>
         <div class="slider__dots-container">
@@ -249,23 +1657,24 @@
         </template>
       </div>
     </section>
-  <section class="team"></section>
-  <section class="partners"></section>
-  <section class="feedback"></section>
-  <footer class="footer"></footer>
-  <template id="ai-reserch-popup-template">
-    <div class="popup-ai-research">
-      <div class="popup-ai-research__main-container">
-        <img src="" alt="" class="popup-ai-research__img">
+    <section class="team"></section>
+    <section class="partners"></section>
+    <section class="feedback"></section>
+    <footer class="footer"></footer>
+    <template id="ai-reserch-popup-template">
+      <div class="popup-ai-research">
+        <div class="popup-ai-research__main-container">
+          <img src="" alt="" class="popup-ai-research__img">
           <button type="button" class="popup-ai-research__close" aria-label="Закрыть окно просмотра."></button>
           <h3 class="popup-ai-research__title"></h3>
-        <div class="popup-ai-research__text-container">
+          <div class="popup-ai-research__text-container">
+          </div>
         </div>
       </div>
-    </div>
-  </template>
-  <script src="./scripts/script.js"></script>
-  <script src="./scripts/ai-research-popups.js"></script>
-  <script src="./scripts/script_slider.js"></script>
-</body>
+    </template>
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/ai-research-popups.js"></script>
+    <script src="./scripts/script_slider.js"></script>
+    <script src="scripts/tooltips-publications.js"></script>
+  </body>
 </html>
