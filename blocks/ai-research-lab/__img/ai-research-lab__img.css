@@ -1,6 +1,8 @@
 .ai-research-lab__img {
   object-fit: cover;
   max-width: 49%;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .ai-research-lab__img:first-of-type {
