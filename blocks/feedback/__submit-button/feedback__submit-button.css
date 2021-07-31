@@ -1,0 +1,27 @@
+.feedback__submit-button {
+  grid-area: submit;
+  border: 1px solid white;
+  border-radius: 10px;
+  background-color: #009FAC;
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 30px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 425px) {
+  .feedback__submit-button {
+    font-size: 14px;
+    line-height: 19px;
+    border-radius: 5px;
+  }
+}
+
+.feedback__submit-button:hover {
+  opacity: 0.6;
+}
+
+.feedback__submit-button:active {
+  opacity: 1;
+}

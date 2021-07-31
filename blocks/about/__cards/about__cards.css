@@ -15,7 +15,7 @@
 
 @media all and (max-width: 768px) {
   .about__cards {
-    left:   calc(37.27vw - 99.28px);/*calc(561px - 384px + 50vw - 384px + 10px);*/
+    /*left:   calc() ;calc(37.27vw - 99.28px);calc(561px - 384px + 50vw - 384px + 10px);*/
     width: 1050px;
   }
 }

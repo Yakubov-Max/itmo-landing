@@ -1,0 +1,9 @@
+.section-title__about {
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 320px) {
+  .section-title {
+    margin-bottom: 12px;
+  }
+}

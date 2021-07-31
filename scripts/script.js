@@ -4,7 +4,9 @@ function include(url) {
   document.getElementsByTagName('head')[0].appendChild(script);
 }
 include("./scripts/about-script.js");
+include("./scripts/team-script.js");
 include("./scripts/projects.js");
+include("./scripts/feedback.js");
 //console.log('DOM loaded')
 
 const buttonPopupAiReseach1 = document.querySelector('#ai-research-button-one');
