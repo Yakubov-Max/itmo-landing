@@ -166,6 +166,17 @@
 @import url(../blocks/education/__flex-container/_visible/education__flex-container_visible.css);
 @import url(../blocks/education/__wraper/education__wraper.css);
 
+@import url(../blocks/feedback/feedback.css);
+@import url(../blocks/feedback/__email/feedback__email.css);
+@import url(../blocks/feedback/__first-name/feedback__first-name.css);
+@import url(../blocks/feedback/__form-item/feedback__form-item.css);
+@import url(../blocks/feedback/__form/feedback__form.css);
+@import url(../blocks/feedback/__last-name/feedback__last-name.css);
+@import url(../blocks/feedback/__message/feedback__message.css);
+@import url(../blocks/feedback/__number/feedback__number.css);
+@import url(../blocks/feedback/__submit-button/feedback__submit-button.css);
+@import url(../blocks/feedback/__text/feedback__text.css);
+
 @import url(../blocks/footer/footer.css);
 @import url(../blocks/footer/__aboutCenter/footer__aboutCenter.css);
 @import url(../blocks/footer/__adress/footer__adress.css);
