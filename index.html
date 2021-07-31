@@ -304,7 +304,18 @@
     </section>
   <section class="team"></section>
   <section class="partners"></section>
-  <section class="feedback"></section>
+  <section class="feedback">
+    <h2 class="section-title section-title_color_white">Всегда на связи</h2>
+    <p class="feedback__text">По всем интересующим вас вопросам вы всегда можете обратиться по указанным телефонам, написать на почту или оставтиь свое сообщение через форму обратной связи. </p>
+    <form action="" class="feedback__form">
+      <input type="text" required class="feedback__form-item feedback__first-name" placeholder="Имя">
+      <input type="text" required class="feedback__form-item feedback__last-name" placeholder="Фамилия">
+      <input type="number" required class="feedback__form-item feedback__number" placeholder="Телефон">
+      <input type="email" required class="feedback__form-item feedback__email" placeholder="E-mail">
+      <textarea type="text" required class="feedback__form-item feedback__message" placeholder="Сообщение"></textarea>
+      <input type="submit" class="feedback__submit-button">
+    </form>
+  </section>
   <template id="ai-reserch-popup-template">
     <div class="popup-ai-research">
       <div class="popup-ai-research__main-container">
@@ -323,9 +334,9 @@
     <div class="footer__content">
       <div class="footer__information">
         <img src="./images/Logo_AI1.svg" alt="Логотип лаборатории" class="footer__logo">
-        
+
         <p class="footer__copyright">Информация © 2020 Университет ИТМО </p>
-        
+
         <p class="footer__information-text">
           Национальный центр когнитивных разработок – центр национальной технологической инициативы (НТИ), получивший государственную поддержку
           по направлению «Технологии машинного обучения
