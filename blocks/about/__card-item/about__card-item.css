@@ -14,12 +14,14 @@
 @media all and (max-width: 768px) {
   .about__card-item{
     width: 330px;
+    height: 330px;
   }
 }
 
 @media all and (max-width: 320px) {
   .about__card-item {
     width: 288px;
+    height: 250px;
   }
 }
 
