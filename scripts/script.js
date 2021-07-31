@@ -18,6 +18,12 @@ const buttonChangeEducation = document.querySelector('.education__buttons-contai
 const aspirantePartButton = document.querySelector('#aspirante');                       // Часть кнопки аспирантов.
 const magistracyPartButton = document.querySelector('#magistracy');                     // Часть кнопки магистратуры.
 const aspiranteContent = document.querySelector('.education__flex-container_absolute'); // Основной меняющийся контент про обучение.
+const page = document.querySelector('.page');                                           // Блок для установки класса с блокировкой скролла приоткрытом попапе.
+
+// Остановка скролла при открытом попап AiResearch.
+const changeScrollWithPopup = () => {
+  page.classList.toggle('page_hidden');
+}
 
 // Смена контента про виды обучения.
 const handleChangeEducation = () => {
@@ -35,6 +41,7 @@ const handleCloseAiResearchPopup = () => {
   const popupAiResearch = document.querySelector('.popup-ai-research');
   popupAiResearch.classList.remove('popup-ai-research_active');
   deleteInnerPopupAiResearch();
+  changeScrollWithPopup();
 }
 
 // Создание клона попапа AiResearch.
@@ -91,6 +98,7 @@ const handleCreateAiResearchPopup = (item) => {
   fillTextPopupAiResearch(item);           // Добавление текстового содержимого в попап AiResearch.
   buttonCloseAiResearchPopup.addEventListener('click', handleCloseAiResearchPopup);
   popup.classList.add('popup-ai-research_active');
+  changeScrollWithPopup();
 }
 
 // Удаление popup AiResearch из разметки.
