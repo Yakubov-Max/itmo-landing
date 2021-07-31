@@ -105,6 +105,7 @@
 
 @import url(../blocks/section-background/_light-blue/section-background_light-blue.css);
 @import url(../blocks/section-title/_color/section-title_color_blue.css);
+@import url(../blocks/section-title/__team/section-title__team.css);
 @import url(../blocks/section-title/_color/section-title_color_white.css);
 @import url(../blocks/section-title/_color/section-title_color_dark-blue.css);
 
@@ -125,6 +126,24 @@
 @import url(../blocks/slider/__dots-container/slider__dots-container.css);
 @import url(../blocks/slider/__dots/slider__dots.css);
 @import url(../blocks/slider/__dots/_active/slider__dots_active.css);
+
+@import url(../blocks/team/__roll-to-right/team__roll-to-right.css);
+@import url(../blocks/team/__roll-to-left/team__roll-to-left.css);
+@import url(../blocks/team/__card-item/team__card-item.css);
+@import url(../blocks/team/__card-item/team__card-item_opacityTransition.css);
+@import url(../blocks/team/__card-item/team__card-item_show.css);
+@import url(../blocks/team/__card-item/team__card-item_zeroOpacity.css);
+@import url(../blocks/team/__card-item/team__card-item_zeroTransition.css);
+@import url(../blocks/team/__dot/team__dot.css);
+@import url(../blocks/team/team.css);
+@import url(../blocks/team/__dots/team__dots.css);
+@import url(../blocks/team/__dot/team__dot_active.css);
+@import url(../blocks/team/__card-photo/team__card-photo.css);
+@import url(../blocks/team/__card-surname/team__card-surname.css);
+@import url(../blocks/team/__card-shortPost/team__card-shortPost.css);
+@import url(../blocks/team/__cards/team__cards.css);
+@import url(../blocks/team/__card-post/team__card-post.css);
+@import url(../blocks/team/__card-name/team__card-name.css);
 
 @import url(../blocks/education/education.css);
 @import url(../blocks/education/__flex-container/_absolute/education__flex-container_absolute.css);
