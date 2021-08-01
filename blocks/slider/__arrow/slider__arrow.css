@@ -16,3 +16,9 @@
 .slider__arrow:active {
   background-color: #009FAC;
 }
+
+@media screen and (max-width: 854px) {
+  .slider__arrow {
+    display: none;
+  }
+}

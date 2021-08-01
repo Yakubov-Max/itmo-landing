@@ -8,3 +8,11 @@
   object-fit: cover;
   object-position: center center;
 }
+
+@media screen and (max-width: 1260px) {
+  .publications__item-image_shrank {
+    height: 153px;
+    object-fit: cover;
+    object-position: center center;
+  }
+}

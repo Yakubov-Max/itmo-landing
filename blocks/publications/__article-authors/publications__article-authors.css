@@ -7,3 +7,10 @@
   line-height: 19px;
   color: #009FAC;
 }
+
+@media screen and (max-width: 707px) {
+  .publications__article-authors {
+    font-size: 12px;
+    line-height: 145%;
+  }
+}

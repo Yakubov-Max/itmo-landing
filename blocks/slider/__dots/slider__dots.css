@@ -1,5 +1,5 @@
 .slider__dots {
-  margin: 0 12px;
+  margin: 0 12px 0 0;
   width: 8px;
   height: 8px;
   cursor: pointer;
@@ -8,10 +8,6 @@
   background-color: #001337;
   opacity: 50%;
   transition: opacity 0.6s ease;
-}
-
-.slider__dots:first-of-type {
-  margin-left: 0;
 }
 
 .slider__dots:last-of-type {

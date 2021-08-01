@@ -3,3 +3,9 @@
   padding-top: 80px;
   padding-bottom: 21px;
 }
+
+@media screen and (max-width: 707px) {
+  .publications {
+    max-width: 288px;
+  }
+}

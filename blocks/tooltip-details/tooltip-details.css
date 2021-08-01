@@ -12,3 +12,17 @@
   background-color: #009fac;
   border-radius: 0 0 10px 10px;
 }
+
+@media screen and (max-width: 1260px) {
+  .tooltip-details {
+    display: flex;
+    padding: 15px 20px 15px;
+    max-height: 60px;
+  }
+}
+
+@media screen and (max-width: 707px) {
+  .tooltip-details {
+    max-height: 44px;
+  }
+}
