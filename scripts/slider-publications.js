@@ -1,16 +1,26 @@
 // найдем слайдер на странице и кнопки внутри него
-const sliderPublications = document.querySelector('#slider-publications');
-const slide = sliderPublications.querySelectorAll('.slider__page');
+const sliderPublications = document.querySelector('.slider');
+let slide = [];
 const buttonPblctLeft = sliderPublications.querySelector('#left-arrow');
 const buttonPblctRight = sliderPublications.querySelector('#right-arrow');
 let dots = [];
 const dotsContainerPublications = sliderPublications.querySelector('.slider__dots-container');
 
-window.onload = function () {
+/* Индекс слайда по умолчанию */
+let slideIndex = 0;
+
+window.addEventListener("load", () => {
+  setSlides();
   addDots();
-  getDots();
+  setDots();
   buttonPblctRight.addEventListener('click', plusSlide);
   buttonPblctLeft.addEventListener('click', minusSlide);
+
+  showSlides(slideIndex);
+}, true);
+
+function setSlides() {
+  slide = sliderPublications.querySelectorAll('.slider__page');
 }
 
 function addDots() {
@@ -27,13 +37,10 @@ function addDots() {
   }
 }
 
-function getDots() {
+function setDots() {
   dots = dotsContainerPublications.querySelectorAll('.slider__dots');
 }
 
-/* Индекс слайда по умолчанию */
-let slideIndex = 0;
-showSlides(slideIndex);
 
 /* Функция увеличивает индекс на 1, показывает следующй слайд*/
 function plusSlide() {
@@ -66,5 +73,7 @@ function showSlides(n) {
     dots[i].classList.remove('slider__dots_active');
   }
   slide[slideIndex].classList.remove('slider__page_hidden');
-  dots[slideIndex].classList.add('slider__dots_active');
+  if (dots.length > 0) {
+    dots[slideIndex].classList.add('slider__dots_active');
+  }
 }

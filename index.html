@@ -232,72 +232,58 @@
     </section>
     <section class="publications section-background section-background_light-blue">
       <h2 class="section-title section-title_color_blue">Публикации</h2>
-      <div class="slider" id="slider-publications">
-        <div class="slider__page">
-          <ul class="publications__container">
+      <div class="slider">
+        <div id="slider-publications">
+          <template id="slider-page-template">
+            <div class="slider__page">
+              <ul class="publications__container">
+              </ul>
+            </div>
+          </template>
+          <template id="cards-publications-template">
             <li class="publications__item">
-              <img class="publications__item-image" src="images/publication/publication_Convolutional neural networks with hierarchical context transfe….png" alt="">
-              <div class="publications__item-text">
-                <h3 class="publications__article-heading">Convolutional neural networks with hierarchical context transfe…</h3>
-                <p class="publications__article-autors">Ksenia D Mukhina, Alexander A Visheratin, Denis Nasonov</p>
-                <p class="publications__article">In this work, we consider a problem of predicting the next state of a given area using retrospective information. The proposed concept of hierarchical context transfer (HCT) operates on several spatial levels of the input data to overcome
-                  major issues of next state prediction problems - density variability, a sig…
-                </p>
+              <div class="publications__image-container publications__item-image_shrank">
+                <img
+                  class="publications__item-image"
+                  src=""
+                  alt="Иллюстрация к статье">
               </div>
-            </li>
-            <li class="publications__item">
-              <img class="publications__item-image" src="images/publication/publication_Convolutional neural networks with hierarchical context transfe….png" alt="">
               <div class="publications__item-text">
-                <h3 class="publications__article-heading">Convolutional neural networks with hierarchical context transfe…</h3>
-                <p class="publications__article-autors">Ksenia D Mukhina, Alexander A Visheratin, Denis Nasonov</p>
-                <p class="publications__article">In this work, we consider a problem of predicting the next state of a given area using retrospective information. The proposed concept of hierarchical context transfer (HCT) operates on several spatial levels of the input data to overcome
-                  major issues of next state prediction problems - density variability, a sig…
-                </p>
-              </div>
-            </li>
-            <li class="publications__item">
-              <img class="publications__item-image" src="images/publication/publication_Convolutional neural networks with hierarchical context transfe….png" alt="">
-              <div class="publications__item-text">
-                <h3 class="publications__article-heading">Convolutional neural networks with hierarchical context transfe…</h3>
-                <p class="publications__article-autors">Ksenia D Mukhina, Alexander A Visheratin, Denis Nasonov</p>
-                <p class="publications__article">In this work, we consider a problem of predicting the next state of a given area using retrospective information. The proposed concept of hierarchical context transfer (HCT) operates on several spatial levels of the input data to overcome
-                  major issues of next state prediction problems - density variability, a sig…
-                </p>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div class="slider__page">
-          <ul class="publications__container">
-            <li class="publications__item">
-              <img class="publications__item-image" src="images/publication/publication_Convolutional neural networks with hierarchical context transfe….png" alt="">
-              <div class="publications__item-text">
-                <h3 class="publications__article-heading">Convolutional neural networks with hierarchical context transfe…</h3>
-                <p class="publications__article-autors">Ksenia D Mukhina, Alexander A Visheratin, Denis Nasonov</p>
-                <p class="publications__article">In this work, we consider a problem of predicting the next state of a given area using retrospective information. The proposed concept of hierarchical context transfer (HCT) operates on several spatial levels of the input data to overcome
-                  major issues of next state prediction problems - density variability, a sig…
-                </p>
-              </div>
-            </li>
-            <li class="publications__item">
-              <img class="publications__item-image" src="images/publication/publication_Convolutional neural networks with hierarchical context transfe….png" alt="">
-              <div class="publications__item-text">
-                <h3 class="publications__article-heading">Convolutional neural networks with hierarchical context transfe…</h3>
-                <p class="publications__article-autors">Ksenia D Mukhina, Alexander A Visheratin, Denis Nasonov</p>
-                <p class="publications__article">In this work, we consider a problem of predicting the next state of a given area using retrospective information. The proposed concept of hierarchical context transfer (HCT) operates on several spatial levels of the input data to overcome
-                  major issues of next state prediction problems - density variability, a sig…
-                </p>
-              </div>
-            </li>
-            <li class="publications__item">
-              <img class="publications__item-image" src="images/publication/publication_Convolutional neural networks with hierarchical context transfe….png" alt="">
-              <div class="publications__item-text">
-                <h3 class="publications__article-heading">Convolutional neural networks with hierarchical context transfe…</h3>
-                <p class="publications__article-autors">Ksenia D Mukhina, Alexander A Visheratin, Denis Nasonov</p>
+                <h3 class="publications__article-heading"></h3>
+                <p class="publications__article-authors"></p>
                 <p class="publications__article"></p>
               </div>
+              <div class="tooltip-details">
+                <a
+                  href="#"
+                  class="publications__link-to-article" type="button"
+                  target="_blank">
+                  <p class="tooltip-details__heading">Читать полностью</p>
+                  <button class="tooltip-details__arrow"></button>
+                </a>
+                <button class="tooltip-details__share-icon"></button>
+                <div class="tooltip-social">
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/vk_emerald.svg"
+                    alt="иконка ВКонтакте"
+                    class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img
+                    src="images/icons/facebook_emerald.svg"
+                    alt="иконка Facebook"
+                    class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img
+                    src="images/icons/telegram_emerald.svg"
+                    alt="иконка Телеграм"
+                    class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/insta_emerald.svg"
+                    alt="иконка Инстаграм"
+                    class="tooltip-social__icon"></a>
+                  <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/youtube_emerald.svg"
+                    alt="иконка YouTube"
+                    class="tooltip-social__icon"></a>
+                </div>
+              </div>
             </li>
-          </ul>
+          </template>
         </div>
         <button class="slider__arrow slider__arrow_left" id="left-arrow"></button>
         <button class=" slider__arrow slider__arrow_right " id="right-arrow"></button>
@@ -334,64 +320,66 @@
       </div>
     </section>
     <section class="partners">
-    <h2 class="partners__title section-title section-title_color_white">С кем мы работаем</h2>
-    <p class="partners__text">За время сотрудничества компания показала себя как надежный партнер, способный оперативно решать вопросы по внесению
-      необходимых изменений.</p>
-    <p class="partners__text">Отдельно хочется отметить квалифицированный персонал компании, который всегда готов прийти на помощь в решении поставленных задач, дать объективную
-      оценку и свои рекомендации по улучшению деятельности. Надеемся на дальнейшее и плодотворное сотрудничество.</p>
+      <h2 class="partners__title section-title section-title_color_white">С кем мы работаем</h2>
+      <p class="partners__text">За время сотрудничества компания показала себя как надежный партнер, способный оперативно решать вопросы по внесению
+        необходимых изменений.
+      </p>
+      <p class="partners__text">Отдельно хочется отметить квалифицированный персонал компании, который всегда готов прийти на помощь в решении поставленных задач, дать объективную
+        оценку и свои рекомендации по улучшению деятельности. Надеемся на дальнейшее и плодотворное сотрудничество.
+      </p>
       <ul class="partners__logo-container">
         <li>
           <a href="#" target="_blank" class="partners__logo-link">
-            <img src="./images/partnership-logos/gazprom-logo.svg" alt="Логотип Газпром." class="partners__img">
+          <img src="./images/partnership-logos/gazprom-logo.svg" alt="Логотип Газпром." class="partners__img">
           </a>
         </li>
         <li>
           <a href="#" target="_blank" class="partners__logo-link">
-            <img src="./images/partnership-logos/sberbank_logo.svg" alt="Логотип Сбер." class="partners__img">
+          <img src="./images/partnership-logos/sberbank_logo.svg" alt="Логотип Сбер." class="partners__img">
           </a>
         </li>
         <li>
           <a href="#" target="_blank" class="partners__logo-link">
-            <img src="./images/partnership-logos/mail-logo.svg" alt="Логотип Мэйл." class="partners__img">
+          <img src="./images/partnership-logos/mail-logo.svg" alt="Логотип Мэйл." class="partners__img">
           </a>
         </li>
         <li>
           <a href="#" target="_blank" class="partners__logo-link">
-            <img src="./images/partnership-logos/siemens-logo.svg" alt="Логотип Сименс." class="partners__img">
+          <img src="./images/partnership-logos/siemens-logo.svg" alt="Логотип Сименс." class="partners__img">
           </a>
         </li>
         <li>
           <a href="#" target="_blank" class="partners__logo-link">
-            <img src="./images/partnership-logos/huawei-logo.svg" alt="Логотип Хуавей." class="partners__img">
+          <img src="./images/partnership-logos/huawei-logo.svg" alt="Логотип Хуавей." class="partners__img">
           </a>
         </li>
         <li>
           <a href="#" target="_blank" class="partners__logo-link">
-            <img src="./images/partnership-logos/sberbank_logo.svg" alt="Логотип Сбер." class="partners__img">
+          <img src="./images/partnership-logos/sberbank_logo.svg" alt="Логотип Сбер." class="partners__img">
           </a>
         </li>
         <li>
           <a href="#" target="_blank" class="partners__logo-link">
-            <img src="./images/partnership-logos/rosneft-logo.svg" alt="Логотип Роснефть." class="partners__img">
+          <img src="./images/partnership-logos/rosneft-logo.svg" alt="Логотип Роснефть." class="partners__img">
           </a>
         </li>
         <li>
           <a href="#" target="_blank" class="partners__logo-link">
-            <img src="./images/partnership-logos/gazprom-logo.svg" alt="Логотип Газпром." class="partners__img">
+          <img src="./images/partnership-logos/gazprom-logo.svg" alt="Логотип Газпром." class="partners__img">
           </a>
         </li>
         <li>
           <a href="#" target="_blank" class="partners__logo-link">
-            <img src="./images/partnership-logos/huawei-logo.svg" alt="Логотип Хуавей." class="partners__img">
+          <img src="./images/partnership-logos/huawei-logo.svg" alt="Логотип Хуавей." class="partners__img">
           </a>
         </li>
         <li>
           <a href="#" target="_blank" class="partners__logo-link">
-            <img src="./images/partnership-logos/mail-logo.svg" alt="Логотип Мэйл." class="partners__img">
+          <img src="./images/partnership-logos/mail-logo.svg" alt="Логотип Мэйл." class="partners__img">
           </a>
         </li>
       </ul>
-  </section>
+    </section>
     <section class="feedback">
       <h2 class="section-title section-title_color_white">Всегда на связи</h2>
       <p class="feedback__text">По всем интересующим вас вопросам вы всегда можете обратиться по указанным телефонам, написать на почту или оставтиь свое сообщение через форму обратной связи. </p>
@@ -476,5 +464,11 @@
         <p class="footer__doneBy-formobile">Сделано студентами Яндекс. Практикума</p>
       </div>
     </footer>
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/ai-research-popups.js"></script>
+    <script src="scripts/cards-publications.js"></script>
+    <script src="scripts/adding-cards-publications.js"></script>
+    <script src="scripts/slider-publications.js"></script>
+    <script src="scripts/tooltips-publications.js"></script>
   </body>
 </html>
