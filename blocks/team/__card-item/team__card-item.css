@@ -1,0 +1,26 @@
+.team__card-item {
+  background-color: white;
+  width: 255px;
+  height: 439px;
+  box-sizing: border-box;
+  display: none;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.1s linear;
+}
+
+@media all and (max-width:768px) {
+  .team__card-item {
+    width:210px;
+    height: 337px;
+  }
+}
+
+@media all and (max-width:320px) {
+  .team__card-item {
+    padding: 10px;
+    width: 140px;
+    height: 256px;
+  }
+}

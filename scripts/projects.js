@@ -38,6 +38,7 @@ projectsMenuElements.forEach((element) => {
 
 // Функция хайлайта элемента меню
 function handleHighlightProjectsMenu(event) {
+  event.preventDefault()
   projectsMenuElements.forEach((element) => {
     if (element.classList.item(1)) {
       element.classList.remove("projects__menu-item_active");
@@ -70,15 +71,14 @@ const projectsCard = {
   description:
     "Направление включает в себя исследования и разработки технологий МО и КТ. Модули для внедрения в предметные сетевые программы магистратуры с элементами МО и КТ, или программы ДПО.",
   link: "#",
+  test_span: 0
 };
 
 const CARDS = [];
 
 for (let i = 0; i < 120; i++) {
   let copy = Object.assign({}, projectsCard);
-  if (i % 5 === 0) {
-    copy.logo = "./images/partnership-logos/sberbank_logo.svg";
-  }
+  copy.test_span = i
   CARDS.push(copy);
 }
 
@@ -180,6 +180,7 @@ function createProjectsCard(cardData) {
   cardElement.querySelector(".projects__item-about").textContent =
     cardData.description;
   cardElement.querySelector(".projects__item-details").href = cardData.link;
+  cardElement.querySelector(".projects__test-span").textContent = cardData.test_span;
   return cardElement;
 }
 

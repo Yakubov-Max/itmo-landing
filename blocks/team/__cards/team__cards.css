@@ -1,0 +1,27 @@
+.team__cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 1110px;
+  flex-wrap: nowrap;
+}
+
+@media all and (max-width: 1110px) {
+  .team__cards {
+    left: calc(-50vw + 555px + 39px);
+  }
+}
+
+@media all and (max-width: 768px) {
+  .team__cards {
+    width: 930px;
+    left: calc(-50vw + 384px + 129px);
+  }
+}
+
+@media all and (max-width: 320px) {
+  .team__cards {
+    width: 584px;
+    left: calc(-50vw + 160px + 143px + 16px);
+  }
+}

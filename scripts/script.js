@@ -4,7 +4,9 @@ function include(url) {
   document.getElementsByTagName('head')[0].appendChild(script);
 }
 include("./scripts/about-script.js");
+include("./scripts/team-script.js");
 include("./scripts/projects.js");
+include("./scripts/feedback.js");
 //console.log('DOM loaded')
 
 const buttonPopupAiReseach1 = document.querySelector('#ai-research-button-one');
@@ -14,11 +16,34 @@ const buttonPopupAiReseach4 = document.querySelector('#ai-research-button-four')
 const blockAiResearch = document.querySelector('.ai-research-lab');
 const widthWindow = window.innerWidth;
 let indArrayForCreatePopup = widthWindow < 1200 ? widthWindow < 768 ? 2 : 1 : 0; // Индекс необходимого объекта в массиве для попапа AiResearch в зависимости от размера экрана.
+const buttonChangeEducation = document.querySelector('.education__buttons-container');  // Кнопка переключения образования.
+const aspirantePartButton = document.querySelector('#aspirante');                       // Часть кнопки аспирантов.
+const magistracyPartButton = document.querySelector('#magistracy');                     // Часть кнопки магистратуры.
+const aspiranteContent = document.querySelector('.education__flex-container_absolute'); // Основной меняющийся контент про обучение.
+const page = document.querySelector('.page');                                           // Блок для установки класса с блокировкой скролла приоткрытом попапе.
+
+// Остановка скролла при открытом попап AiResearch.
+const changeScrollWithPopup = () => {
+  page.classList.toggle('page_hidden');
+}
+
+// Смена контента про виды обучения.
+const handleChangeEducation = () => {
+  aspirantePartButton.classList.toggle('education__button-change-info_active');
+  magistracyPartButton.classList.toggle('education__button-change-info_active');
+  handleChangeVisibleContent();
+}
+
+// Смена видимости блока с обучением.
+const handleChangeVisibleContent = () => {
+  aspiranteContent.classList.toggle('education__flex-container_visible');
+}
 
 const handleCloseAiResearchPopup = () => {
   const popupAiResearch = document.querySelector('.popup-ai-research');
   popupAiResearch.classList.remove('popup-ai-research_active');
   deleteInnerPopupAiResearch();
+  changeScrollWithPopup();
 }
 
 // Создание клона попапа AiResearch.
@@ -75,6 +100,7 @@ const handleCreateAiResearchPopup = (item) => {
   fillTextPopupAiResearch(item);           // Добавление текстового содержимого в попап AiResearch.
   buttonCloseAiResearchPopup.addEventListener('click', handleCloseAiResearchPopup);
   popup.classList.add('popup-ai-research_active');
+  changeScrollWithPopup();
 }
 
 // Удаление popup AiResearch из разметки.
@@ -86,6 +112,7 @@ buttonPopupAiReseach1.addEventListener('click', () => handleCreateAiResearchPopu
 buttonPopupAiReseach2.addEventListener('click', () => handleCreateAiResearchPopup(popupSecondCard[indArrayForCreatePopup]));
 buttonPopupAiReseach3.addEventListener('click', () => handleCreateAiResearchPopup(popupThirdCard[indArrayForCreatePopup]));
 buttonPopupAiReseach4.addEventListener('click', () => handleCreateAiResearchPopup(popupFourthCard[indArrayForCreatePopup]));
+buttonChangeEducation.addEventListener('click', handleChangeEducation);
 window.addEventListener('click', e => {
   const target = e.target;
   target.getAttribute('class') === 'popup-ai-research popup-ai-research_active' ? handleCloseAiResearchPopup() : '';

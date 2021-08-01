@@ -1,0 +1,18 @@
+.education {
+  box-sizing: border-box;
+  padding: 80px 0;
+  background-color: #009FAC;
+  position: relative;
+}
+
+@media screen and (max-width: 1200px) {
+  .education {
+    padding: 60px 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .education {
+    padding: 40px 0;
+  }
+}
