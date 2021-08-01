@@ -8,3 +8,10 @@
   line-height: 30px;
   color: #fff;
 }
+
+@media screen and (max-width: 707px) {
+  .tooltip-details__heading {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
