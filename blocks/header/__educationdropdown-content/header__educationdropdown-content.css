@@ -1,0 +1,28 @@
+.header__educationdropdown-content {
+  display: none;
+  position: relative;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  flex-direction: column;
+  transition: 0.4s;
+}
+
+.header__educationdropdown-content a {
+  color: white;
+  background-color: #000D26;
+  text-decoration: none;
+  display: block;
+  padding-top: 12.5px;
+  box-sizing: border-box;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  margin-left: 16px;
+  text-align: left;
+  padding-bottom: 15px;
+  height: 44px;
+  transition: 0.4s;
+}

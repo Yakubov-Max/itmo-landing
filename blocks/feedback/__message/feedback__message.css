@@ -1,0 +1,8 @@
+.feedback__message {
+  grid-area: message;
+}
+
+.feedback__message::placeholder {
+  padding-top: 20px;
+  padding-left: 20px;
+}

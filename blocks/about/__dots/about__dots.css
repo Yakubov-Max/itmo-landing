@@ -1,0 +1,12 @@
+.about__dots {
+  display: flex;
+  flex-direction: row;
+  margin-top: 26.5px;
+  justify-content: space-between;
+}
+
+@media all and (max-width:768px) {
+  .about__dots {
+    display: none;
+  }
+}

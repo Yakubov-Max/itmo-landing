@@ -1,0 +1,25 @@
+.publications__container {
+  margin: 0 auto;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 348px);
+  gap: 33px 30px;
+  justify-content: center;
+  max-width: 1262px;
+}
+
+@media screen and (max-width: 1260px) {
+  .publications__container {
+    grid-template-columns: repeat(auto-fit, 330px);
+    gap: 30px;
+    max-width: 690px;
+  }
+}
+
+@media screen and (max-width: 707px) {
+  .publications__container {
+    grid-template-columns: repeat(auto-fit, 288px);
+    gap: 8px;
+    max-width: 288px;
+  }
+}

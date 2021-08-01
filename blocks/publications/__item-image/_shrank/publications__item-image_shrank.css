@@ -1,0 +1,18 @@
+.publications__item-image_shrank {
+  height: 223px;
+  width: 100%;
+}
+
+.publications__item:hover .publications__item-image_shrank {
+  height: 153px;
+  object-fit: cover;
+  object-position: center center;
+}
+
+@media screen and (max-width: 1260px) {
+  .publications__item-image_shrank {
+    height: 153px;
+    object-fit: cover;
+    object-position: center center;
+  }
+}

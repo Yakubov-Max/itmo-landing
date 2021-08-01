@@ -1,0 +1,13 @@
+.publications__image-container {
+  display: flex;
+  padding: 20px 19px 0;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 707px) {
+  .publications__image-container {
+    padding: 0;
+  }
+}

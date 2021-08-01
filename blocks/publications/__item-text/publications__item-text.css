@@ -1,0 +1,9 @@
+.publications__item-text {
+  padding: 20px;
+}
+
+@media screen and (max-width: 707px) {
+  .publications__item-text {
+    padding: 12px 0 0;
+  }
+}

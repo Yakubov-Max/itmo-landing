@@ -1,0 +1,21 @@
+.header {
+  width: 100%;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  color: white;
+  background-color: #000D26;
+  height: calc(2.97vw + 37.14px);
+}
+
+@media all and (max-width: 768px) {
+  .header {
+    height: calc(3.57vw + 32.57px);
+  }
+}
+
+@media all and (max-width: 320px) {
+  .header {
+    height: 44px;
+  }
+}

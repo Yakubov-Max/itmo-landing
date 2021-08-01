@@ -1,0 +1,28 @@
+.about__card-item {
+  position: relative;
+  background-color: #E0F0FF;
+  color: black;
+  width: 348px;
+  box-sizing: border-box;
+  padding: 20px 20px 30px;
+  border-radius: 10px;
+  margin: 0;
+  display: none;
+  transition: transform 0.1s linear;
+}
+
+@media all and (max-width: 768px) {
+  .about__card-item{
+    width: 330px;
+    height: 330px;
+  }
+}
+
+@media all and (max-width: 320px) {
+  .about__card-item {
+    width: 288px;
+    height: 250px;
+  }
+}
+
+

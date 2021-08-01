@@ -1,0 +1,14 @@
+.footer__navigation {
+  margin-top: 91.5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: calc(14.88vw + 125.71px);
+}
+
+@media all and (max-width: 320px) {
+  .footer__navigation {
+    margin-top: 40px;
+    width: 286px;
+  }
+}
