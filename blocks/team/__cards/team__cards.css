@@ -1,6 +1,5 @@
 .team__cards {
   display: flex;
-  position: relative;
   flex-direction: row;
   justify-content: space-between;
   width: 1110px;
