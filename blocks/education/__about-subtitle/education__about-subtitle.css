@@ -1,0 +1,13 @@
+.education__about-subtitle {
+  margin-top: 0;
+  font-size: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 1200px) {
+  .education__about-subtitle {
+    margin-bottom: 27px;
+  }
+}

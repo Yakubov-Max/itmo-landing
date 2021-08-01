@@ -1,16 +1,29 @@
 .about__card-title {
   padding: 0;
   margin: 0;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 30px;
+  max-height: 90px;
+  width: 308px;
+  word-wrap: break-word;
+  letter-spacing: 0em;
   padding-bottom: 20px;
   margin-bottom: 20px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
   border-bottom: 1px solid #009FAC;
 }
 
 @media all and (max-width:320px) {
-  .about__card-title{
+  .about__card-title {
+    font-size: 14px;
+    width: 248px;
+    line-height: 19px;
+    height: 57px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
     padding-bottom: 12px;
     margin-bottom: 12px;
   }
