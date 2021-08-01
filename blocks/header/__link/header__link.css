@@ -1,5 +1,4 @@
 .header__link {
-  font-family: Open Sans;
   font-size: 14px;
   font-style: normal;
   height: 44px;
@@ -11,6 +10,8 @@
   text-align: center;
   margin-left: 20px;
   margin-bottom: 4px;
+  text-decoration: none;
+  color: white;
 }
 
 .header__link:hover{
