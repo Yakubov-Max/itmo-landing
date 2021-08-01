@@ -1,6 +1,7 @@
 .team__cards {
   display: flex;
   flex-direction: row;
+  position: relative;
   justify-content: space-between;
   width: 1110px;
   flex-wrap: nowrap;
@@ -15,6 +16,7 @@
 @media all and (max-width: 768px) {
   .team__cards {
     width: 930px;
+    margin-bottom: 112px;
     left: calc(-50vw + 384px + 129px);
   }
 }
@@ -22,6 +24,7 @@
 @media all and (max-width: 320px) {
   .team__cards {
     width: 584px;
+    margin-bottom: 72px;
     left: calc(-50vw + 160px + 143px + 16px);
   }
 }

@@ -9,6 +9,7 @@
 
 @media all and (max-width: 768px) {
   .team__dots {
+    display: none;
     margin-top: 24px;
     margin-bottom: 81px;
   }
