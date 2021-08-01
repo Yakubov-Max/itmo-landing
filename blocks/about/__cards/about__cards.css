@@ -22,7 +22,7 @@
 
 @media all and (max-width: 320px) {
   .about__cards {
-    left: 5px;
+    left: calc(561px - 160px - 78px - 14px);
     width: 894px;
   }
 }

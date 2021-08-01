@@ -7,6 +7,8 @@ const rollToLeftButton = document.querySelector('.about__roll-to-left');
 const burgerListOfItems = document.querySelectorAll('.header__mobile-menu-item');
 const aboutHeaderDropDown = document.getElementById("educationDropDown");
 
+let aboutAchualSecondCard = 0;
+let aboutAchualThirdCard = 0;
 let sliderRoundIndex = 0;
 const aboutCardsMassive = [
   {
@@ -161,7 +163,35 @@ for (let i = 0; i < 3; i++) {
 }
 
 function rollRight() {
-  if (lastIndex == addedCards.length-1) { } else {
+  if (lastIndex == addedCards.length - 1) {
+    if (window.innerWidth <= 768 && window.innerWidth > 320) {
+      if (aboutAchualSecondCard==0) {
+        addedCards[firstIndex].style.transform = 'translateX(' + -383 + 'px)';
+        addedCards[firstIndex + 1].style.transform = 'translateX(' + -383 + 'px)';
+        addedCards[firstIndex + 2].style.transform = 'translateX(' + -383 + 'px)';
+        aboutAchualSecondCard = 1;
+      }
+    } else if (window.innerWidth <= 320) {
+      console.log(aboutAchualSecondCard);
+      console.log(aboutAchualThirdCard);
+      switch (aboutAchualSecondCard + aboutAchualThirdCard) {
+        case 0:
+          addedCards[firstIndex].style.transform = 'translateX(' + -310 + 'px)';
+          addedCards[firstIndex + 1].style.transform = 'translateX(' + -310 + 'px)';
+          addedCards[firstIndex + 2].style.transform = 'translateX(' + -310 + 'px)';
+          aboutAchualSecondCard = 1;
+        break;
+        case 1:
+          addedCards[firstIndex + 1].style.transform = 'translateX(' + -620 + 'px)';
+          addedCards[firstIndex + 2].style.transform = 'translateX(' + -620 + 'px)';
+          aboutAchualThirdCard = 1;
+        break;
+        case 2:
+
+        break;
+      }
+    }
+  } else {
     addedCards[firstIndex].classList.add('about__card-item_zeroOpacity');
     addedCards[firstIndex + 1].style.transform = 'translateX(' + -383 + 'px)';
     addedCards[firstIndex + 2].style.transform = 'translateX(' + -383 + 'px)';
@@ -193,31 +223,56 @@ function rollRight() {
 
 function rollLeft() {
   if (firstIndex == 0) { } else {
-    addedCards[lastIndex].classList.add('about__card-item_zeroOpacity');
-    addedCards[firstIndex].style.transform = 'translateX(' + 383 + 'px)';
-    addedCards[firstIndex + 1].style.transform = 'translateX(' + 383 + 'px)';
-    setTimeout(() => {
-      addedCards[firstIndex - 1].classList.add('about__card-item_show');
-      addedCards[firstIndex - 1].classList.add('about__card-item_zeroOpacity');
-      addedCards[lastIndex].classList.remove('about__card-item_show');
-      addedCards[lastIndex].classList.remove('about__card-item_zeroOpacity');
-      addedCards[firstIndex].classList.add('about__card-item_zeroTransition');
-      addedCards[firstIndex + 1].classList.add('about__card-item_zeroTransition');
-      addedCards[firstIndex].style.transform = '';
-      addedCards[firstIndex + 1].style.transform = '';
+    if (lastIndex == addedCards.length - 1 && aboutAchualSecondCard == 1) {
+      if (window.innerWidth <= 768 && window.innerWidth > 320) {
+          addedCards[firstIndex].style.transform = 'translateX(' + 0 + 'px)';
+          addedCards[firstIndex + 1].style.transform = 'translateX(' + 0 + 'px)';
+          addedCards[firstIndex + 2].style.transform = 'translateX(' + 0 + 'px)';
+          aboutAchualSecondCard = 0;
+      } else if (window.innerWidth <= 320) {
+        switch (aboutAchualSecondCard + aboutAchualThirdCard) {
+          case 0:
+            break;
+          case 1:
+            addedCards[firstIndex].style.transform = 'translateX(' + 0 + 'px)';
+            addedCards[firstIndex + 1].style.transform = 'translateX(' + 0 + 'px)';
+            addedCards[firstIndex + 2].style.transform = 'translateX(' + 0 + 'px)';
+            aboutAchualSecondCard = 0;
+            break;
+          case 2:
+            addedCards[firstIndex + 1].style.transform = 'translateX(' + -310 + 'px)';
+            addedCards[firstIndex + 2].style.transform = 'translateX(' + -310 + 'px)';
+            aboutAchualThirdCard = 0;
+            break;
+        }
+      }
+    } else {
+      addedCards[lastIndex].classList.add('about__card-item_zeroOpacity');
+      addedCards[firstIndex].style.transform = 'translateX(' + 383 + 'px)';
+      addedCards[firstIndex + 1].style.transform = 'translateX(' + 383 + 'px)';
       setTimeout(() => {
-        addedCards[firstIndex].classList.remove('about__card-item_zeroTransition');
-        addedCards[firstIndex + 1].classList.remove('about__card-item_zeroTransition');
-        addedCards[firstIndex - 1].classList.remove('about__card-item_opacityTransition');
-        lastIndex--;
-        firstIndex--;
-        sliderRoundIndex--;
+        addedCards[firstIndex - 1].classList.add('about__card-item_show');
+        addedCards[firstIndex - 1].classList.add('about__card-item_zeroOpacity');
+        addedCards[lastIndex].classList.remove('about__card-item_show');
+        addedCards[lastIndex].classList.remove('about__card-item_zeroOpacity');
+        addedCards[firstIndex].classList.add('about__card-item_zeroTransition');
+        addedCards[firstIndex + 1].classList.add('about__card-item_zeroTransition');
+        addedCards[firstIndex].style.transform = '';
+        addedCards[firstIndex + 1].style.transform = '';
+        setTimeout(() => {
+          addedCards[firstIndex].classList.remove('about__card-item_zeroTransition');
+          addedCards[firstIndex + 1].classList.remove('about__card-item_zeroTransition');
+          addedCards[firstIndex - 1].classList.remove('about__card-item_opacityTransition');
+          lastIndex--;
+          firstIndex--;
+          sliderRoundIndex--;
+        }, 100);
+        addedCards[firstIndex - 1].classList.add('about__card-item_opacityTransition');
+        addedCards[firstIndex - 1].classList.remove('about__card-item_zeroOpacity');
+        aboutDots[firstIndex].classList.remove('about__dot_active');
+        aboutDots[firstIndex - 1].classList.add('about__dot_active');
       }, 100);
-      addedCards[firstIndex - 1].classList.add('about__card-item_opacityTransition');
-      addedCards[firstIndex - 1].classList.remove('about__card-item_zeroOpacity');
-      aboutDots[firstIndex].classList.remove('about__dot_active');
-      aboutDots[firstIndex - 1].classList.add('about__dot_active');
-    }, 100);
+    }
   }
 }
 window.addEventListener('load', function () {

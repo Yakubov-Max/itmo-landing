@@ -56,6 +56,9 @@ const teamCardsMassive = [
   },
 ];
 
+
+let teamAchualSecondCard = 0;
+let teamAchualThirdCard = 0;
 let teamSliderRoundIndex = 0;
 let teamLastIndex = 3;
 let teamFirstIndex = 0;
@@ -123,7 +126,38 @@ for (let i = 0; i < 4; i++) {
 }
 
 function teamRollRight() {
-  if (teamLastIndex == addedTeamCards.length-1) { } else {
+  if (teamLastIndex == addedTeamCards.length - 1) {
+    if (window.innerWidth <= 768 && window.innerWidth > 320) {
+      if (teamAchualSecondCard == 0) {
+        addedTeamCards[teamFirstIndex].style.transform = 'translateX(' + -255 + 'px)';
+        addedTeamCards[teamFirstIndex + 1].style.transform = 'translateX(' + -255 + 'px)';
+        addedTeamCards[teamFirstIndex + 2].style.transform = 'translateX(' + -255 + 'px)';
+        addedTeamCards[teamFirstIndex + 3].style.transform = 'translateX(' + -255 + 'px)';
+        teamAchualSecondCard = 1;
+      }
+    } else if (window.innerWidth <= 320) {
+      console.log(teamAchualSecondCard);
+      console.log(teamAchualThirdCard);
+      switch (teamAchualSecondCard + teamAchualThirdCard) {
+        case 0:
+          addedTeamCards[teamFirstIndex].style.transform = 'translateX(' + -160 + 'px)';
+          addedTeamCards[teamFirstIndex + 1].style.transform = 'translateX(' + -160 + 'px)';
+          addedTeamCards[teamFirstIndex + 2].style.transform = 'translateX(' + -160 + 'px)';
+          addedTeamCards[teamFirstIndex + 3].style.transform = 'translateX(' + -160 + 'px)';
+          teamAchualSecondCard = 1;
+          break;
+        case 1:
+          addedTeamCards[teamFirstIndex + 1].style.transform = 'translateX(' + -320 + 'px)';
+          addedTeamCards[teamFirstIndex + 2].style.transform = 'translateX(' + -320 + 'px)';
+          addedTeamCards[teamFirstIndex + 3].style.transform = 'translateX(' + -320 + 'px)';
+          teamAchualThirdCard = 1;
+          break;
+        case 2:
+
+          break;
+      }
+    }
+  } else {
     addedTeamCards[teamFirstIndex].classList.add('team__card-item_zeroOpacity');
     addedTeamCards[teamFirstIndex + 1].style.transform = 'translateX(' + -255 + 'px)';
     addedTeamCards[teamFirstIndex + 2].style.transform = 'translateX(' + -255 + 'px)';
@@ -159,35 +193,68 @@ function teamRollRight() {
 
 function teamRollLeft() {
   if (teamFirstIndex == 0) { } else {
-    addedTeamCards[teamLastIndex].classList.add('team__card-item_zeroOpacity');
-    addedTeamCards[teamFirstIndex].style.transform = 'translateX(' + 255 + 'px)';
-    addedTeamCards[teamFirstIndex + 1].style.transform = 'translateX(' + 255 + 'px)';
-    addedTeamCards[teamFirstIndex + 2].style.transform = 'translateX(' + 255 + 'px)';
-    setTimeout(() => {
-      addedTeamCards[teamFirstIndex - 1].classList.add('team__card-item_show');
-      addedTeamCards[teamFirstIndex - 1].classList.add('team__card-item_zeroOpacity');
-      addedTeamCards[teamLastIndex].classList.remove('team__card-item_show');
-      addedTeamCards[teamLastIndex].classList.remove('team__card-item_zeroOpacity');
-      addedTeamCards[teamFirstIndex].classList.add('team__card-item_zeroTransition');
-      addedTeamCards[teamFirstIndex + 1].classList.add('team__card-item_zeroTransition');
-      addedTeamCards[teamFirstIndex + 2].classList.add('team__card-item_zeroTransition');
-      addedTeamCards[teamFirstIndex].style.transform = '';
-      addedTeamCards[teamFirstIndex + 1].style.transform = '';
-      addedTeamCards[teamFirstIndex + 2].style.transform = '';
+    if (teamLastIndex == addedTeamCards.length - 1 && teamAchualSecondCard == 1) {
+      if (window.innerWidth <= 768 && window.innerWidth > 320) {
+        if (teamAchualSecondCard == 1) {
+          addedTeamCards[teamFirstIndex].style.transform = 'translateX(' + 0 + 'px)';
+          addedTeamCards[teamFirstIndex + 1].style.transform = 'translateX(' + 0 + 'px)';
+          addedTeamCards[teamFirstIndex + 2].style.transform = 'translateX(' + 0 + 'px)';
+          addedTeamCards[teamFirstIndex + 3].style.transform = 'translateX(' + 0 + 'px)';
+          teamAchualSecondCard = 0;
+        }
+      } else if (window.innerWidth <= 320) {
+        console.log(teamAchualSecondCard);
+        console.log(teamAchualThirdCard);
+        switch (teamAchualSecondCard + teamAchualThirdCard) {
+          case 0:
+
+            break;
+          case 1:
+            addedTeamCards[teamFirstIndex].style.transform = 'translateX(' + 0 + 'px)';
+            addedTeamCards[teamFirstIndex + 1].style.transform = 'translateX(' + 0 + 'px)';
+            addedTeamCards[teamFirstIndex + 2].style.transform = 'translateX(' + 0 + 'px)';
+            addedTeamCards[teamFirstIndex + 3].style.transform = 'translateX(' + 0 + 'px)';
+            teamAchualSecondCard = 0;
+            break;
+          case 2:
+            addedTeamCards[teamFirstIndex + 1].style.transform = 'translateX(' + -160 + 'px)';
+            addedTeamCards[teamFirstIndex + 2].style.transform = 'translateX(' + -160 + 'px)';
+            addedTeamCards[teamFirstIndex + 3].style.transform = 'translateX(' + -160 + 'px)';
+            teamAchualThirdCard = 0;
+            break;
+        }
+      }
+    } else {
+      addedTeamCards[teamLastIndex].classList.add('team__card-item_zeroOpacity');
+      addedTeamCards[teamFirstIndex].style.transform = 'translateX(' + 255 + 'px)';
+      addedTeamCards[teamFirstIndex + 1].style.transform = 'translateX(' + 255 + 'px)';
+      addedTeamCards[teamFirstIndex + 2].style.transform = 'translateX(' + 255 + 'px)';
       setTimeout(() => {
-        addedTeamCards[teamFirstIndex].classList.remove('team__card-item_zeroTransition');
-        addedTeamCards[teamFirstIndex + 1].classList.remove('team__card-item_zeroTransition');
-        addedTeamCards[teamFirstIndex + 2].classList.remove('team__card-item_zeroTransition');
-        addedTeamCards[teamFirstIndex - 1].classList.remove('team__card-item_opacityTransition');
-        teamLastIndex--;
-        teamFirstIndex--;
-        teamSliderRoundIndex--;
+        addedTeamCards[teamFirstIndex - 1].classList.add('team__card-item_show');
+        addedTeamCards[teamFirstIndex - 1].classList.add('team__card-item_zeroOpacity');
+        addedTeamCards[teamLastIndex].classList.remove('team__card-item_show');
+        addedTeamCards[teamLastIndex].classList.remove('team__card-item_zeroOpacity');
+        addedTeamCards[teamFirstIndex].classList.add('team__card-item_zeroTransition');
+        addedTeamCards[teamFirstIndex + 1].classList.add('team__card-item_zeroTransition');
+        addedTeamCards[teamFirstIndex + 2].classList.add('team__card-item_zeroTransition');
+        addedTeamCards[teamFirstIndex].style.transform = '';
+        addedTeamCards[teamFirstIndex + 1].style.transform = '';
+        addedTeamCards[teamFirstIndex + 2].style.transform = '';
+        setTimeout(() => {
+          addedTeamCards[teamFirstIndex].classList.remove('team__card-item_zeroTransition');
+          addedTeamCards[teamFirstIndex + 1].classList.remove('team__card-item_zeroTransition');
+          addedTeamCards[teamFirstIndex + 2].classList.remove('team__card-item_zeroTransition');
+          addedTeamCards[teamFirstIndex - 1].classList.remove('team__card-item_opacityTransition');
+          teamLastIndex--;
+          teamFirstIndex--;
+          teamSliderRoundIndex--;
+        }, 200);
+        addedTeamCards[teamFirstIndex - 1].classList.add('team__card-item_opacityTransition');
+        addedTeamCards[teamFirstIndex - 1].classList.remove('team__card-item_zeroOpacity');
+        teamDots[teamFirstIndex].classList.remove('team__dot_active');
+        teamDots[teamFirstIndex - 1].classList.add('team__dot_active');
       }, 200);
-      addedTeamCards[teamFirstIndex - 1].classList.add('team__card-item_opacityTransition');
-      addedTeamCards[teamFirstIndex - 1].classList.remove('team__card-item_zeroOpacity');
-      teamDots[teamFirstIndex].classList.remove('team__dot_active');
-      teamDots[teamFirstIndex - 1].classList.add('team__dot_active');
-    }, 200);
+    }
   }
 }
 window.addEventListener('load', function () {
