@@ -98,10 +98,7 @@
             <img src="./images/lab/molecular.svg" alt="Модель молекулы." class="ai-research-lab__molecular">
           </p>
         </div>
-        <div class="ai-research-lab__img-conteiner">
-          <img src="./images/lab/image1.png" alt="Мужчина в черной футболке сидя в офисе, смотрит на открытый ноутбук." class="ai-research-lab__img">
-          <img src="./images/lab/image2table.png" alt="Двое мужчин работаю в офисе за ноутбуками." class="ai-research-lab__img">
-        </div>
+        <div class="ai-research-lab__img-conteiner"></div>
       </div>
       <div class="ai-research-lab__cards-conteiner">
         <div class="ai-research-lab__card">
@@ -136,7 +133,7 @@
         <li class="projects__menu-item projects__menu-item_active">
           <a href="#" class="projects__menu-item-link">Все проекты</a>
           <div class="projects__dropdown">
-            <button class="projects__menu-dropdown-button"></button>
+            <button type="menu" class="projects__menu-dropdown-button"></button>
             <div class="projects__dropdown-content">
               <ul class="projects__dropdown-menu">
                 <li class="projects__dropdown-menu-item"><a href="#" class="projects__dropdown-menu-link">Все проекты</a></li>
@@ -155,7 +152,7 @@
       </div>
       <ul class="projects__pagination">
         <li class="projects__pagination-item"><a href="#" class="projects__pagination-left-arrow"></a></li>
-        <li class="projects__pagination-item projects__pagination-current-page"><a href="#" class="projects__pagination-link projects__pagination-link_active">1</a></li>
+        <li class="projects__pagination-item projects__pagination-current-page"><a href="#" class="projects__pagination-link"><span class="projects__pagination-link_active">1</span></a></li>
         <li class="projects__pagination-item">/</li>
         <li class="projects__pagination-item projects__pagination-last-page"><a href="#" class="projects__pagination-link">30</a></li>
         <li class="projects__pagination-item"><a href="#" class="projects__pagination-link"><span class="projects__pagination-right-arrow"></span></a></li>
@@ -191,7 +188,7 @@
               <li class="education__list-elem">Семантические системы и инженерия знаний;</li>
               <li class="education__list-elem">Технологии разработки компьютерных игр.</li>
             </ul>
-            <a href="yandex.ru" class="education__link" target="_blank">
+            <a href="https://abit.itmo.ru/program/14596/#passport" class="education__link" target="_blank">
               Подробнее
               <div class="education__arrow"></div>
             </a>
@@ -214,7 +211,7 @@
               <li class="education__list-elem">Семантические системы и инженерия знаний;</li>
               <li class="education__list-elem">Технологии разработки компьютерных игр.</li>
             </ul>
-            <a href="#" class="education__link" target="_blank">
+            <a href="https://aspirantura.itmo.ru/?main=12" class="education__link" target="_blank">
               Подробнее
               <div class="education__arrow"></div>
             </a>
@@ -329,67 +326,47 @@
       </p>
       <ul class="partners__logo-container">
         <li>
-          <a href="#" target="_blank" class="partners__logo-link">
           <img src="./images/partnership-logos/gazprom-logo.svg" alt="Логотип Газпром." class="partners__img">
-          </a>
         </li>
         <li>
-          <a href="#" target="_blank" class="partners__logo-link">
           <img src="./images/partnership-logos/sberbank_logo.svg" alt="Логотип Сбер." class="partners__img">
-          </a>
         </li>
         <li>
-          <a href="#" target="_blank" class="partners__logo-link">
           <img src="./images/partnership-logos/mail-logo.svg" alt="Логотип Мэйл." class="partners__img">
-          </a>
         </li>
         <li>
-          <a href="#" target="_blank" class="partners__logo-link">
           <img src="./images/partnership-logos/siemens-logo.svg" alt="Логотип Сименс." class="partners__img">
-          </a>
         </li>
         <li>
-          <a href="#" target="_blank" class="partners__logo-link">
           <img src="./images/partnership-logos/huawei-logo.svg" alt="Логотип Хуавей." class="partners__img">
-          </a>
         </li>
         <li>
-          <a href="#" target="_blank" class="partners__logo-link">
           <img src="./images/partnership-logos/sberbank_logo.svg" alt="Логотип Сбер." class="partners__img">
-          </a>
         </li>
         <li>
-          <a href="#" target="_blank" class="partners__logo-link">
           <img src="./images/partnership-logos/rosneft-logo.svg" alt="Логотип Роснефть." class="partners__img">
-          </a>
         </li>
         <li>
-          <a href="#" target="_blank" class="partners__logo-link">
           <img src="./images/partnership-logos/gazprom-logo.svg" alt="Логотип Газпром." class="partners__img">
-          </a>
         </li>
         <li>
-          <a href="#" target="_blank" class="partners__logo-link">
           <img src="./images/partnership-logos/huawei-logo.svg" alt="Логотип Хуавей." class="partners__img">
-          </a>
         </li>
         <li>
-          <a href="#" target="_blank" class="partners__logo-link">
           <img src="./images/partnership-logos/mail-logo.svg" alt="Логотип Мэйл." class="partners__img">
-          </a>
         </li>
       </ul>
     </section>
     <section class="feedback" id="feedback">
       <h2 class="section-title section-title_color_white">Всегда на связи</h2>
       <p class="feedback__text">По всем интересующим вас вопросам вы всегда можете обратиться по указанным телефонам, написать на почту или оставтиь свое сообщение через форму обратной связи. </p>
-      <form class="feedback__form">
-        <input type="text" required class="feedback__form-item feedback__first-name" placeholder="Имя">
-        <input type="text" required class="feedback__form-item feedback__last-name" placeholder="Фамилия">
-        <input type="number" required class="feedback__form-item feedback__number" placeholder="Телефон">
-        <input type="email" required class="feedback__form-item feedback__email" placeholder="E-mail">
+      <form name="feedback-form" class="feedback__form">
+        <input name="feedback-first-name" type="text" required class="feedback__form-item feedback__first-name" placeholder="Имя">
+        <input name="feedback-last-name" type="text" required class="feedback__form-item feedback__last-name" placeholder="Фамилия">
+        <input name="feedback-number" type="number" required class="feedback__form-item feedback__number" placeholder="Телефон">
+        <input name="feedback-email" type="email" required class="feedback__form-item feedback__email" placeholder="E-mail">
         <textarea required class="feedback__form-item feedback__message" placeholder="Сообщение"></textarea>
-        <input type="submit" class="feedback__submit-button">
+        <input name="feedback-submit" type="submit" class="feedback__submit-button">
       </form>
     </section>
     <template id="ai-reserch-popup-template">

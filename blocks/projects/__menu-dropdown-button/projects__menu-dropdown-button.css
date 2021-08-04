@@ -9,7 +9,7 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 425px) {
   .projects__menu-dropdown-button {
     display: block;
   }

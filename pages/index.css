@@ -51,7 +51,6 @@
 @import url(../blocks/ai-research-lab/__text-intro/ai-research-lab__text-intro.css);
 @import url(../blocks/ai-research-lab/__text-details/ai-research-lab__text-details.css);
 @import url(../blocks/ai-research-lab/__text-conteiner/ai-research-lab__text-conteiner.css);
-@import url(../blocks/ai-research-lab/__img/ai-research-lab__img.css);
 @import url(../blocks/ai-research-lab/__img-conteiner/ai-research-lab__img-conteiner.css);
 @import url(../blocks/ai-research-lab/__molecular/ai-research-lab__molecular.css);
 @import url(../blocks/ai-research-lab/__cards-conteiner/ai-research-lab__cards-conteiner.css);
@@ -94,7 +93,6 @@
 @import url(../blocks/projects/__pagination-link/projects__pagination-link.css);
 @import url(../blocks/projects/__pagination-current-page/projects__pagination-current-page.css);
 @import url(../blocks/projects/__pagination-last-page/projects__pagination-last-page.css);
-@import url(../blocks/projects/__pagination-link/_active/projects__pagination-link_active.css);
 @import url(../blocks/projects/__dropdown/projects__dropdown.css);
 @import url(../blocks/projects/__dropdown-content/projects__dropdown-content.css);
 @import url(../blocks/projects/__dropdown-menu/projects__dropdown-menu.css);
@@ -102,6 +100,7 @@
 @import url(../blocks/projects/__dropdown-menu-link/projects__dropdown-menu-link.css);
 @import url(../blocks/projects/__menu-dropdown-button/projects__menu-dropdown-button.css);
 @import url(../blocks/projects/__dropdown-content/_opened/projects__dropdown-content_opened.css);
+@import url(../blocks/projects/__pagination-link/_active/projects__pagination-link_active.css);
 
 @import url(../blocks/section-background/_light-blue/section-background_light-blue.css);
 @import url(../blocks/section-title/__about/section-title__about.css);
@@ -215,6 +214,5 @@
 @import url(../blocks/partners/__title/partners__title.css);
 @import url(../blocks/partners/__text/partners__text.css);
 @import url(../blocks/partners/__logo-container/partners__logo-container.css);
-@import url(../blocks/partners/__logo-link/partners__logo-link.css);
 @import url(../blocks/partners/__img/partners__img.css);
 @import url(../blocks/partners/__logo-item/partners__logo-item.css);
