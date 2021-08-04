@@ -17,3 +17,9 @@
 .slider__dots:hover {
   opacity: 100%;
 }
+
+@media screen and (max-width: 707px) {
+  .slider__dots {
+    margin-bottom: 12px;
+  }
+}

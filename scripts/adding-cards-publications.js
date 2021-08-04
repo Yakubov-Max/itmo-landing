@@ -1,11 +1,43 @@
 // найти контейнер, куда вставлять slider-page
-const sliderPageContainer = document.querySelector('#slider-publications');
+const sliderPageContainer = document.querySelector('.slider-page-container');
 
-// при загрузке окна вставить карточки в контейнер
-window.addEventListener("load", () => {
+
+//при загрузке окна вставить карточки в контейнер
+window.addEventListener('load', () => {
+  paintSliderPage();
+}, true);
+
+window.addEventListener('resize', () => {
+  paintSliderPage();
+}, true);
+
+function paintSliderPage() {
+  let n = 6;
+  // проверка ширины экрана
+  let windowWidth = window.screen.width;
+  if (windowWidth > 1260) {
+    n = 6;
+  } else if (windowWidth <= 1260 && windowWidth > 707) {
+    n = 4;
+  } else if (windowWidth <= 707) {
+    n = 1;
+  }
+
+  // sliderPageContainer.innerHTML = '';
+
+  // while (sliderPageContainer.firstChild > 0) {
+  //   sliderPageContainer.removeChild(sliderPageContainer.lastChild);
+  // }
+
+
+
+  while (sliderPageContainer.firstChild) {
+    sliderPageContainer.firstChild.remove()
+  }
+
   let sliderPage = null; // неприсвоенное значение
   for (let cardPubIndex = 0; cardPubIndex < cardsPublications.length; cardPubIndex++) {
-    if (cardPubIndex % 6 === 0) {
+    if (cardPubIndex % n === 0) {
       // запись возвращенной функцией страницы слайдера в переменную, чтобы внутри нее далее найти контейнер для отрисовки карточек
       sliderPage = addSliderPage(sliderPageContainer);
     }
@@ -13,7 +45,8 @@ window.addEventListener("load", () => {
     const cardPublications = cardsPublications[cardPubIndex];
     addCardsPublications(cardPublications, sliderPage.querySelector('.publications__container'));
   }
-},true);
+}
+
 
 // функция вызова тултипа "Читать полностью"
 function openCloseTooltipPublications(tooltip) {
@@ -26,7 +59,7 @@ function openCloseTooltipSocial(tooltip) {
 }
 
 //функция создания slider-page для каждой шестерки карточек
-function createSliderPagePublications () {
+function createSliderPagePublications() {
   const sliderPageTemplate = document.querySelector('#slider-page-template').content;
   // поиск и возвращение функцией узла (ноды) "элемент 'карточка'" для клонирования всего содежиомого
   return sliderPageTemplate.querySelector('.slider__page').cloneNode(true);

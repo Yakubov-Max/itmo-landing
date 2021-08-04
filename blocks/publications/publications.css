@@ -1,11 +1,10 @@
 .publications {
   margin: 0 auto;
   padding-top: 80px;
-  padding-bottom: 21px;
 }
 
-@media screen and (max-width: 707px) {
+@media screen and (max-width: 1200px) {
   .publications {
-    max-width: 288px;
+    padding-top: 60px;
   }
 }

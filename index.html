@@ -240,6 +240,7 @@
               </ul>
             </div>
           </template>
+          <div class="slider-page-container"></div>
           <template id="cards-publications-template">
             <li class="publications__item">
               <div class="publications__image-container publications__item-image_shrank">
@@ -259,9 +260,9 @@
                   class="publications__link-to-article" type="button"
                   target="_blank">
                   <p class="tooltip-details__heading">Читать полностью</p>
-                  <button class="tooltip-details__arrow"></button>
+                  <button class="tooltip-details__arrow" type="button"></button>
                 </a>
-                <button class="tooltip-details__share-icon"></button>
+                <button class="tooltip-details__share-icon" type="button"></button>
                 <div class="tooltip-social">
                   <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/vk_emerald.svg"
                     alt="иконка ВКонтакте"
@@ -285,12 +286,12 @@
             </li>
           </template>
         </div>
-        <button class="slider__arrow slider__arrow_left" id="left-arrow"></button>
-        <button class=" slider__arrow slider__arrow_right " id="right-arrow"></button>
+        <button class="slider__arrow slider__arrow_left" id="left-arrow" type="button"></button>
+        <button class=" slider__arrow slider__arrow_right " id="right-arrow" type="button"></button>
         <div class="slider__dots-container">
         </div>
         <template id="dots-template">
-          <div class="slider__dots"></div>
+          <div class="slider__dots" type="button"></div>
         </template>
       </div>
     </section>

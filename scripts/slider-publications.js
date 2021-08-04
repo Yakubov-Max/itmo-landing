@@ -1,6 +1,6 @@
 // найдем слайдер на странице и кнопки внутри него
 const sliderPublications = document.querySelector('.slider');
-let slidesPublications = [];
+let slidesPublications = []; // перенести в adding-cards-publications.js
 const buttonPublicationsLeft = sliderPublications.querySelector('#left-arrow');
 const buttonPublicationsRight = sliderPublications.querySelector('#right-arrow');
 let dotsPublications = [];
@@ -9,7 +9,7 @@ const dotsContainerPublications = sliderPublications.querySelector('.slider__dot
 /* Индекс слайда по умолчанию */
 let slidePublicationsIndex = 0;
 
-window.addEventListener("load", () => {
+window.addEventListener('load', () => {
   setSlides();
   addDots();
   setDots();
@@ -19,11 +19,27 @@ window.addEventListener("load", () => {
   showSlides(slidePublicationsIndex);
 }, true);
 
+window.addEventListener('resize', () => {
+  setSlides();
+  addDots();
+  setDots();
+  if (slidePublicationsIndex > slidesPublications.length) {
+    slidePublicationsIndex = 0;
+  }
+  showSlides(slidePublicationsIndex);
+}, true);
+
+
 function setSlides() {
   slidesPublications = sliderPublications.querySelectorAll('.slider__page');
 }
 
 function addDots() {
+  dotsContainerPublications.innerHTML = '';
+
+  // dotsContainerPublications.childNodes.forEach(item => {
+  //   item.remove();
+  // });
   const dotsTemplate = sliderPublications.querySelector('#dots-template').content;
   for (let dotsIndex = 0; dotsIndex < slidesPublications.length; dotsIndex++) {
     const dot = dotsTemplate.querySelector('.slider__dots').cloneNode(true);
