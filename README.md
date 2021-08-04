@@ -7,4 +7,4 @@
 
 Используемые технологии: HTML5, CSS3, flexbox, grid layout, JavaScript
 
-Ссылка на проектный сайт на GitHub Pages: 
+Ссылка на проектный сайт на GitHub Pages: https://yakubov-max.github.io/itmo-landing/
