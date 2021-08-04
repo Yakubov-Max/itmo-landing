@@ -12,6 +12,7 @@
   margin-bottom: 4px;
   text-decoration: none;
   color: white;
+  width: 100px;
 }
 
 .header__link:hover{
@@ -19,8 +20,15 @@
   opacity: 0.6;
 }
 
+.header__link:active {
+  font-weight: 600;
+  border-bottom: 1px solid #009FAC;
+}
+
 @media all and (max-width: 768px) {
   .header__link {
     display: none;
   }
 }
+
+

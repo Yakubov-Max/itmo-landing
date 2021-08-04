@@ -1,7 +1,7 @@
 .header {
   width: 100%;
   display: flex;
-  position: relative;
+  position: fixed;
   justify-content: center;
   color: white;
   background-color: #000D26;
