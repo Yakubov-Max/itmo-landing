@@ -383,13 +383,13 @@
     <section class="feedback" id="feedback">
       <h2 class="section-title section-title_color_white">Всегда на связи</h2>
       <p class="feedback__text">По всем интересующим вас вопросам вы всегда можете обратиться по указанным телефонам, написать на почту или оставтиь свое сообщение через форму обратной связи. </p>
-      <form class="feedback__form">
-        <input type="text" required class="feedback__form-item feedback__first-name" placeholder="Имя">
-        <input type="text" required class="feedback__form-item feedback__last-name" placeholder="Фамилия">
-        <input type="number" required class="feedback__form-item feedback__number" placeholder="Телефон">
-        <input type="email" required class="feedback__form-item feedback__email" placeholder="E-mail">
+      <form name="feedback-form" class="feedback__form">
+        <input name="feedback-first-name" type="text" required class="feedback__form-item feedback__first-name" placeholder="Имя">
+        <input name="feedback-last-name" type="text" required class="feedback__form-item feedback__last-name" placeholder="Фамилия">
+        <input name="feedback-number" type="number" required class="feedback__form-item feedback__number" placeholder="Телефон">
+        <input name="feedback-email" type="email" required class="feedback__form-item feedback__email" placeholder="E-mail">
         <textarea required class="feedback__form-item feedback__message" placeholder="Сообщение"></textarea>
-        <input type="submit" class="feedback__submit-button">
+        <input name="feedback-submit" type="submit" class="feedback__submit-button">
       </form>
     </section>
     <template id="ai-reserch-popup-template">

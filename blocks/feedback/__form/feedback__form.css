@@ -4,7 +4,7 @@
   "first-name last-name message"
   "number email message"
   ". submit ." ;
-  grid-template-rows: repeat(3, minmax(44px, 60px));
+  grid-template-rows: repeat(2, minmax(44px, 60px)) calc(60px + 17px);
   grid-template-columns: repeat(3, minmax(200px, 351px));
   row-gap: 20px;
   column-gap: 29px;
@@ -15,7 +15,7 @@
 
 @media screen and (max-width: 768px) {
   .feedback__form {
-    grid-template-rows: repeat(3, 44px);
+    grid-template-rows: repeat(2, 44px) calc(60px + 17px);
     grid-template-columns: repeat(3, minmax(140px, 320px));
     padding-bottom: 60px;
     padding-left: 40px;
@@ -28,7 +28,7 @@
     padding-bottom: 40px;
     row-gap: 12px;
     grid-template-columns: 288px;
-    grid-template-rows: repeat(4, 44px) 140px 44px;
+    grid-template-rows: repeat(4, 44px) 140px calc(60px + 11px);
     grid-template-areas:
     "first-name"
     "last-name"
