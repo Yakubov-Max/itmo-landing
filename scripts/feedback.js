@@ -1,5 +1,3 @@
-console.log('feedback js loaded')
-
 const feedbackForm = document.querySelector('.feedback__form')
 const feedbackFirstName = feedbackForm.querySelector('.feedback__first-name')
 const feedbackLastName = feedbackForm.querySelector('.feedback__last-name')

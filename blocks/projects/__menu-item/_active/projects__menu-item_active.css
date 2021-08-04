@@ -1,6 +1,5 @@
 .projects__menu-item_active {
   border-bottom: 5px solid #009FAC;
-  box-sizing: border-box;
 }
 
 @media screen and (max-width: 768px) {
