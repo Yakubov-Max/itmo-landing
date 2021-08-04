@@ -6,6 +6,12 @@
   width: calc(14.88vw + 125.71px);
 }
 
+@media all and (max-width:768px) {
+  .footer__navigation {
+    margin-top: 144px;
+  }
+}
+
 @media all and (max-width: 320px) {
   .footer__navigation {
     margin-top: 40px;

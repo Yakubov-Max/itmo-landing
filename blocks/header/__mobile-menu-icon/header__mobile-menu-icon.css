@@ -1,4 +1,6 @@
 .header__mobile-menu-icon {
+  padding: 0;
+  margin: 0;
   display: block;
   position: relative;
   background: white;

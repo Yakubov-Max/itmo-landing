@@ -12,23 +12,23 @@
       <nav class="header__mobile-menu">
         <input type="checkbox" id="checkbox" class="header__mobile-menu-checkbox">
         <label for="checkbox" class="header__mobile-menu-btn">
-          <img class="header__mobile-menu-icon" src="" alt="">
+          <img src="./images" class="header__mobile-menu-icon" alt="">
         </label>
         <div class="header__mobile-menu-container">
           <ul class="header__mobile-menu-list">
-            <li class="header__mobile-menu-item"><a href="#" class="header__mobile-menu-link">О нас</a></li>
-            <li class="header__mobile-menu-item"><a href="#" class="header__mobile-menu-link">Лаборатория</a></li>
-            <li class="header__mobile-menu-item"><a href="#" class="header__mobile-menu-link">Проекты</a></li>
+            <li class="header__mobile-menu-item"><a href="#about" class="header__mobile-menu-link">О нас</a></li>
+            <li class="header__mobile-menu-item"><a href="#labs" class="header__mobile-menu-link">Лаборатория</a></li>
+            <li class="header__mobile-menu-item"><a href="#projects" class="header__mobile-menu-link">Проекты</a></li>
             <li class="header__dropdown" id="educationDropDown">
-              <button class="header__mobile-menu-item header__dropbtn"><a href="#" class="header__mobile-menu-link ">Образование</a></button>
-              <div class="header__educationdropdown-content">
-                <a href="#">Магистратура</a>
-                <a href="#">Аспирантура</a>
-              </div>
+              <a href="#education" class="header__mobile-menu-item header__dropbtn">Образование</a>
+              <ul class="header__educationdropdown-content">
+                <li><a>Магистратура</a></li>
+                <li><a>Аспирантура</a></li>
+              </ul>
             </li>
-            <li class="header__mobile-menu-item"><a href="#" class="header__mobile-menu-link">Публикации</a></li>
-            <li class="header__mobile-menu-item"><a href="#" class="header__mobile-menu-link">Команда</a></li>
-            <li class="header__mobile-menu-item"><a href="#" class="header__mobile-menu-link">Связаться</a></li>
+            <li class="header__mobile-menu-item"><a href="#publications" class="header__mobile-menu-link">Публикации</a></li>
+            <li class="header__mobile-menu-item"><a href="#team" class="header__mobile-menu-link">Команда</a></li>
+            <li class="header__mobile-menu-item"><a href="#feedback" class="header__mobile-menu-link">Связаться</a></li>
           </ul>
         </div>
       </nav>
@@ -43,11 +43,11 @@
         <a class="header__link" href="#feedback">Связаться</a>
       </div>
     </header>
-    <section class="about" id="#about">
+    <section class="about" id="about">
       <div class="about__AI-window">
-        <h2 class="about__subtitle">Когнитивные технологии, машинное обучение</h2>
+        <h1 class="about__subtitle"><b>Когнитивные технологии</b>, машинное обучение</h1>
         <p class="about__AI-window-text">
-          Системы прикладного искусственного интелекта
+          Системы прикладного искусственного интеллекта
         </p>
         <button class="about__projects-button">
         Наши проекты
@@ -63,8 +63,8 @@
           «Технологии машинного обучения и когнитивные технологии».
         </p>
         <div class="about__cards" id="about__touchsurface">
-          <button class="about__roll-to-left"></button>
-          <button class="about__roll-to-right"></button>
+          <button type="button" class="about__roll-to-left"></button>
+          <button type="button" class="about__roll-to-right"></button>
           <template id="about__card-template">
             <div class="about__card-item">
               <img src="./images/Niddle.svg" class="about__card-niddle">
@@ -295,10 +295,10 @@
       </div>
     </section>
     <section class="team" id="team">
-      <h1 class="section-title section-title_color_blue section-title__team">Наша команда</h1>
+      <h2 class="section-title section-title_color_blue section-title__team">Наша команда</h2>
       <div class="team__cards" id="team__touchsurface">
-        <button class="team__roll-to-left"></button>
-        <button class="team__roll-to-right"></button>
+        <button type="button" class="team__roll-to-left"></button>
+        <button type="button" class="team__roll-to-right"></button>
         <template id="team__card-template">
           <div class="team__card-item">
             <img src="" class="team__card-photo">
@@ -414,10 +414,10 @@
             и когнитивные технологии». Инфраструктурная основа взаимодействия научных, образовательных
             и промышленных организаций
           </p>
-          <p class="footer__doneBy">Сделано студентами Яндекс. Практикума</p>
+          <p class="footer__done-by">Сделано студентами Яндекс. Практикума</p>
         </div>
         <div class="footer__navigation">
-          <div class="footer__aboutCenter">
+          <div class="footer__about-center">
             <h4 class="footer__navigation-header">О центре</h4>
             <a href="#" class="footer__link">О нас</a>
             <a href="#" class="footer__link">Главная</a>
@@ -441,24 +441,24 @@
             Биржевая линия, д. 4, лит. М,
             ауд. 302С
           </p>
-          <p class="footer__telephone">
+          <a href="#" class="footer__telephone">
             +7 (812) 337-64-90
-          </p>
-          <p class="footer__telephone">
+          </a>
+          <a href="#" class="footer__telephone">
             +7 (812) 337-64-94
-          </p>
-          <p class="footer__email">
+          </a>
+          <a href="#" class="footer__email">
             anna.lutsenko@itmo.ru
-          </p>
+          </a>
           <div class="footer__social-logotips">
-            <a href="#" class="footer__social-link"><img src="./images/social-icons/VK.svg" class="footer__social-logo" alt="Логотип Vk"></a>
+            <a href="#" class="footer__social-link"><img src="./images/social-icons/vk.svg" class="footer__social-logo" alt="Логотип Vk"></a>
             <a href="#" class="footer__social-link"><img src="./images/social-icons/Facebook.svg" class="footer__social-logo" alt="Логотип Facebook"></a>
             <a href="#" class="footer__social-link"> <img src="./images/social-icons/Telegram.svg" class="footer__social-logo" alt="Логотип Telegram"></a>
             <a href="#" class="footer__social-link"><img src="./images/social-icons/Insta.svg" class="footer__social-logo" alt="Логотип Instgramm"></a>
             <a href="#" class="footer__social-link"><img src="./images/social-icons/YouTube.svg" class="footer__social-logo" alt="Логотип YouTube"></a>
           </div>
         </div>
-        <p class="footer__doneBy-formobile">Сделано студентами Яндекс. Практикума</p>
+        <p class="footer__done-by-formobile">Сделано студентами Яндекс. Практикума</p>
       </div>
     </footer>
     <script src="./scripts/script.js"></script>

@@ -1,4 +1,7 @@
 .header__educationdropdown-content {
+  padding: 0;
+  margin: 0;
+  list-style: none;
   display: none;
   position: relative;
   min-width: 160px;

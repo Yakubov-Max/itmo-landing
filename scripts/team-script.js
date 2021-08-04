@@ -120,7 +120,6 @@ for (let i = 0; i < teamDots.length; i++) {
 }
 
 const addedTeamCards = Array.from(document.querySelectorAll('.team__card-item'));
-console.log(addedTeamCards[0]);
 for (let i = 0; i < 4; i++) {
   addedTeamCards[i].classList.add('team__card-item_show');
 }

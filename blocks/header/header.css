@@ -6,10 +6,12 @@
   color: white;
   background-color: #000D26;
   height: calc(2.97vw + 37.14px);
+  z-index: 3;
 }
 
 @media all and (max-width: 768px) {
   .header {
+    position: fixed;
     height: calc(3.57vw + 32.57px);
   }
 }

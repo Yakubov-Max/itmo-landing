@@ -1,5 +1,4 @@
-
-.footer__doneBy {
+.footer__done-by {
   margin: 0;
   padding: 0;
   opacity: 0.5;
@@ -12,14 +11,14 @@
 }
 
 @media all and (max-width: 768px) {
-  .footer__doneBy {
+  .footer__done-by {
     font-size: 12px;
     line-height: 20px;
   }
 }
 
 @media all and (max-width: 320px) {
-  .footer__doneBy {
+  .footer__done-by {
     display: none;
   }
 }
