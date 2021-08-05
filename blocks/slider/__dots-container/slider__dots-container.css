@@ -6,3 +6,11 @@
   min-width: 128px;
   min-height: 8px;
 }
+
+@media screen and (max-width: 707px) {
+  .slider__dots-container {
+    flex-wrap: wrap;
+    max-width: 248px;
+    overflow: hidden;
+  }
+}

@@ -1,4 +1,4 @@
-.footer__doneBy-formobile {
+.footer__done-by-formobile {
   display: none;
   margin: 0;
   padding: 0;
@@ -12,7 +12,7 @@
 }
 
 @media all and (max-width: 320px) {
-  .footer__doneBy-formobile {
+  .footer__done-by-formobile {
     display: block;
   }
 }

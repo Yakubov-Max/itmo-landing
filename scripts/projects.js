@@ -1,13 +1,13 @@
-console.log("Projects.js loaded");
-
 // Селекторы dropdown
-const projectDropdown = document.querySelector(".projects__dropdown");
-const projectDropdownContent = projectDropdown.querySelector(
+const projects = document.querySelector(".projects");
+const projectDropdownContent = projects.querySelector(
   ".projects__dropdown-content"
 );
-const projectDropdownButton = projectDropdown.querySelector(
+const projectDropdownButton = projects.querySelector(
   ".projects__menu-dropdown-button"
 );
+
+
 
 projectDropdownButton.addEventListener("click", handleProjectsDropdown);
 
@@ -56,7 +56,7 @@ const paginateNext = document.querySelector(
 );
 
 const paginateCurrentPage = document.querySelector(
-  ".projects__pagination-current-page"
+  ".projects__pagination-link_active"
 );
 const paginateLastPage = document.querySelector(
   ".projects__pagination-last-page"
@@ -117,9 +117,9 @@ function getCardsPerPage() {
   let screenWidth = window.screen.width;
   let cardsPerPage = 0;
 
-  if (screenWidth > 865) {
+  if (screenWidth > 1060) {
     cardsPerPage = 4;
-  } else if (screenWidth <= 865 && screenWidth > 620) {
+  } else if (screenWidth <= 1060 && screenWidth > 620) {
     cardsPerPage = 3;
   } else if (screenWidth <= 620) {
     cardsPerPage = 2;

@@ -7,15 +7,13 @@ include("./scripts/about-script.js");
 include("./scripts/team-script.js");
 include("./scripts/projects.js");
 include("./scripts/feedback.js");
-//console.log('DOM loaded')
 
 const buttonPopupAiReseach1 = document.querySelector('#ai-research-button-one');
 const buttonPopupAiReseach2 = document.querySelector('#ai-research-button-two');
 const buttonPopupAiReseach3 = document.querySelector('#ai-research-button-three');
 const buttonPopupAiReseach4 = document.querySelector('#ai-research-button-four');
 const blockAiResearch = document.querySelector('.ai-research-lab');
-const widthWindow = window.innerWidth;
-let indArrayForCreatePopup = widthWindow < 1200 ? widthWindow < 768 ? 2 : 1 : 0; // Индекс необходимого объекта в массиве для попапа AiResearch в зависимости от размера экрана.
+let numberOfButton;
 const buttonChangeEducation = document.querySelector('.education__buttons-container');  // Кнопка переключения образования.
 const aspirantePartButton = document.querySelector('#aspirante');                       // Часть кнопки аспирантов.
 const magistracyPartButton = document.querySelector('#magistracy');                     // Часть кнопки магистратуры.
@@ -92,7 +90,12 @@ const fillTextPopupAiResearch = (basePopup) => {
   }
 }
 // Добавление popup AiResearch в разметку.
-const handleCreateAiResearchPopup = (item) => {
+const handleCreateAiResearchPopup = (num) => {
+  const widthWindow = window.innerWidth;
+  let indArrayForCreatePopup = widthWindow < 1200 ? widthWindow < 768 ? 2 : 1 : 0; // Индекс необходимого объекта в массиве для попапа AiResearch в зависимости от размера экрана.
+  const item = num === 1 ? popupFirstCard[indArrayForCreatePopup] : num === 2 ?
+    popupSecondCard[indArrayForCreatePopup] : num === 3 ? popupThirdCard[indArrayForCreatePopup] :
+    popupFourthCard[indArrayForCreatePopup];
   const popup = createNodePopupAiResearch();  // Создание клона.
   fillBaseInfoPopupAiResearch(popup, item);        // Заполнение клона основной информацией.
   blockAiResearch.append(popup);            // Добавление клона в разметку.
@@ -101,6 +104,7 @@ const handleCreateAiResearchPopup = (item) => {
   buttonCloseAiResearchPopup.addEventListener('click', handleCloseAiResearchPopup);
   popup.classList.add('popup-ai-research_active');
   changeScrollWithPopup();
+  numberOfButton = num;
 }
 
 // Удаление popup AiResearch из разметки.
@@ -108,12 +112,22 @@ const deleteInnerPopupAiResearch = () => {
   document.querySelector('.popup-ai-research').remove();
 }
 
-buttonPopupAiReseach1.addEventListener('click', () => handleCreateAiResearchPopup(popupFirstCard[indArrayForCreatePopup]));
-buttonPopupAiReseach2.addEventListener('click', () => handleCreateAiResearchPopup(popupSecondCard[indArrayForCreatePopup]));
-buttonPopupAiReseach3.addEventListener('click', () => handleCreateAiResearchPopup(popupThirdCard[indArrayForCreatePopup]));
-buttonPopupAiReseach4.addEventListener('click', () => handleCreateAiResearchPopup(popupFourthCard[indArrayForCreatePopup]));
+buttonPopupAiReseach1.addEventListener('click', () => handleCreateAiResearchPopup(1));
+buttonPopupAiReseach2.addEventListener('click', () => handleCreateAiResearchPopup(2));
+buttonPopupAiReseach3.addEventListener('click', () => handleCreateAiResearchPopup(3));
+buttonPopupAiReseach4.addEventListener('click', () => handleCreateAiResearchPopup(4));
 buttonChangeEducation.addEventListener('click', handleChangeEducation);
 window.addEventListener('click', e => {
   const target = e.target;
   target.getAttribute('class') === 'popup-ai-research popup-ai-research_active' ? handleCloseAiResearchPopup() : '';
 })
+
+// Изменение popupAIResearch при открытом попапе и изменении ширины экрана.
+  window.addEventListener('resize', function() {
+    if (document.querySelector('.popup-ai-research_active')) {
+      let dinamicWidthWindow = window.innerWidth;
+      indArrayForCreatePopup2 = dinamicWidthWindow < 1200 ? dinamicWidthWindow < 768 ? 2 : 1 : 0;
+      handleCloseAiResearchPopup();
+      handleCreateAiResearchPopup(numberOfButton);
+    }
+}, true);

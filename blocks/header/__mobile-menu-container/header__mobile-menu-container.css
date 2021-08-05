@@ -2,7 +2,7 @@
   position: fixed;
   text-align: center;
   display: flex;
-  top: 50px;
+  top: calc(2.97vw + 37.14px - 3px); 
   left: 0;
   right: 0;
   z-index: 999;
@@ -11,4 +11,10 @@
   transition: 0.5s;
   transition-delay: 0.2s;
   overflow: hidden;
+}
+
+@media all and (max-width:320px) {
+  .header__mobile-menu-container {
+    top: 44px;
+  }
 }

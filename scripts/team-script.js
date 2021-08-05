@@ -9,7 +9,7 @@ const teamCardsMassive = [
     surname: 'Бобцов',
     name: 'Алексей Алексеевич',
     post: 'Директор, профессор, ДТН',
-    shortPost: 'Директор, ДТН', 
+    shortPost: 'Директор, ДТН',
     photo: './images/team/manPhoto.png',
   },
   {
@@ -120,7 +120,6 @@ for (let i = 0; i < teamDots.length; i++) {
 }
 
 const addedTeamCards = Array.from(document.querySelectorAll('.team__card-item'));
-console.log(addedTeamCards[0]);
 for (let i = 0; i < 4; i++) {
   addedTeamCards[i].classList.add('team__card-item_show');
 }
@@ -136,8 +135,6 @@ function teamRollRight() {
         teamAchualSecondCard = 1;
       }
     } else if (window.innerWidth <= 320) {
-      console.log(teamAchualSecondCard);
-      console.log(teamAchualThirdCard);
       switch (teamAchualSecondCard + teamAchualThirdCard) {
         case 0:
           addedTeamCards[teamFirstIndex].style.transform = 'translateX(' + -160 + 'px)';
@@ -203,8 +200,6 @@ function teamRollLeft() {
           teamAchualSecondCard = 0;
         }
       } else if (window.innerWidth <= 320) {
-        console.log(teamAchualSecondCard);
-        console.log(teamAchualThirdCard);
         switch (teamAchualSecondCard + teamAchualThirdCard) {
           case 0:
 
@@ -298,5 +293,5 @@ teamRollToRightButton.addEventListener('click', teamRollRight);
 teamRollToLeftButton.addEventListener('click', teamRollLeft);
 
 if (document.documentElement.clientWidth < 321) {
-  
+
 }

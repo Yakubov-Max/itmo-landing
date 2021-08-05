@@ -12,29 +12,29 @@
       <nav class="header__mobile-menu">
         <input type="checkbox" id="checkbox" class="header__mobile-menu-checkbox">
         <label for="checkbox" class="header__mobile-menu-btn">
-          <img class="header__mobile-menu-icon" src="" alt="">
+          <img src="./images" class="header__mobile-menu-icon" alt="">
         </label>
         <div class="header__mobile-menu-container">
           <ul class="header__mobile-menu-list">
-            <li class="header__mobile-menu-item"><a href="#" class="header__mobile-menu-link">О нас</a></li>
-            <li class="header__mobile-menu-item"><a href="#" class="header__mobile-menu-link">Лаборатория</a></li>
-            <li class="header__mobile-menu-item"><a href="#" class="header__mobile-menu-link">Проекты</a></li>
+            <li class="header__mobile-menu-item"><a href="#about" class="header__mobile-menu-link">О нас</a></li>
+            <li class="header__mobile-menu-item"><a href="#labs" class="header__mobile-menu-link">Лаборатория</a></li>
+            <li class="header__mobile-menu-item"><a href="#projects" class="header__mobile-menu-link">Проекты</a></li>
             <li class="header__dropdown" id="educationDropDown">
-              <button class="header__mobile-menu-item header__dropbtn"><a href="#" class="header__mobile-menu-link ">Образование</a></button>
-              <div class="header__educationdropdown-content">
-                <a href="#">Магистратура</a>
-                <a href="#">Аспирантура</a>
-              </div>
+              <a href="#education" class="header__mobile-menu-item header__dropbtn">Образование</a>
+              <ul class="header__educationdropdown-content">
+                <li><a>Магистратура</a></li>
+                <li><a>Аспирантура</a></li>
+              </ul>
             </li>
-            <li class="header__mobile-menu-item"><a href="#" class="header__mobile-menu-link">Публикации</a></li>
-            <li class="header__mobile-menu-item"><a href="#" class="header__mobile-menu-link">Команда</a></li>
-            <li class="header__mobile-menu-item"><a href="#" class="header__mobile-menu-link">Связаться</a></li>
+            <li class="header__mobile-menu-item"><a href="#publications" class="header__mobile-menu-link">Публикации</a></li>
+            <li class="header__mobile-menu-item"><a href="#team" class="header__mobile-menu-link">Команда</a></li>
+            <li class="header__mobile-menu-item"><a href="#feedback" class="header__mobile-menu-link">Связаться</a></li>
           </ul>
         </div>
       </nav>
       <div class="header__container">
         <img src="./images/Logo_AI1.svg" class="header__logo" alt="Логотип лаборатории">
-        <a class="header__link header__link_active" href="#about">О нас</a>
+        <a class="header__link" href="#about">О нас</a>
         <a class="header__link" href="#labs">Лаборатория</a>
         <a class="header__link" href="#projects">Проекты</a>
         <a class="header__link" href="#education">Образование</a>
@@ -43,13 +43,13 @@
         <a class="header__link" href="#feedback">Связаться</a>
       </div>
     </header>
-    <section class="about" id="#about">
+    <section class="about" id="about">
       <div class="about__AI-window">
-        <h2 class="about__subtitle">Когнитивные технологии, машинное обучение</h2>
+        <h1 class="about__subtitle"><b>Когнитивные технологии</b>, машинное обучение</h1>
         <p class="about__AI-window-text">
-          Системы прикладного искусственного интелекта
+          Системы прикладного искусственного интеллекта
         </p>
-        <button class="about__projects-button">
+        <button class="about__projects-button" type="button">
         Наши проекты
         </button>
       </div>
@@ -63,8 +63,8 @@
           «Технологии машинного обучения и когнитивные технологии».
         </p>
         <div class="about__cards" id="about__touchsurface">
-          <button class="about__roll-to-left"></button>
-          <button class="about__roll-to-right"></button>
+          <button type="button" class="about__roll-to-left"></button>
+          <button type="button" class="about__roll-to-right"></button>
           <template id="about__card-template">
             <div class="about__card-item">
               <img src="./images/Niddle.svg" class="about__card-niddle">
@@ -79,7 +79,7 @@
         </div>
         <div class="about__dots">
           <template id="about__dot-template">
-            <button class="about__dot"></button>
+            <button class="about__dot" type="button"></button>
           </template>
         </div>
       </div>
@@ -98,10 +98,7 @@
             <img src="./images/lab/molecular.svg" alt="Модель молекулы." class="ai-research-lab__molecular">
           </p>
         </div>
-        <div class="ai-research-lab__img-conteiner">
-          <img src="./images/lab/image1.png" alt="Мужчина в черной футболке сидя в офисе, смотрит на открытый ноутбук." class="ai-research-lab__img">
-          <img src="./images/lab/image2table.png" alt="Двое мужчин работаю в офисе за ноутбуками." class="ai-research-lab__img">
-        </div>
+        <div class="ai-research-lab__img-conteiner"></div>
       </div>
       <div class="ai-research-lab__cards-conteiner">
         <div class="ai-research-lab__card">
@@ -136,7 +133,7 @@
         <li class="projects__menu-item projects__menu-item_active">
           <a href="#" class="projects__menu-item-link">Все проекты</a>
           <div class="projects__dropdown">
-            <button class="projects__menu-dropdown-button"></button>
+            <button type="button" class="projects__menu-dropdown-button"></button>
             <div class="projects__dropdown-content">
               <ul class="projects__dropdown-menu">
                 <li class="projects__dropdown-menu-item"><a href="#" class="projects__dropdown-menu-link">Все проекты</a></li>
@@ -155,7 +152,7 @@
       </div>
       <ul class="projects__pagination">
         <li class="projects__pagination-item"><a href="#" class="projects__pagination-left-arrow"></a></li>
-        <li class="projects__pagination-item projects__pagination-current-page"><a href="#" class="projects__pagination-link projects__pagination-link_active">1</a></li>
+        <li class="projects__pagination-item projects__pagination-current-page"><a href="#" class="projects__pagination-link"><span class="projects__pagination-link_active">1</span></a></li>
         <li class="projects__pagination-item">/</li>
         <li class="projects__pagination-item projects__pagination-last-page"><a href="#" class="projects__pagination-link">30</a></li>
         <li class="projects__pagination-item"><a href="#" class="projects__pagination-link"><span class="projects__pagination-right-arrow"></span></a></li>
@@ -191,7 +188,7 @@
               <li class="education__list-elem">Семантические системы и инженерия знаний;</li>
               <li class="education__list-elem">Технологии разработки компьютерных игр.</li>
             </ul>
-            <a href="yandex.ru" class="education__link" target="_blank">
+            <a href="https://abit.itmo.ru/program/14596/#passport" class="education__link" target="_blank">
               Подробнее
               <div class="education__arrow"></div>
             </a>
@@ -214,7 +211,7 @@
               <li class="education__list-elem">Семантические системы и инженерия знаний;</li>
               <li class="education__list-elem">Технологии разработки компьютерных игр.</li>
             </ul>
-            <a href="#" class="education__link" target="_blank">
+            <a href="https://aspirantura.itmo.ru/?main=12" class="education__link" target="_blank">
               Подробнее
               <div class="education__arrow"></div>
             </a>
@@ -240,6 +237,7 @@
               </ul>
             </div>
           </template>
+          <div class="slider-page-container"></div>
           <template id="cards-publications-template">
             <li class="publications__item">
               <div class="publications__image-container publications__item-image_shrank">
@@ -259,9 +257,9 @@
                   class="publications__link-to-article" type="button"
                   target="_blank">
                   <p class="tooltip-details__heading">Читать полностью</p>
-                  <button class="tooltip-details__arrow"></button>
+                  <button class="tooltip-details__arrow" type="button"></button>
                 </a>
-                <button class="tooltip-details__share-icon"></button>
+                <button class="tooltip-details__share-icon" type="button"></button>
                 <div class="tooltip-social">
                   <a href="#" target="_blank" class="tooltip-social__link"><img src="images/icons/vk_emerald.svg"
                     alt="иконка ВКонтакте"
@@ -285,20 +283,20 @@
             </li>
           </template>
         </div>
-        <button class="slider__arrow slider__arrow_left" id="left-arrow"></button>
-        <button class=" slider__arrow slider__arrow_right " id="right-arrow"></button>
+        <button class="slider__arrow slider__arrow_left" id="left-arrow" type="button"></button>
+        <button class=" slider__arrow slider__arrow_right " id="right-arrow" type="button"></button>
         <div class="slider__dots-container">
         </div>
         <template id="dots-template">
-          <div class="slider__dots"></div>
+          <div class="slider__dots" type="button"></div>
         </template>
       </div>
     </section>
     <section class="team" id="team">
-      <h1 class="section-title section-title_color_blue section-title__team">Наша команда</h1>
+      <h2 class="section-title section-title_color_blue section-title__team">Наша команда</h2>
       <div class="team__cards" id="team__touchsurface">
-        <button class="team__roll-to-left"></button>
-        <button class="team__roll-to-right"></button>
+        <button type="button" class="team__roll-to-left"></button>
+        <button type="button" class="team__roll-to-right"></button>
         <template id="team__card-template">
           <div class="team__card-item">
             <img src="" class="team__card-photo">
@@ -315,7 +313,7 @@
       </div>
       <div class="team__dots">
         <template id="team__dot-template">
-          <button class="team__dot"></button>
+          <button type="button" class="team__dot"></button>
         </template>
       </div>
     </section>
@@ -329,67 +327,47 @@
       </p>
       <ul class="partners__logo-container">
         <li>
-          <a href="#" target="_blank" class="partners__logo-link">
           <img src="./images/partnership-logos/gazprom-logo.svg" alt="Логотип Газпром." class="partners__img">
-          </a>
         </li>
         <li>
-          <a href="#" target="_blank" class="partners__logo-link">
           <img src="./images/partnership-logos/sberbank_logo.svg" alt="Логотип Сбер." class="partners__img">
-          </a>
         </li>
         <li>
-          <a href="#" target="_blank" class="partners__logo-link">
           <img src="./images/partnership-logos/mail-logo.svg" alt="Логотип Мэйл." class="partners__img">
-          </a>
         </li>
         <li>
-          <a href="#" target="_blank" class="partners__logo-link">
           <img src="./images/partnership-logos/siemens-logo.svg" alt="Логотип Сименс." class="partners__img">
-          </a>
         </li>
         <li>
-          <a href="#" target="_blank" class="partners__logo-link">
           <img src="./images/partnership-logos/huawei-logo.svg" alt="Логотип Хуавей." class="partners__img">
-          </a>
         </li>
         <li>
-          <a href="#" target="_blank" class="partners__logo-link">
           <img src="./images/partnership-logos/sberbank_logo.svg" alt="Логотип Сбер." class="partners__img">
-          </a>
         </li>
         <li>
-          <a href="#" target="_blank" class="partners__logo-link">
           <img src="./images/partnership-logos/rosneft-logo.svg" alt="Логотип Роснефть." class="partners__img">
-          </a>
         </li>
         <li>
-          <a href="#" target="_blank" class="partners__logo-link">
           <img src="./images/partnership-logos/gazprom-logo.svg" alt="Логотип Газпром." class="partners__img">
-          </a>
         </li>
         <li>
-          <a href="#" target="_blank" class="partners__logo-link">
           <img src="./images/partnership-logos/huawei-logo.svg" alt="Логотип Хуавей." class="partners__img">
-          </a>
         </li>
         <li>
-          <a href="#" target="_blank" class="partners__logo-link">
           <img src="./images/partnership-logos/mail-logo.svg" alt="Логотип Мэйл." class="partners__img">
-          </a>
         </li>
       </ul>
     </section>
     <section class="feedback" id="feedback">
       <h2 class="section-title section-title_color_white">Всегда на связи</h2>
       <p class="feedback__text">По всем интересующим вас вопросам вы всегда можете обратиться по указанным телефонам, написать на почту или оставтиь свое сообщение через форму обратной связи. </p>
-      <form class="feedback__form">
-        <input type="text" required class="feedback__form-item feedback__first-name" placeholder="Имя">
-        <input type="text" required class="feedback__form-item feedback__last-name" placeholder="Фамилия">
-        <input type="number" required class="feedback__form-item feedback__number" placeholder="Телефон">
-        <input type="email" required class="feedback__form-item feedback__email" placeholder="E-mail">
+      <form name="feedback-form" class="feedback__form">
+        <input name="feedback-first-name" type="text" required class="feedback__form-item feedback__first-name" placeholder="Имя">
+        <input name="feedback-last-name" type="text" required class="feedback__form-item feedback__last-name" placeholder="Фамилия">
+        <input name="feedback-number" type="number" required class="feedback__form-item feedback__number" placeholder="Телефон">
+        <input name="feedback-email" type="email" required class="feedback__form-item feedback__email" placeholder="E-mail">
         <textarea required class="feedback__form-item feedback__message" placeholder="Сообщение"></textarea>
-        <input type="submit" class="feedback__submit-button">
+        <input name="feedback-submit" type="submit" class="feedback__submit-button">
       </form>
     </section>
     <template id="ai-reserch-popup-template">
@@ -414,10 +392,10 @@
             и когнитивные технологии». Инфраструктурная основа взаимодействия научных, образовательных
             и промышленных организаций
           </p>
-          <p class="footer__doneBy">Сделано студентами Яндекс. Практикума</p>
+          <p class="footer__done-by">Сделано студентами Яндекс. Практикума</p>
         </div>
         <div class="footer__navigation">
-          <div class="footer__aboutCenter">
+          <div class="footer__about-center">
             <h4 class="footer__navigation-header">О центре</h4>
             <a href="#" class="footer__link">О нас</a>
             <a href="#" class="footer__link">Главная</a>
@@ -441,24 +419,24 @@
             Биржевая линия, д. 4, лит. М,
             ауд. 302С
           </p>
-          <p class="footer__telephone">
+          <a href="#" class="footer__telephone">
             +7 (812) 337-64-90
-          </p>
-          <p class="footer__telephone">
+          </a>
+          <a href="#" class="footer__telephone">
             +7 (812) 337-64-94
-          </p>
-          <p class="footer__email">
+          </a>
+          <a href="#" class="footer__email">
             anna.lutsenko@itmo.ru
-          </p>
+          </a>
           <div class="footer__social-logotips">
-            <a href="#" class="footer__social-link"><img src="./images/social-icons/VK.svg" class="footer__social-logo" alt="Логотип Vk"></a>
+            <a href="#" class="footer__social-link"><img src="./images/social-icons/vk.svg" class="footer__social-logo" alt="Логотип Vk"></a>
             <a href="#" class="footer__social-link"><img src="./images/social-icons/Facebook.svg" class="footer__social-logo" alt="Логотип Facebook"></a>
             <a href="#" class="footer__social-link"> <img src="./images/social-icons/Telegram.svg" class="footer__social-logo" alt="Логотип Telegram"></a>
             <a href="#" class="footer__social-link"><img src="./images/social-icons/Insta.svg" class="footer__social-logo" alt="Логотип Instgramm"></a>
             <a href="#" class="footer__social-link"><img src="./images/social-icons/YouTube.svg" class="footer__social-logo" alt="Логотип YouTube"></a>
           </div>
         </div>
-        <p class="footer__doneBy-formobile">Сделано студентами Яндекс. Практикума</p>
+        <p class="footer__done-by-formobile">Сделано студентами Яндекс. Практикума</p>
       </div>
     </footer>
     <script src="./scripts/script.js"></script>
