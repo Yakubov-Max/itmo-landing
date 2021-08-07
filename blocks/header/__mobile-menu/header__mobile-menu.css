@@ -14,7 +14,7 @@
   z-index: 2;
 }
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 900px) {
   .header__mobile-menu {
     display: flex;
   }
@@ -24,6 +24,5 @@
   .header__mobile-menu {
     padding-left: 18px;
     margin-top: 14.67px;
-    padding-left: 18px;
   }
 }

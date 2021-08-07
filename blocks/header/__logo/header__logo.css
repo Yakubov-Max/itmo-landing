@@ -5,7 +5,7 @@
   height: calc(3.27vw + 6.85px);
 }
 
-@media all and (max-width:768px) {
+@media all and (max-width:900px) {
   .header__logo {
     position: unset;
     width: calc(5.3vw + 54.02px);
