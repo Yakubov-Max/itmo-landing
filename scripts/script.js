@@ -3,6 +3,7 @@ function include(url) {
   script.src = url;
   document.getElementsByTagName('head')[0].appendChild(script);
 }
+include("./scripts/header-script.js");
 include("./scripts/about-script.js");
 include("./scripts/team-script.js");
 include("./scripts/projects.js");
