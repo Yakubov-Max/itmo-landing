@@ -23,14 +23,6 @@ function paintSliderPage() {
     n = 1;
   }
 
-  // sliderPageContainer.innerHTML = '';
-
-  // while (sliderPageContainer.firstChild > 0) {
-  //   sliderPageContainer.removeChild(sliderPageContainer.lastChild);
-  // }
-
-
-
   while (sliderPageContainer.firstChild) {
     sliderPageContainer.firstChild.remove()
   }
