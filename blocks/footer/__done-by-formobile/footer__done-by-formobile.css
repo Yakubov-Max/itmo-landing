@@ -11,8 +11,15 @@
   text-align: center;
 }
 
-@media all and (max-width: 320px) {
+@media all and (max-width: 764px) {
   .footer__done-by-formobile {
     display: block;
+    align-self: flex-end;
+  }
+}
+
+@media all and (max-width: 320px) {
+  .footer__done-by-formobile {
+    align-self: auto;
   }
 }

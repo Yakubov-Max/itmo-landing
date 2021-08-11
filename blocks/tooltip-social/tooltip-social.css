@@ -18,3 +18,42 @@
   border: 7px solid transparent;
   border-top: 7px solid #fff;
 }
+
+
+@media screen and (max-width: 1260px) {
+  .tooltip-social {
+    bottom: 60px;
+  }
+  .tooltip-social:after {
+    bottom: -13px;
+  }
+}
+
+
+@media screen and (max-width: 846px) {
+  .tooltip-social {
+    left: 45%;
+    bottom: 60px;
+  }
+  .tooltip-social:after {
+    left: 80%;
+  }
+}
+
+@media screen and (max-width: 707px) {
+  .tooltip-social {
+    bottom: 44px;
+  }
+  .tooltip-social:after {
+    left: 65%;
+  }
+}
+
+@media screen and (max-width: 354px) {
+  .tooltip-social {
+    left: 36%;
+  }
+  .tooltip-social:after {
+    left: 80%;
+  }
+}

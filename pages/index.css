@@ -5,6 +5,7 @@
 @import url(../blocks/page/_hidden/page_hidden.css);
 
 @import url(../blocks/header/header.css);
+@import url(../blocks/header/__bold-text/header__bold-text.css);
 @import url(../blocks/header/__container/header__container.css);
 @import url(../blocks/header/__logo/header__logo.css);
 @import url(../blocks/header/__link/header__link.css);
@@ -27,6 +28,7 @@
 @import url(../blocks/about/__card-title/about__card-title.css);
 @import url(../blocks/about/__card-niddle/about__card-niddle.css);
 @import url(../blocks/about/__AI-window/about__AI-window.css);
+@import url(../blocks/about/__AI-window-content/about__AI-window-content.css);
 @import url(../blocks/about/__AI-window-text/about__AI-window-text.css);
 @import url(../blocks/about/__card-date/about__card-date.css);
 @import url(../blocks/about/__cards-container/about__cards-container.css);
