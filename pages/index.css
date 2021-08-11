@@ -22,6 +22,7 @@
 @import url(../blocks/header/__dropdown/header__dropdown.css);
 @import url(../blocks/header/__educationdropdown-content/header__educationdropdown-content.css);
 @import url(../blocks/header/__dropbtn/header__dropbtn_show.css);
+@import url(../blocks/header/__mobile-menu/_active/header__mobile-menu_active.css);
 
 @import url(../blocks/about/about.css);
 @import url(../blocks/about/__cards/about__cards.css);

@@ -121,6 +121,7 @@ buttonChangeEducation.addEventListener('click', handleChangeEducation);
 window.addEventListener('click', e => {
   const target = e.target;
   target.getAttribute('class') === 'popup-ai-research popup-ai-research_active' ? handleCloseAiResearchPopup() : '';
+  e.target.getAttribute('class') === 'header__mobile-menu-container' ? closeMobileMenuClickWindow() : '';
 })
 
 // Изменение popupAIResearch при открытом попапе и изменении ширины экрана.

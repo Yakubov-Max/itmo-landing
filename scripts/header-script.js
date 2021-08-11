@@ -1,13 +1,33 @@
 const headerMobileMenuIcon = document.querySelector('.header__mobile-menu');
 const headerLogo = document.querySelector('.header__logo');
 const headerMobileButton = document.querySelector('.header__mobile-menu-btn')
+const headerMobileMenuContainer = document.querySelector('.header__mobile-menu-container');
+
+// Открыть мобильной меню.
+const openMobileMenu = () => {
+  headerMobileMenuIcon.classList.add('header__mobile-menu_active');
+}
+
+// Закрыть мобильное меню.
+const closeMobileMenu = () => {
+  headerMobileMenuIcon.classList.remove('header__mobile-menu_active');
+}
+
+// Закрыть мобильное меню по клику вне области меню.
+const closeMobileMenuClickWindow = () => {
+  if (headerMobileMenuIcon.classList.contains('header__mobile-menu_active')) {
+    headerLogo.style.marginRight = "";
+    document.querySelector('.header__mobile-menu-checkbox').checked = false;
+    closeMobileMenu();
+  }
+}
+
 headerMobileButton.addEventListener('click', function () {
-  console.log(headerMobileMenuIcon.style.left);
-  if (!headerMobileMenuIcon.style.left) {
-    window.setTimeout(headerMobileMenuIcon.style.left = "269px", 100);
+  if (!headerMobileMenuIcon.classList.contains('header__mobile-menu_active')) {
+    openMobileMenu();
     headerLogo.style.marginRight = "calc(100vw - 70px)";
   } else {
-    window.setTimeout(headerMobileMenuIcon.style.left = "", 100);
+    closeMobileMenu();
     headerLogo.style.marginRight = "";
   }
 });
