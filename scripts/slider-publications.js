@@ -93,3 +93,70 @@ function showSlides(n) {
     dotsPublications[slidePublicationsIndex].classList.add('slider__dots_active');
   }
 }
+
+/*Добавление реакции на свайп*/
+window.addEventListener('load', function () {
+
+  let touchsurface = document.getElementById('slider-publications');
+  let startX;
+  let startY;
+  let dist;
+  let threshold = 150; // минимальное расстояние для swipe
+  function rollRight() {
+    if (slidePublicationsIndex == slidesPublications.length - 1) {
+      slidesPublications[slidePublicationsIndex].classList.add('slider__page_hidden');
+      slidesPublications[0].classList.remove('slider__page_hidden');
+      dotsPublications[slidePublicationsIndex].classList.remove('slider__dots_active');
+      dotsPublications[0].classList.add('slider__dots_active');
+      slidePublicationsIndex = 0;
+    } else {
+      slidesPublications[slidePublicationsIndex].classList.add('slider__page_hidden');
+      slidesPublications[slidePublicationsIndex + 1].classList.remove('slider__page_hidden');
+      dotsPublications[slidePublicationsIndex].classList.remove('slider__dots_active');
+      dotsPublications[slidePublicationsIndex + 1].classList.add('slider__dots_active');
+      slidePublicationsIndex++;
+    }
+  }
+  function rollLeft() {
+    if (slidePublicationsIndex == 0) {
+      slidesPublications[0].classList.add('slider__page_hidden');
+      slidesPublications[slidesPublications.length - 1].classList.remove('slider__page_hidden');
+      dotsPublications[slidePublicationsIndex].classList.remove('slider__dots_active');
+      dotsPublications[slidesPublications.length - 1].classList.add('slider__dots_active');
+      slidePublicationsIndex = slidesPublications.length - 1;
+    } else {
+      slidesPublications[slidePublicationsIndex].classList.add('slider__page_hidden');
+      slidesPublications[slidePublicationsIndex - 1].classList.remove('slider__page_hidden');
+      dotsPublications[slidePublicationsIndex].classList.remove('slider__dots_active');
+      dotsPublications[slidePublicationsIndex - 1].classList.add('slider__dots_active');
+      slidePublicationsIndex--;
+    }
+  }
+  function handleswipe(isrightswipe) {
+    if (isrightswipe > 150) {
+      rollLeft();
+    } else if (isrightswipe < -150) {
+      rollRight();
+    }
+  };
+
+  touchsurface.addEventListener('touchstart', function (e) {
+    var touchobj = e.changedTouches[0];
+    dist = 0;
+    startX = touchobj.pageX;
+    startY = touchobj.pageY;
+    //e.preventDefault();
+  }, false);
+
+  touchsurface.addEventListener('touchmove', function (e) {
+    //e.preventDefault() // отключаем стандартную реакцию скроллинга
+  }, false)
+
+  touchsurface.addEventListener('touchend', function (e) {
+    var touchobj = e.changedTouches[0];
+    dist = touchobj.pageX - startX;
+    handleswipe(dist);
+    //e.preventDefault();
+  }, false)
+
+}, false)
