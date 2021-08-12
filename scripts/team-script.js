@@ -273,18 +273,18 @@ window.addEventListener('load', function () {
     dist = 0;
     startX = touchobj.pageX;
     startY = touchobj.pageY;
-    e.preventDefault();
+    //e.preventDefault();
   }, false);
 
   touchsurface.addEventListener('touchmove', function (e) {
-    e.preventDefault() // отключаем стандартную реакцию скроллинга
+    //e.preventDefault() // отключаем стандартную реакцию скроллинга
   }, false)
 
   touchsurface.addEventListener('touchend', function (e) {
     var touchobj = e.changedTouches[0];
     dist = touchobj.pageX - startX;
     handleswipe(dist);
-    e.preventDefault();
+    //e.preventDefault();
   }, false)
 
 }, false)

@@ -22,12 +22,14 @@
 @import url(../blocks/header/__dropdown/header__dropdown.css);
 @import url(../blocks/header/__educationdropdown-content/header__educationdropdown-content.css);
 @import url(../blocks/header/__dropbtn/header__dropbtn_show.css);
+@import url(../blocks/header/__mobile-menu/_active/header__mobile-menu_active.css);
 
 @import url(../blocks/about/about.css);
 @import url(../blocks/about/__cards/about__cards.css);
 @import url(../blocks/about/__card-title/about__card-title.css);
 @import url(../blocks/about/__card-niddle/about__card-niddle.css);
 @import url(../blocks/about/__AI-window/about__AI-window.css);
+@import url(../blocks/about/__AI-window-content/about__AI-window-content.css);
 @import url(../blocks/about/__AI-window-text/about__AI-window-text.css);
 @import url(../blocks/about/__card-date/about__card-date.css);
 @import url(../blocks/about/__cards-container/about__cards-container.css);

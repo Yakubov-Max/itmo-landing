@@ -1,13 +1,17 @@
 .about__AI-window {
-  max-width: 445px;
-  margin-top: 92px;
-  margin-left: calc(117.7vw - 865px);
+  margin: auto;
+  width: calc(100vw - 2 * 39px);
+  max-width: 1110px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 @media all and (max-width:768px) {
   .about__AI-window {
-  margin-left: 39px;
-  max-width:calc(35vw + 175.87px);
+    width: 100%;
+    margin-left: 39px;
+    margin-right: 39px;
+    justify-content: flex-start;
   }
 }
 
