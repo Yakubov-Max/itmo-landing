@@ -18,6 +18,11 @@
   }
 }
 
+@media all and (max-width:580px) {
+  .header__mobile-menu {
+    margin-top: 17.67px;
+  }
+}
 @media all and (max-width:320px) {
   .header__mobile-menu {
     margin-top: 14.67px;
