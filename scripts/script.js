@@ -121,7 +121,11 @@ buttonChangeEducation.addEventListener('click', handleChangeEducation);
 window.addEventListener('click', e => {
   const target = e.target;
   target.getAttribute('class') === 'popup-ai-research popup-ai-research_active' ? handleCloseAiResearchPopup() : '';
-  e.target.getAttribute('class') === 'header__mobile-menu-container' ? closeMobileMenuClickWindow() : '';
+  target.getAttribute('class') === 'header__mobile-menu-container' ? closeMobileMenuClickWindow() : '';
+  if(projectDropdownContent.classList.contains('projects__dropdown-content_opened') &&
+  (target.getAttribute('class') != 'projects__menu-dropdown-button')) {
+    !target.closest('.projects__dropdown-content') ? handleProjectsSwitchDropdown() : '';
+  }
 })
 
 // Изменение popupAIResearch при открытом попапе и изменении ширины экрана.

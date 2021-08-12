@@ -9,10 +9,10 @@ const projectDropdownButton = projects.querySelector(
 
 
 
-projectDropdownButton.addEventListener("click", handleProjectsDropdown);
+projectDropdownButton.addEventListener("click", handleProjectsSwitchDropdown);
 
-// Функция открытия dropdown меню
-function handleProjectsDropdown() {
+// Функция открытия/закрытия dropdown меню.
+function handleProjectsSwitchDropdown() {
   projectDropdownContent.classList.toggle("projects__dropdown-content_opened");
   reverseProjectsArrow();
 }
