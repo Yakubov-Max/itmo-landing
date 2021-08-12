@@ -4,10 +4,16 @@
   width: 150px;
   height: 54px;
 }
+@media all and (max-width:1180px) {
+  .header__logo {
+    margin-left: 20px;
+  }
+}
 
 @media all and (max-width:900px) {
   .header__logo {
     position: unset;
+    margin: 0 auto;
   }
 }
 
