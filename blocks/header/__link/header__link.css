@@ -25,10 +25,5 @@
   border-bottom: 1px solid #009FAC;
 }
 
-@media all and (max-width: 768px) {
-  .header__link {
-    display: none;
-  }
-}
 
 

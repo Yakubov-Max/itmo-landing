@@ -9,8 +9,6 @@
   left: 0;
   right: 0;
   height: 20px;
-  margin-top: 22.67px;
-  padding-left: 41px;
   z-index: 2;
 }
 
@@ -22,7 +20,6 @@
 
 @media all and (max-width:320px) {
   .header__mobile-menu {
-    padding-left: 18px;
     margin-top: 14.67px;
   }
 }

@@ -2,7 +2,7 @@
   position: fixed;
   text-align: center;
   display: flex;
-  top: calc(2.97vw + 37.14px - 3px); 
+  top: 60px;
   left: 0;
   right: 0;
   z-index: 999;
@@ -13,7 +13,7 @@
   overflow: hidden;
 }
 
-@media all and (max-width:320px) {
+@media all and (max-width:480px) {
   .header__mobile-menu-container {
     top: 44px;
   }

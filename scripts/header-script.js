@@ -1,3 +1,4 @@
+const header = document.querySelector('.header');
 const headerMobileMenuIcon = document.querySelector('.header__mobile-menu');
 const headerLogo = document.querySelector('.header__logo');
 const headerMobileButton = document.querySelector('.header__mobile-menu-btn')
@@ -25,10 +26,13 @@ const closeMobileMenuClickWindow = () => {
 headerMobileButton.addEventListener('click', function () {
   if (!headerMobileMenuIcon.classList.contains('header__mobile-menu_active')) {
     openMobileMenu();
-    headerLogo.style.marginRight = "calc(100vw - 70px)";
+    header.style.justifyContent = "flex-start";
+    headerMobileButton.style.left = "274px";
+    /* headerLogo.style.marginRight = "calc(100vw - 70px)"; */
   } else {
     closeMobileMenu();
-    headerLogo.style.marginRight = "";
+    header.style.justifyContent = "";
+    headerMobileButton.style.left = "";
   }
 });
 
