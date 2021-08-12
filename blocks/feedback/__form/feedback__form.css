@@ -23,11 +23,11 @@
   }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 495px) {
   .feedback__form {
     padding-bottom: 40px;
     row-gap: 12px;
-    grid-template-columns: 288px;
+    grid-template-columns: 90vw;
     grid-template-rows: repeat(4, 44px) 140px calc(60px + 11px);
     grid-template-areas:
     "first-name"

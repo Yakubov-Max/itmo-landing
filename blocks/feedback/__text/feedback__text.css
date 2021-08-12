@@ -6,8 +6,8 @@
   margin: 0;
   padding-top: 37px;
   padding-bottom: 60px;
-  padding-left: 262px;
-  padding-right: 259px;
+  padding-left: calc(18vh);
+  padding-right: calc(18vh);
 }
 
 @media screen and (max-width: 870px) {
