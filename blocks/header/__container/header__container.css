@@ -1,6 +1,6 @@
 .header__container {
   position: relative;
-  max-width: 1110px;
+  width: 1110px;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -9,6 +9,6 @@
 
 @media all and (max-width: 768px) {
   .header__container{
-    display: none;
+    justify-content: center;
   }
 }

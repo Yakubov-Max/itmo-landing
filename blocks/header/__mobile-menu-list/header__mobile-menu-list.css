@@ -1,6 +1,6 @@
 .header__mobile-menu-list {
-  width: 330px;
-  height: 420px;
+  width: 320px;
+  height: 448px;
   margin: 0;
   padding-top: 16px;
   background-color: #000D26;
@@ -8,11 +8,4 @@
   transition-delay: 0.5s;
   list-style: none;
   padding-left: 0;
-}
-
-@media all and (max-width: 480px) {
-  .header__mobile-menu-list {
-    width: 320px;
-    height: 433px;
-  }
 }

@@ -20,9 +20,9 @@
 }
 
 .header__mobile-menu-icon::after {
-  top: 7px;
+  top: 8px;
 }
 
 .header__mobile-menu-icon::before {
-  top: -7px;
+  top: -8px;
 }
