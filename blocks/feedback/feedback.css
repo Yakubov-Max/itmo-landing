@@ -5,7 +5,7 @@
   background-color: #009FAC;
   color: white;
   overflow: hidden;
-  padding-top: calc(80px - 40px);
+  padding-top: calc(80px - 20px);
 }
 
 @media screen and (max-width: 768px) {
