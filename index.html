@@ -60,6 +60,8 @@
       </div>
     </div>
     <div class="about__cards-container">
+      <button type="button" class="about__roll-to-left"></button>
+      <button type="button" class="about__roll-to-right"></button>
       <h2 class="section-title section-title__about">
         несколько слов о нас
       </h2>
@@ -69,8 +71,6 @@
         «Технологии машинного обучения и когнитивные технологии».
       </p>
       <div class="about__cards" id="about__touchsurface">
-        <button type="button" class="about__roll-to-left"></button>
-        <button type="button" class="about__roll-to-right"></button>
         <template id="about__card-template">
           <div class="about__card-item">
             <img src="./images/Niddle.svg" class="about__card-niddle">
@@ -215,8 +215,7 @@
         </div>
         <picture class="education__img-container">
           <source srcset="./images/study/MagistrMobile.png" media="(max-width: 767px)">
-          <img src="./images/study/Magistr.png"
-            alt="Магистры ИТМО во время церемонии награждения."
+          <img src="./images/study/Magistr.png" alt="Магистры ИТМО во время церемонии награждения."
             class="education__img">
         </picture>
       </div>
@@ -240,9 +239,7 @@
         </div>
         <picture class="education__img-container">
           <source srcset="./images/study/AspirantMobile.png" media="(max-width: 767px)">
-          <img src="./images/study/Aspirant.png"
-            alt="Аспиранты ИТМО во время работы."
-            class="education__img">
+          <img src="./images/study/Aspirant.png" alt="Аспиранты ИТМО во время работы." class="education__img">
         </picture>
       </div>
     </div>
@@ -373,7 +370,8 @@
   </section>
   <section class="feedback" id="feedback">
     <h2 class="section-title section-title_color_white">Всегда на связи</h2>
-    <p class="feedback__text">По&nbsp;всем интересующим вас вопросам вы&nbsp;всегда можете обратиться по&nbsp;указанным телефонам,
+    <p class="feedback__text">По&nbsp;всем интересующим вас вопросам вы&nbsp;всегда можете обратиться по&nbsp;указанным
+      телефонам,
       написать на&nbsp;почту или оставтиь свое сообщение через форму обратной связи.</p>
     <form name="feedback-form" class="feedback__form">
       <input name="feedback-first-name" type="text" required class="feedback__form-item feedback__first-name"
