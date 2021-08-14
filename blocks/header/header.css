@@ -3,21 +3,25 @@
   display: flex;
   position: fixed;
   justify-content: center;
+  align-items: center;
   color: white;
   background-color: #000D26;
-  height: calc(2.97vw + 37.14px);
+  height: 80px;
   z-index: 3;
+  box-sizing: border-box;
 }
 
 @media all and (max-width: 768px) {
   .header {
-    position: fixed;
-    height: calc(3.57vw + 32.57px);
+    height: 60px;
+    justify-content: center;
+    padding: 0 41px;
   }
 }
 
-@media all and (max-width: 320px) {
+@media all and (max-width: 480px) {
   .header {
     height: 44px;
+    padding: 0 18px;
   }
 }
