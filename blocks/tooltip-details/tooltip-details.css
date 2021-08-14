@@ -2,7 +2,8 @@
   position: absolute;
   left: 0;
   bottom: 0;
-  display: none;
+  z-index: -1;
+  display: flex;
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
@@ -11,10 +12,12 @@
   padding: 20px;
   background-color: #009fac;
   border-radius: 0 0 10px 10px;
+  transition: z-index .5s ease;
 }
 
 @media screen and (max-width: 1260px) {
   .tooltip-details {
+    z-index: 2;
     display: flex;
     padding: 15px 20px 15px;
     max-height: 60px;

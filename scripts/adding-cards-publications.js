@@ -23,6 +23,7 @@ function paintSliderPage() {
     n = 1;
   }
 
+  // удаление первой карточки на каждой странице для перерисовки заново при ресайзе - т.к. оставлась она в любом случае
   while (sliderPageContainer.firstChild) {
     sliderPageContainer.firstChild.remove()
   }
@@ -41,13 +42,21 @@ function paintSliderPage() {
 
 
 // функция вызова тултипа "Читать полностью"
-function openCloseTooltipPublications(tooltip) {
-  tooltip.classList.toggle('tooltip-details_active');
-}
+// function openCloseTooltipPublications(tooltip) {
+//   tooltip.classList.toggle('tooltip-details_active');
+// }
 
-// функция вызова тултипа соцсетей
+// функции вызова тултипа соцсетей
 function openCloseTooltipSocial(tooltip) {
   tooltip.classList.toggle('tooltip-social_active');
+}
+
+function openTooltipSocial(tooltip) {
+  tooltip.classList.add('tooltip-social_active');
+}
+
+function closeTooltipSocial(tooltip) {
+  tooltip.classList.remove('tooltip-social_active');
 }
 
 //функция создания slider-page для каждой шестерки карточек
@@ -83,17 +92,29 @@ function createCardsPublications(cardPblItem) {
   cardPublicationsElement.querySelector('.publications__link-to-article').href = cardPblItem.link;
 
 // слушатели событий наведения и снятия наведения на/с карточку/-и, чтобы открывать/скрывать тултип "Читать полностью"
-  cardPublicationsElement.addEventListener('mouseover', () => {
-    openCloseTooltipPublications(tooltipDetailsPublications);
-  });
-  cardPublicationsElement.addEventListener('mouseout', () => {
-    openCloseTooltipPublications(tooltipDetailsPublications);
-  });
-  // слушатель события нажатия на иконку "поделиться", чтобы открыть тултип с соцсетями
-  iconShare.addEventListener('click', () => {
-    openCloseTooltipSocial(tooltipSocialPublications);
-  });
+//   cardPublicationsElement.addEventListener('mouseover', () => {
+//     openCloseTooltipPublications(tooltipDetailsPublications);
+//   });
+//   cardPublicationsElement.addEventListener('mouseout', () => {
+//     openCloseTooltipPublications(tooltipDetailsPublications);
+//   });
 
+  // слушатель события нажатия на иконку "поделиться", чтобы открыть тултип с соцсетями и поднять нужную карточку из потока
+  // (чтобы тултип оказался поверх других карточек)
+  iconShare.addEventListener('click', function () {
+    let windowWidth = window.screen.width;
+    if (windowWidth <= 1260) {
+      openCloseTooltipSocial(tooltipSocialPublications);
+    }
+    else {
+      openTooltipSocial(tooltipSocialPublications);
+    }
+    cardPublicationsElement.classList.add('publications__item_tooltip-active');
+  });
+  cardPublicationsElement.addEventListener('mouseleave', function () {
+    closeTooltipSocial(tooltipSocialPublications);
+    cardPublicationsElement.classList.remove('publications__item_tooltip-active');
+  });
   // вернуть готовую карточку со всеми внутренними примочками
   return cardPublicationsElement;
 }
@@ -103,4 +124,3 @@ function addCardsPublications(cardsPublications, cardContainerPublications) {
   const cardElem = createCardsPublications(cardsPublications);
   cardContainerPublications.append(cardElem);
 }
-

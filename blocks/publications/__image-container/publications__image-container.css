@@ -1,4 +1,6 @@
 .publications__image-container {
+  position: relative;
+  z-index: 2;
   display: flex;
   padding: 20px 19px 0;
   width: 100%;
