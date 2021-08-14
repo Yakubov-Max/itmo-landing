@@ -1,12 +1,14 @@
 .publications__item-image_shrank {
   height: 223px;
   width: 100%;
+  transition: height .5s ease;
 }
 
 .publications__item:hover .publications__item-image_shrank {
   height: 153px;
   object-fit: cover;
   object-position: center center;
+
 }
 
 @media screen and (max-width: 1260px) {
@@ -14,5 +16,6 @@
     height: 153px;
     object-fit: cover;
     object-position: center center;
+    transition: unset;
   }
 }

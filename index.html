@@ -1,50 +1,56 @@
 <!DOCTYPE html>
 <html lang="ru">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./pages/index.css" />
-  <title>ITMO-landing</title>
-</head>
-
-<body class="page">
-  <header class="header" id="header">
-    <nav class="header__mobile-menu">
-      <input type="checkbox" id="checkbox" class="header__mobile-menu-checkbox">
-      <label for="checkbox" class="header__mobile-menu-btn">
-        <div class="header__mobile-menu-icon"></div>
-      </label>
-      <div class="header__mobile-menu-container">
-        <ul class="header__mobile-menu-list">
-          <li class="header__mobile-menu-item"><a href="#about" class="header__mobile-menu-link">О нас</a></li>
-          <li class="header__mobile-menu-item"><a href="#labs" class="header__mobile-menu-link">Лаборатория</a></li>
-          <li class="header__mobile-menu-item"><a href="#projects" class="header__mobile-menu-link">Проекты</a></li>
-          <li class="header__dropdown" id="educationDropDown">
-            <a href="#education" class="header__mobile-menu-item header__dropbtn">Образование</a>
-            <ul class="header__educationdropdown-content">
-              <li><a>Магистратура</a></li>
-              <li><a>Аспирантура</a></li>
-            </ul>
-          </li>
-          <li class="header__mobile-menu-item"><a href="#publications" class="header__mobile-menu-link">Публикации</a>
-          </li>
-          <li class="header__mobile-menu-item"><a href="#team" class="header__mobile-menu-link">Команда</a></li>
-          <li class="header__mobile-menu-item"><a href="#feedback" class="header__mobile-menu-link">Связаться</a></li>
-        </ul>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./pages/index.css" />
+    <title>ITMO-landing</title>
+  </head>
+  <body class="page">
+    <header class="header">
+      <nav class="header__mobile-menu">
+        <input type="checkbox" id="checkbox" class="header__mobile-menu-checkbox">
+        <label for="checkbox" class="header__mobile-menu-btn">
+          <img src="./images" class="header__mobile-menu-icon" alt="">
+        </label>
+        <div class="header__mobile-menu-container">
+          <ul class="header__mobile-menu-list">
+            <li class="header__mobile-menu-item"><a href="#about" class="header__mobile-menu-link">О нас</a></li>
+            <li class="header__mobile-menu-item"><a href="#labs" class="header__mobile-menu-link">Лаборатория</a></li>
+            <li class="header__mobile-menu-item"><a href="#projects" class="header__mobile-menu-link">Проекты</a></li>
+            <li class="header__dropdown" id="educationDropDown">
+              <a href="#education" class="header__mobile-menu-item header__dropbtn">Образование</a>
+              <ul class="header__educationdropdown-content">
+                <li><a>Магистратура</a></li>
+                <li><a>Аспирантура</a></li>
+              </ul>
+            </li>
+            <li class="header__mobile-menu-item"><a href="#publications" class="header__mobile-menu-link">Публикации</a></li>
+            <li class="header__mobile-menu-item"><a href="#team" class="header__mobile-menu-link">Команда</a></li>
+            <li class="header__mobile-menu-item"><a href="#feedback" class="header__mobile-menu-link">Связаться</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="header__container">
+        <img src="./images/Logo_AI1.svg" class="header__logo" alt="Логотип лаборатории">
+        <nav>
+          <ul class = "header__list-links">
+            <li class = "header__list-item"><a class="header__link" href="#about">О нас</a></li>
+            <li class = "header__list-item"><a class="header__link" href="#labs">Лаборатория</a></li>
+            <li class = "header__list-item"><a class="header__link" href="#projects">Проекты</a></li>
+            <li class = "header__list-item"><a class="header__link" href="#education">Образование</a>
+              <ul class = "header__list-second">
+                <li class = "header__list-second-item"><a href="#aspirante" class="header__link">Аспирантура</a></li>
+                <li class = "header__list-second-item"><a href="#magistracy" class="header__link">Магистратура</a></li>
+              </ul>
+            </li>
+            <li class = "header__list-item"><a class="header__link" href="#publications">Публикации</a></li>
+            <li class = "header__list-item"><a class="header__link" href="#team">Команда</a></li>
+            <li class = "header__list-item"><a class="header__link" href="#feedback">Связаться</a></li>
+          </ul>
+        </nav>
       </div>
-    </nav>
-    <div class="header__container">
-      <img src="./images/Logo_AI1.svg" class="header__logo" alt="Логотип Industrial AI Research Lab">
-      <a class="header__link" href="#about">О нас</a>
-      <a class="header__link" href="#labs">Лаборатория</a>
-      <a class="header__link" href="#projects">Проекты</a>
-      <a class="header__link" href="#education">Образование</a>
-      <a class="header__link" href="#publications">Публикации</a>
-      <a class="header__link" href="#team">Команда</a>
-      <a class="header__link" href="#feedback">Связаться</a>
-    </div>
   </header>
   <section class="about" id="about">
     <div class="about__AI-window">
@@ -60,6 +66,8 @@
       </div>
     </div>
     <div class="about__cards-container">
+      <button type="button" class="about__roll-to-left"></button>
+      <button type="button" class="about__roll-to-right"></button>
       <h2 class="section-title section-title__about">
         несколько слов о нас
       </h2>
@@ -69,8 +77,6 @@
         «Технологии машинного обучения и когнитивные технологии».
       </p>
       <div class="about__cards" id="about__touchsurface">
-        <button type="button" class="about__roll-to-left"></button>
-        <button type="button" class="about__roll-to-right"></button>
         <template id="about__card-template">
           <div class="about__card-item">
             <img src="./images/Niddle.svg" class="about__card-niddle">
@@ -215,8 +221,7 @@
         </div>
         <picture class="education__img-container">
           <source srcset="./images/study/MagistrMobile.png" media="(max-width: 767px)">
-          <img src="./images/study/Magistr.png"
-            alt="Магистры ИТМО во время церемонии награждения."
+          <img src="./images/study/Magistr.png" alt="Магистры ИТМО во время церемонии награждения."
             class="education__img">
         </picture>
       </div>
@@ -240,9 +245,7 @@
         </div>
         <picture class="education__img-container">
           <source srcset="./images/study/AspirantMobile.png" media="(max-width: 767px)">
-          <img src="./images/study/Aspirant.png"
-            alt="Аспиранты ИТМО во время работы."
-            class="education__img">
+          <img src="./images/study/Aspirant.png" alt="Аспиранты ИТМО во время работы." class="education__img">
         </picture>
       </div>
     </div>
@@ -339,41 +342,42 @@
       оценку и свои рекомендации по улучшению деятельности. Надеемся на дальнейшее и плодотворное сотрудничество.
     </p>
     <ul class="partners__logo-container">
-      <li>
+      <li class="partners__logo-item">
         <img src="./images/partnership-logos/gazprom-logo.svg" alt="Логотип ГазпромНефть." class="partners__img">
       </li>
-      <li>
+      <li class="partners__logo-item">
         <img src="./images/partnership-logos/sberbank_logo.svg" alt="Логотип СберБанк." class="partners__img">
       </li>
-      <li>
+      <li class="partners__logo-item">
         <img src="./images/partnership-logos/mail-logo.svg" alt="Логотип МэйлРу." class="partners__img">
       </li>
-      <li>
+      <li class="partners__logo-item">
         <img src="./images/partnership-logos/siemens-logo.svg" alt="Логотип Сименс." class="partners__img">
       </li>
-      <li>
+      <li class="partners__logo-item">
         <img src="./images/partnership-logos/huawei-logo.svg" alt="Логотип Хуавей." class="partners__img">
       </li>
-      <li>
+      <li class="partners__logo-item">
         <img src="./images/partnership-logos/sberbank_logo.svg" alt="Логотип СберБанк." class="partners__img">
       </li>
-      <li>
+      <li class="partners__logo-item">
         <img src="./images/partnership-logos/rosneft-logo.svg" alt="Логотип Роснефть." class="partners__img">
       </li>
-      <li>
+      <li class="partners__logo-item">
         <img src="./images/partnership-logos/gazprom-logo.svg" alt="Логотип ГазпромНефть." class="partners__img">
       </li>
-      <li>
+      <li class="partners__logo-item">
         <img src="./images/partnership-logos/huawei-logo.svg" alt="Логотип Хуавей." class="partners__img">
       </li>
-      <li>
+      <li class="partners__logo-item">
         <img src="./images/partnership-logos/mail-logo.svg" alt="Логотип МэйлРу." class="partners__img">
       </li>
     </ul>
   </section>
   <section class="feedback" id="feedback">
     <h2 class="section-title section-title_color_white">Всегда на связи</h2>
-    <p class="feedback__text">По&nbsp;всем интересующим вас вопросам вы&nbsp;всегда можете обратиться по&nbsp;указанным телефонам,
+    <p class="feedback__text">По&nbsp;всем интересующим вас вопросам вы&nbsp;всегда можете обратиться по&nbsp;указанным
+      телефонам,
       написать на&nbsp;почту или оставтиь свое сообщение через форму обратной связи.</p>
     <form name="feedback-form" class="feedback__form">
       <input name="feedback-first-name" type="text" required class="feedback__form-item feedback__first-name"
@@ -470,7 +474,7 @@
   <script src="scripts/slider-publications.js"></script>
   <script src="scripts/tooltips-publications.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-  <script type="text/javascript" src="./scripts/slick.min.js"></script>
+  <script src="./scripts/slick.min.js"></script>
 </body>
 
 </html>

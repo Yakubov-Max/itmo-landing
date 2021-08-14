@@ -12,6 +12,10 @@
 @import url(../blocks/header/__container/header__container.css);
 @import url(../blocks/header/__logo/header__logo.css);
 @import url(../blocks/header/__link/header__link.css);
+@import url(../blocks/header/__list-links/header__list-links.css);
+@import url(../blocks/header/__list-item/header__list-item.css);
+@import url(../blocks/header/__list-second/header__list-second.css);
+@import url(../blocks/header/__list-second-item/header__list-second-item.css);
 @import url(../blocks/header/__mobile-menu/header__mobile-menu.css);
 @import url(../blocks/header/__mobile-menu-btn/header__mobile-menu-btn.css);
 @import url(../blocks/header/__mobile-menu-checkbox/header__mobile-menu-checkbox.css);
@@ -122,6 +126,7 @@
 @import url(../blocks/publications/__title/publications__title.css);
 @import url(../blocks/publications/__container/publications__container.css);
 @import url(../blocks/publications/__item/publications__item.css);
+@import url(../blocks/publications/__item/_tooltip-active/publications__item_tooltip-active.css);
 @import url(../blocks/publications/__image-container/publications__image-container.css);
 @import url(../blocks/publications/__item-image/publications__item-image.css);
 @import url(../blocks/publications/__item-image/_shrank/publications__item-image_shrank.css);

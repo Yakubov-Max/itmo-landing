@@ -1,20 +1,15 @@
-/* .partners__logo-item {
-  margin-right: 55px;
-  margin-bottom: 50px;
+.partners__logo-item {
+  margin: 0 10px 50px 10px;
 }
 
-.partners__logo-item:nth-of-type(5n) {
-  margin-right: 0;
-} */
-
-
-
-
-/* .partners__logo-item {
-  margin-right: 55px;
-  margin-bottom: 50px;
+@media screen and (max-width: 1399px) {
+  .partners__logo-item {
+    margin: 0 20px 30px 20px;
+  }
 }
 
-.partners__logo-item:nth-of-type(5n) {
-  margin-right: 0;
-} */
+@media screen and (max-width: 767px) {
+  .partners__logo-item {
+    margin: 0 15px 20px 15px;
+  }
+}

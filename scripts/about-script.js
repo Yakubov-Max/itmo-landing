@@ -97,15 +97,7 @@ JetBrains он сделал плагин для проверки грамотн�
 let lastIndex = 2;
 let firstIndex = 0;
 
-function sleep(milliseconds) {
-  const date = Date.now();
-  let currentDate = null;
-  do {
-    currentDate = Date.now();
-  } while (currentDate - date < milliseconds);
-}
-
-function createCard(date,text,title) {
+function createCard(date, text, title) {
   clone = aboutCardTemplate.content.cloneNode(true);
   clone.querySelector(".about__card-date").textContent = date;
   clone.querySelector(".about__card-title").textContent = title;
@@ -129,14 +121,50 @@ function addCard(date, text, title) {
 for (let i = 0; i < aboutCardsMassive.length; i++) {
   addCard(aboutCardsMassive[i].date, aboutCardsMassive[i].text, aboutCardsMassive[i].title);
 }
+aboutCardTemplate.remove();
 
-for (let i = 0; i < aboutCardsMassive.length-2; i++) {
+$('.about__cards').slick({
+  infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  variableWidth: true,
+  arrows: true,
+  dots: true,
+  appendDots: '.about__dots',
+  appendArrows: '.about__cards-container',
+  dotsClass: 'slick-dots__team',
+  prevArrow: '.about__roll-to-left',
+  nextArrow: '.about__roll-to-right',
+  responsive: [
+    {
+      breakpoint: 900,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        dots: false,
+        arrows: false,
+      }
+    },
+    {
+      breakpoint: 500,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      }
+    },
+  ]
+});
+
+
+/*
+for (let i = 0; i < aboutCardsMassive.length - 2; i++) {
   addDot();
 }
+*/
 
-const aboutDots = document.querySelectorAll('.about__dot');
-aboutDots[0].classList.add('about__dot_active');
-
+//const aboutDots = document.querySelectorAll('.about__dot');
+//aboutDots[0].classList.add('about__dot_active');
+/*
 for (let i = 0; i < aboutDots.length; i++) {
   aboutDots[i].addEventListener('click', function () {
     let indexOfThisRound = Array.from(aboutDots).indexOf(this);
@@ -156,16 +184,20 @@ for (let i = 0; i < aboutDots.length; i++) {
     }
   });
 }
-
+*/
+/*
 const addedCards = Array.from(document.querySelectorAll('.about__card-item'));
 for (let i = 0; i < 3; i++) {
   addedCards[i].classList.add('about__card-item_show');
 }
+*/
 
+
+/*
 function rollRight() {
   if (lastIndex == addedCards.length - 1) {
     if (window.innerWidth <= 768 && window.innerWidth > 320) {
-      if (aboutAchualSecondCard==0) {
+      if (aboutAchualSecondCard == 0) {
         addedCards[firstIndex].style.transform = 'translateX(' + -383 + 'px)';
         addedCards[firstIndex + 1].style.transform = 'translateX(' + -383 + 'px)';
         addedCards[firstIndex + 2].style.transform = 'translateX(' + -383 + 'px)';
@@ -178,15 +210,15 @@ function rollRight() {
           addedCards[firstIndex + 1].style.transform = 'translateX(' + -310 + 'px)';
           addedCards[firstIndex + 2].style.transform = 'translateX(' + -310 + 'px)';
           aboutAchualSecondCard = 1;
-        break;
+          break;
         case 1:
           addedCards[firstIndex + 1].style.transform = 'translateX(' + -620 + 'px)';
           addedCards[firstIndex + 2].style.transform = 'translateX(' + -620 + 'px)';
           aboutAchualThirdCard = 1;
-        break;
+          break;
         case 2:
 
-        break;
+          break;
       }
     }
   } else {
@@ -209,7 +241,7 @@ function rollRight() {
         lastIndex++;
         firstIndex++;
         sliderRoundIndex++;
-      },100);
+      }, 100);
       addedCards[lastIndex + 1].classList.add('about__card-item_opacityTransition');
       addedCards[lastIndex + 1].classList.remove('about__card-item_zeroOpacity');
       aboutDots[firstIndex].classList.remove('about__dot_active');
@@ -218,15 +250,16 @@ function rollRight() {
     }, 100);
   }
 }
+*/
 
-function rollLeft() {
+/*function rollLeft() {
   if (firstIndex == 0) { } else {
     if (lastIndex == addedCards.length - 1 && aboutAchualSecondCard == 1) {
       if (window.innerWidth <= 768 && window.innerWidth > 320) {
-          addedCards[firstIndex].style.transform = 'translateX(' + 0 + 'px)';
-          addedCards[firstIndex + 1].style.transform = 'translateX(' + 0 + 'px)';
-          addedCards[firstIndex + 2].style.transform = 'translateX(' + 0 + 'px)';
-          aboutAchualSecondCard = 0;
+        addedCards[firstIndex].style.transform = 'translateX(' + 0 + 'px)';
+        addedCards[firstIndex + 1].style.transform = 'translateX(' + 0 + 'px)';
+        addedCards[firstIndex + 2].style.transform = 'translateX(' + 0 + 'px)';
+        aboutAchualSecondCard = 0;
       } else if (window.innerWidth <= 320) {
         switch (aboutAchualSecondCard + aboutAchualThirdCard) {
           case 0:
@@ -273,10 +306,12 @@ function rollLeft() {
     }
   }
 }
+*/
+/*
 window.addEventListener('load', function () {
 
   let touchsurface = document.getElementById('about__touchsurface');
-    let startX;
+  let startX;
   let startY;
   let dist;
   let threshold = 150; // минимальное расстояние для swipe
@@ -309,16 +344,16 @@ window.addEventListener('load', function () {
   }, false)
 
 }, false)
-
+*/
 aboutHeaderDropDown.addEventListener('click', function () {
   document.querySelector(".header__educationdropdown-content").classList.toggle("header__dropbtn_show");
   for (let i = 0; i < 7; i++) {
     if (i == 3) {
-      burgerListOfItems[i].style.fontWeight = burgerListOfItems[i].style.fontWeight != 600 ? 600 : 400 ;
+      burgerListOfItems[i].style.fontWeight = burgerListOfItems[i].style.fontWeight != 600 ? 600 : 400;
       continue;
     }
     burgerListOfItems[i].style.opacity = burgerListOfItems[i].style.opacity == 0.5 ? 1 : 0.5;
   }
 });
-rollToRightButton.addEventListener('click', rollRight);
-rollToLeftButton.addEventListener('click', rollLeft);
+//rollToRightButton.addEventListener('click', rollRight);
+//rollToLeftButton.addEventListener('click', rollLeft);
