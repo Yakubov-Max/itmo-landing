@@ -7,8 +7,6 @@ const projectDropdownButton = projects.querySelector(
   ".projects__menu-dropdown-button"
 );
 
-
-
 projectDropdownButton.addEventListener("click", handleProjectsSwitchDropdown);
 
 // Функция открытия/закрытия dropdown меню.
@@ -38,7 +36,7 @@ projectsMenuElements.forEach((element) => {
 
 // Функция хайлайта элемента меню
 function handleHighlightProjectsMenu(event) {
-  event.preventDefault()
+  event.preventDefault();
   projectsMenuElements.forEach((element) => {
     if (element.classList.item(1)) {
       element.classList.remove("projects__menu-item_active");
@@ -71,14 +69,14 @@ const projectsCard = {
   description:
     "Направление включает в себя исследования и разработки технологий МО и КТ. Модули для внедрения в предметные сетевые программы магистратуры с элементами МО и КТ, или программы ДПО.",
   link: "#",
-  test_span: 0
+  test_span: 0,
 };
 
 const CARDS = [];
 
 for (let i = 0; i < 120; i++) {
   let copy = Object.assign({}, projectsCard);
-  copy.test_span = i
+  copy.test_span = i;
   CARDS.push(copy);
 }
 
@@ -114,7 +112,7 @@ function handlePaginatePreviousPage(event) {
 
 // Функция получения кол-ва карточек на странице, по ширине экрана
 function getCardsPerPage() {
-  let screenWidth = window.screen.width;
+  let screenWidth = window.innerWidth;
   let cardsPerPage = 0;
 
   if (screenWidth > 1060) {
@@ -180,7 +178,8 @@ function createProjectsCard(cardData) {
   cardElement.querySelector(".projects__item-about").textContent =
     cardData.description;
   cardElement.querySelector(".projects__item-details").href = cardData.link;
-  cardElement.querySelector(".projects__test-span").textContent = cardData.test_span;
+  cardElement.querySelector(".projects__test-span").textContent =
+    cardData.test_span;
   return cardElement;
 }
 
