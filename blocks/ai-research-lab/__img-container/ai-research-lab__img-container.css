@@ -1,8 +1,8 @@
-.ai-research-lab__img-conteiner {
+.ai-research-lab__img-container {
   display: flex;
 }
 
-.ai-research-lab__img-conteiner::before {
+.ai-research-lab__img-container::before {
   content: "";
   width: 264px;
   border-radius: 10px;
@@ -13,7 +13,7 @@
   margin-right: 12px;
 }
 
-.ai-research-lab__img-conteiner::after {
+.ai-research-lab__img-container::after {
   content: "";
   width: 264px;
   border-radius: 10px;
@@ -24,13 +24,13 @@
 }
 
 @media screen and (max-width: 1200px) {
-  .ai-research-lab__img-conteiner::before {
+  .ai-research-lab__img-container::before {
     content: "";
     width: 0;
     height: 0;
   }
 
-  .ai-research-lab__img-conteiner::after {
+  .ai-research-lab__img-container::after {
     content: "";
     width: 330px;
     height: 240px;
@@ -39,7 +39,7 @@
 }
 
 @media screen and (max-width: 767px) {
-  .ai-research-lab__img-conteiner {
+  .ai-research-lab__img-container {
     order: 1;
     max-width: 288px;
     max-height: 180px;
@@ -48,7 +48,7 @@
     margin-bottom: 20px;
   }
 
-  .ai-research-lab__img-conteiner::after {
+  .ai-research-lab__img-container::after {
     content: "";
     width: 288px;
     height: 180px;
