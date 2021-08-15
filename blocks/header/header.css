@@ -2,22 +2,33 @@
   width: 100%;
   display: flex;
   position: fixed;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
   color: white;
   background-color: #000D26;
-  height: calc(2.97vw + 37.14px);
+  height: 80px;
   z-index: 10;
+  box-sizing: border-box;
+  padding: 0 165px;
 }
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 1080px) {
   .header {
-    position: fixed;
-    height: calc(3.57vw + 32.57px);
+    padding: 0 39px;
   }
 }
 
-@media all and (max-width: 320px) {
+
+@media all and (max-width: 768px) {
+  .header {
+    height: 60px;
+    justify-content: center;
+  }
+}
+
+@media all and (max-width: 480px) {
   .header {
     height: 44px;
+    padding: 0 18px;
   }
 }
