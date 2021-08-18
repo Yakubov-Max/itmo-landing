@@ -111,6 +111,7 @@
 @import url(../blocks/projects/__menu-dropdown-button/projects__menu-dropdown-button.css);
 @import url(../blocks/projects/__dropdown-content/_opened/projects__dropdown-content_opened.css);
 @import url(../blocks/projects/__pagination-link/_active/projects__pagination-link_active.css);
+@import url(../blocks/projects/__title/projects__title.css);
 
 @import url(../blocks/section-background/_light-blue/section-background_light-blue.css);
 @import url(../blocks/section-title/__about/section-title__about.css);

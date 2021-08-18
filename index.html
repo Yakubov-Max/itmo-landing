@@ -16,11 +16,11 @@
         </label>
         <div class="header__mobile-menu-container">
           <ul class="header__mobile-menu-list">
-            <li class="header__mobile-menu-item"><a href="#about" class="header__mobile-menu-link">О нас</a></li>
-            <li class="header__mobile-menu-item"><a href="#labs" class="header__mobile-menu-link">Лаборатория</a></li>
-            <li class="header__mobile-menu-item"><a href="#projects" class="header__mobile-menu-link">Проекты</a></li>
+            <li class="header__mobile-menu-item"><a href="#aboutUs" class="header__mobile-menu-link">О нас</a></li>
+            <li class="header__mobile-menu-item"><a href="#ai-research-anchor" class="header__mobile-menu-link">Лаборатория</a></li>
+            <li class="header__mobile-menu-item"><a href="#projects-anchor" class="header__mobile-menu-link">Проекты</a></li>
             <li class="header__dropdown" id="educationDropDown">
-              <a href="#education" class="header__mobile-menu-item header__dropbtn">Образование</a>
+              <a href="#education-anchor" class="header__mobile-menu-item header__dropbtn">Образование</a>
               <ul class="header__educationdropdown-content">
                 <li><a>Магистратура</a></li>
                 <li><a>Аспирантура</a></li>
@@ -36,13 +36,13 @@
       <div class="header__container">
         <nav>
           <ul class = "header__list-links">
-            <li class = "header__list-item"><a class="header__link" href="#about">О нас</a></li>
-            <li class = "header__list-item"><a class="header__link" href="#labs">Лаборатория</a></li>
-            <li class = "header__list-item"><a class="header__link" href="#projects">Проекты</a></li>
-            <li class = "header__list-item"><a class="header__link" href="#education">Образование</a>
+            <li class = "header__list-item"><a class="header__link" href="#aboutUs">О нас</a></li>
+            <li class = "header__list-item"><a class="header__link" href="#ai-research-anchor">Лаборатория</a></li>
+            <li class = "header__list-item"><a class="header__link" href="#projects-anchor">Проекты</a></li>
+            <li class = "header__list-item"><a class="header__link" href="#education-anchor">Образование</a>
               <ul class = "header__list-second">
-                <li class = "header__list-second-item"><a href="#education" class="header__link">Аспирантура</a></li>
-                <li class = "header__list-second-item"><a href="#education" class="header__link">Магистратура</a></li>
+                <li class = "header__list-second-item"><a href="#education-anchor" class="header__link">Аспирантура</a></li>
+                <li class = "header__list-second-item"><a href="#education-anchor" class="header__link">Магистратура</a></li>
               </ul>
             </li>
             <li class = "header__list-item"><a class="header__link" href="#publications">Публикации</a></li>
@@ -68,7 +68,7 @@
     <div class="about__cards-container">
       <button type="button" class="about__roll-to-left"></button>
       <button type="button" class="about__roll-to-right"></button>
-      <h2 class="section-title section-title__about">
+      <h2 class="section-title section-title__about" id="aboutUs">
         несколько слов о нас
       </h2>
       <p class="about__cards-container-text">
@@ -97,7 +97,7 @@
     </div>
   </section>
   <section class="ai-research-lab" id="labs">
-    <h2 class="section-title section-title_color_dark-blue ai-research-lab__title">Industrial AI Research Lab</h2>
+    <h2 class="section-title section-title_color_dark-blue ai-research-lab__title" id="ai-research-anchor">Industrial AI Research Lab</h2>
     <div class="ai-research-lab__about-container">
       <div class="ai-research-lab__text-container">
         <p class="ai-research-lab__text-intro">
@@ -141,7 +141,7 @@
     </div>
   </section>
   <section class="projects" id="projects">
-    <h2 class="section-title section-title_color_white">Наши проекты</h2>
+    <h2 class="section-title section-title_color_white projects__title" id="projects-anchor">Наши проекты</h2>
     <ul class="projects__menu">
       <li class="projects__menu-item projects__menu-item_active">
         <a href="#" class="projects__menu-item-link">Все проекты</a>
@@ -192,7 +192,7 @@
     </template>
   </section>
   <section class="education" id="education">
-    <h2 class="education__title section-title section-title_color_white">Образование</h2>
+    <h2 class="education__title section-title section-title_color_white" id="education-anchor">Образование</h2>
     <p class="education__main-text">В образовательной деятельности НЦКР активно использует существующую в Университете
       ИТМО инфраструктуру
       и опыт реализации сетевых форм обучения, опираясь на вузы-диссеминаторы (ННГУ, ДВФУ, ФГБОУ ВО «МГТУ «СТАНКИН»,
