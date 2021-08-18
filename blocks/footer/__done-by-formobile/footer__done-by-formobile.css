@@ -20,6 +20,6 @@
 
 @media all and (max-width: 320px) {
   .footer__done-by-formobile {
-    align-self: auto;
+    align-self: center;
   }
 }
