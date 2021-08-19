@@ -8,6 +8,7 @@
   transition-delay: 0.5s;
   list-style: none;
   padding-left: 0;
+  z-index: 10;
 }
 
 @media all and (max-width: 480px) {
