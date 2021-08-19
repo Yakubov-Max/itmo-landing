@@ -12,10 +12,14 @@
   background-repeat: no-repeat;
   border-radius: 50%;
   box-shadow: 0px 4px 30px rgba(224, 240, 255, 0.1);
+  top: 400px;
+  right: calc(50vw - 550px - 16px - 60px);
+  /*
   margin-top: 210px;
   margin-right: -73px;
-  position: absolute;
   right: 0;
+*/
+  position: absolute;
 }
 
   .team__roll-to-right:hover {

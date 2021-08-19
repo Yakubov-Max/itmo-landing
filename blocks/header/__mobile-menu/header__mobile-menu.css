@@ -1,5 +1,5 @@
 .header__mobile-menu {
-  position: relative;
+  position: absolute;
   box-sizing: border-box;
   display: none;
   align-items: center;
@@ -9,21 +9,22 @@
   left: 0;
   right: 0;
   height: 20px;
-  margin-top: 22.67px;
-  padding-left: 41px;
   z-index: 2;
 }
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 1023px) {
   .header__mobile-menu {
     display: flex;
   }
 }
 
+@media all and (max-width:580px) {
+  .header__mobile-menu {
+    margin-top: 17.67px;
+  }
+}
 @media all and (max-width:320px) {
   .header__mobile-menu {
-    padding-left: 18px;
     margin-top: 14.67px;
-    padding-left: 18px;
   }
 }

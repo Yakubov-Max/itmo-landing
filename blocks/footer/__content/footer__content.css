@@ -1,4 +1,5 @@
 .footer__content {
+  max-width: 1110px;
   width: calc(62.5vw + 210px);
   display: flex;
   flex-direction: row;

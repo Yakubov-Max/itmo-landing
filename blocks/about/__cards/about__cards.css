@@ -4,17 +4,22 @@
   flex-direction: row;
   justify-content: space-between;
   width: 1122px;
+  padding-top: 20px;
+  box-sizing: border-box;
+  overflow: visible;
   flex-wrap: nowrap;
 }
 
-@media all and (max-width:1122px) {
+@media all and (max-width:1160px) {
   .about__cards{
     left: calc(-50vw + 561px);
+    margin-left: 30px;
   }
 }
 
 @media all and (max-width: 768px) {
   .about__cards {
+    margin-left: 0px;
     /*left:   calc() ;calc(37.27vw - 99.28px);calc(561px - 384px + 50vw - 384px + 10px);*/
     width: 1050px;
   }

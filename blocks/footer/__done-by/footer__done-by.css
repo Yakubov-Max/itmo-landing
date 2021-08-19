@@ -8,6 +8,7 @@
   line-height: 19px;
   letter-spacing: 0.1px;
   text-align: left;
+  white-space: nowrap;
 }
 
 @media all and (max-width: 768px) {
@@ -17,7 +18,7 @@
   }
 }
 
-@media all and (max-width: 320px) {
+@media all and (max-width: 764px) {
   .footer__done-by {
     display: none;
   }

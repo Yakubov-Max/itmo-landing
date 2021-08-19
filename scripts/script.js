@@ -3,6 +3,7 @@ function include(url) {
   script.src = url;
   document.getElementsByTagName('head')[0].appendChild(script);
 }
+include("./scripts/header-script.js");
 include("./scripts/about-script.js");
 include("./scripts/team-script.js");
 include("./scripts/projects.js");
@@ -120,6 +121,11 @@ buttonChangeEducation.addEventListener('click', handleChangeEducation);
 window.addEventListener('click', e => {
   const target = e.target;
   target.getAttribute('class') === 'popup-ai-research popup-ai-research_active' ? handleCloseAiResearchPopup() : '';
+  target.getAttribute('class') === 'header__mobile-menu-container' ? closeMobileMenuClickWindow() : '';
+  if(projectDropdownContent.classList.contains('projects__dropdown-content_opened') &&
+  (target.getAttribute('class') != 'projects__menu-dropdown-button')) {
+    !target.closest('.projects__dropdown-content') ? handleProjectsSwitchDropdown() : '';
+  }
 })
 
 // Изменение popupAIResearch при открытом попапе и изменении ширины экрана.

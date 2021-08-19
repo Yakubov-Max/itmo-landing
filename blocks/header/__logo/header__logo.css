@@ -1,14 +1,26 @@
 .header__logo {
-  position: absolute;
   left: 0;
-  width: calc(8.22vw + 31.62px);
-  height: calc(3.27vw + 6.85px);
+  width: 150px;
+  height: 54px;
 }
 
-@media all and (max-width:768px) {
+@media all and (max-width: 1080px) {
   .header__logo {
-    position: unset;
-    width: calc(5.3vw + 54.02px);
-    height: calc(1.78vw + 18.28px);
+    width: 94px;
+    height: 32px;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .header__logo {
+    width: 94px;
+    height: 32px;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .header__logo {
+    width: 71px;
+    height: 24px;
   }
 }

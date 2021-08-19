@@ -56,15 +56,15 @@ const teamCardsMassive = [
   },
 ];
 
-
+/*
 let teamAchualSecondCard = 0;
 let teamAchualThirdCard = 0;
 let teamSliderRoundIndex = 0;
 let teamLastIndex = 3;
 let teamFirstIndex = 0;
+*/
 
-
-function createTeamCard(photo,name,surname,post,shortPost) {
+function createTeamCard(photo, name, surname, post, shortPost) {
   clone = teamCardTemplate.content.cloneNode(true);
   clone.querySelector(".team__card-name").textContent = name;
   clone.querySelector(".team__card-surname").textContent = surname;
@@ -83,16 +83,49 @@ function addTeamDot() {
   teamDotsContainer.append(clone);
 }
 
-function addTeamCard(photo, name, surname, post,shortPost) {
-  createTeamCard(photo, name, surname, post,shortPost);
+function addTeamCard(photo, name, surname, post, shortPost) {
+  createTeamCard(photo, name, surname, post, shortPost);
   teamCards.append(clone);
 }
 
 for (let i = 0; i < teamCardsMassive.length; i++) {
   addTeamCard(teamCardsMassive[i].photo, teamCardsMassive[i].name, teamCardsMassive[i].surname, teamCardsMassive[i].post, teamCardsMassive[i].shortPost);
 }
+teamCardTemplate.remove();
 
-for (let i = 0; i < teamCardsMassive.length-3; i++) {
+$('.team__cards').slick({
+  infinite: true,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  variableWidth: true,
+  arrows: true,
+  dots: true,
+  appendDots: '.team__dots',
+  appendArrows: '.team',
+  dotsClass: 'slick-dots__team',
+  prevArrow: '.team__roll-to-left',
+  nextArrow: '.team__roll-to-right',
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        dots: false,
+        arrows: false,
+      }
+    },
+    {
+      breakpoint: 500,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+      }
+    },
+  ]
+});
+/*
+for (let i = 0; i < teamCardsMassive.length - 3; i++) {
   addTeamDot();
 }
 
@@ -118,12 +151,15 @@ for (let i = 0; i < teamDots.length; i++) {
     }
   });
 }
-
+*/
+/*
 const addedTeamCards = Array.from(document.querySelectorAll('.team__card-item'));
 for (let i = 0; i < 4; i++) {
   addedTeamCards[i].classList.add('team__card-item_show');
 }
+*/
 
+/*
 function teamRollRight() {
   if (teamLastIndex == addedTeamCards.length - 1) {
     if (window.innerWidth <= 768 && window.innerWidth > 320) {
@@ -255,7 +291,7 @@ function teamRollLeft() {
 window.addEventListener('load', function () {
 
   let touchsurface = document.getElementById('team__touchsurface');
-    let startX;
+  let startX;
   let startY;
   let dist;
   let threshold = 150; // минимальное расстояние для swipe
@@ -273,18 +309,18 @@ window.addEventListener('load', function () {
     dist = 0;
     startX = touchobj.pageX;
     startY = touchobj.pageY;
-    e.preventDefault();
+    //e.preventDefault();
   }, false);
 
   touchsurface.addEventListener('touchmove', function (e) {
-    e.preventDefault() // отключаем стандартную реакцию скроллинга
+    //e.preventDefault() // отключаем стандартную реакцию скроллинга
   }, false)
 
   touchsurface.addEventListener('touchend', function (e) {
     var touchobj = e.changedTouches[0];
     dist = touchobj.pageX - startX;
     handleswipe(dist);
-    e.preventDefault();
+    //e.preventDefault();
   }, false)
 
 }, false)
@@ -295,3 +331,4 @@ teamRollToLeftButton.addEventListener('click', teamRollLeft);
 if (document.documentElement.clientWidth < 321) {
 
 }
+*/
