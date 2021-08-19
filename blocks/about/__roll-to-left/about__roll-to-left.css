@@ -11,7 +11,7 @@
   box-shadow: 0px 4px 30px rgba(224, 240, 255, 0.1);
   width: 60px;
   height: 60px;
-  top: calc(186px + 45.5px + 170px);
+  top: calc(60px + 68px + 90px + 45.5px + 30px + 20px + 20px + 115px);
   left: -81px;
   /*
   calc(100vw - 1122px - 42px - 120px);
