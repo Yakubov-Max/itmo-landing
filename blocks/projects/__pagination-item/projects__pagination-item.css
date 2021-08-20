@@ -9,5 +9,6 @@
   .projects__pagination-item {
     font-size: 12px;
     line-height: 16px;
+    z-index: 2;
   }
 }
