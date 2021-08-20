@@ -119,12 +119,20 @@ paginatePrevious.addEventListener("click", handlePaginatePreviousPage);
 function handlePaginateNextPage(event) {
   event.preventDefault();
   currentPage += 1;
+  let totalPages = Math.ceil(CARDS.length / getCardsPerPage());
+  if (currentPage >= totalPages) {
+    currentPage = totalPages;
+  }
+
   paginateProjectsCards(currentPage);
 }
 
 function handlePaginatePreviousPage(event) {
   event.preventDefault();
   currentPage -= 1;
+  if (currentPage <= 0) {
+    currentPage = 1;
+  }
   paginateProjectsCards(currentPage);
 }
 
@@ -152,14 +160,8 @@ function updateTotalPages() {
 }
 
 function paginateProjectsCards(currentPage) {
-  let totalPages = Math.ceil(CARDS.length / getCardsPerPage());
+  console.log(currentPage);
   let cardsPerPage = getCardsPerPage();
-  // краевые случаи пагинации
-  if (currentPage <= 0) {
-    currentPage = 1;
-  } else if (currentPage >= totalPages) {
-    currentPage = totalPages;
-  }
 
   // получение индексов карточек
   let startIndex = (currentPage - 1) * cardsPerPage;
