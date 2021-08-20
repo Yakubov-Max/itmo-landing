@@ -39,13 +39,15 @@
 }
 
 @media screen and (max-width: 767px) {
-  .ai-research-lab__img-container {
+  .ai-research-lab__img-container::before {
+    content: "";
     order: 1;
     max-width: 288px;
     max-height: 180px;
     border-radius: 5px;
     overflow: hidden;
     margin-bottom: 20px;
+    background-size: cover;
   }
 
   .ai-research-lab__img-container::after {
