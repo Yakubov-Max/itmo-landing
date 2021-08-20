@@ -29,20 +29,38 @@ const projectsMenu = document.querySelector(".projects__menu");
 const projectsMenuElements = projectsMenu.querySelectorAll(
   ".projects__menu-item"
 );
+const projectsDropdownMenuElements = projectDropdownContent.querySelectorAll(
+  ".projects__dropdown-menu-item"
+);
 
 projectsMenuElements.forEach((element) => {
+  element.addEventListener("click", handleHighlightProjectsMenu);
+});
+
+projectsDropdownMenuElements.forEach((element) => {
   element.addEventListener("click", handleHighlightProjectsMenu);
 });
 
 // Функция хайлайта элемента меню
 function handleHighlightProjectsMenu(event) {
   event.preventDefault();
-  projectsMenuElements.forEach((element) => {
-    if (element.classList.item(1)) {
-      element.classList.remove("projects__menu-item_active");
-    }
-  });
-  event.currentTarget.classList.add("projects__menu-item_active");
+
+  if (event.currentTarget.classList.contains("projects__menu-item")) {
+    projectsMenuElements.forEach((element) => {
+      if (element.classList.item(1)) {
+        element.classList.remove("projects__menu-item_active");
+      }
+    });
+    event.currentTarget.classList.add("projects__menu-item_active");
+  } else if (
+    event.currentTarget.classList.contains("projects__dropdown-menu-item")
+  ) {
+    handleProjectsSwitchDropdown();
+    projectsMenuElements
+      .item(0)
+      .querySelector(".projects__menu-item-link").textContent =
+      event.currentTarget.textContent;
+  }
 }
 
 // Селекторы элементов пагинации
