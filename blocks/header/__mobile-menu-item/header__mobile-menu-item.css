@@ -1,5 +1,6 @@
 .header__mobile-menu-item {
-  padding-top: 15.5px;
+  display:flex;
+  align-items: center;
   box-sizing: border-box;
   font-size: 14px;
   font-style: normal;
@@ -9,21 +10,21 @@
   padding-left: 40px;
   text-align: left;
   font-size: 14px;
-  padding-bottom: 15px;
-  height: 44px;
+  min-height: 44px;
   transition: background-color .5s linear;
-  transition: opacity .5s linear;
-  opacity: .5;
+
 }
 
 @media all and (max-width: 480px) {
   .header__mobile-menu-item {
-    padding-top: 10.5px;
     padding-left: 16px;
   }
 }
 
-.header__mobile-menu-item:hover {
+.header__mobile-menu-item:hover  {
   background-color: #001337;
+}
+
+.header__mobile-menu-item:hover .header__mobile-menu-link {
   opacity: 1;
 }

@@ -2,6 +2,7 @@
   padding: 0 0 0 40px;
   opacity: .5;
   transition: opacity .5s ;
+  cursor: pointer;
 }
 
 .header__educationdropdown-item:hover  {
