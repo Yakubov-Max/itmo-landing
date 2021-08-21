@@ -8,6 +8,7 @@
   background-color: #001337;
   opacity: 50%;
   transition: opacity 0.6s ease;
+  padding: 0;
 }
 
 .slider__dots:last-of-type {
