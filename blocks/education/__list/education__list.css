@@ -1,8 +1,8 @@
 .education__list {
   padding-left: 10px;
+  margin-bottom: 38px;
   list-style-type: none;
   box-sizing: border-box;
-  margin-bottom: 38px;
 }
 
 @media screen and (max-width: 1200px) {

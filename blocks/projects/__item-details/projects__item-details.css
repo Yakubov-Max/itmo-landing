@@ -1,10 +1,10 @@
 .projects__item-details {
+  padding-bottom: 20px;
+  padding-left: 20px;
   font-weight: 600;
   font-size: 14px;
   line-height: 19px;
   color: inherit;
-  padding-bottom: 20px;
-  padding-left: 20px;
 }
 
 @media screen and (max-width: 768px) {
@@ -16,10 +16,10 @@
 
 @media screen and (max-width: 320px) {
   .projects__item-details {
+    padding-bottom: 12px;
+    padding-left: 10px;
     font-size: 10px;
     line-height: 13px;
     letter-spacing: 0.06px;
-    padding-bottom: 12px;
-    padding-left: 10px;
   }
 }

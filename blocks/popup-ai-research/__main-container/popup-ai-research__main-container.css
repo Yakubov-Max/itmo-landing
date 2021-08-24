@@ -1,7 +1,7 @@
 .popup-ai-research__main-container {
-  box-sizing: border-box;
   padding: 20px;
   border-radius: 10px;
+  box-sizing: border-box;
   background-color: #FFF;
   display: grid;
   grid-template-columns: 400px 650px;

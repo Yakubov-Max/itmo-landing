@@ -1,14 +1,14 @@
 .header__mobile-menu {
-  position: absolute;
-  box-sizing: border-box;
-  display: none;
-  align-items: center;
-  justify-content: flex-start;
   padding: 0;
   top: 0;
   left: 0;
   right: 0;
   height: 20px;
+  position: absolute;
+  box-sizing: border-box;
+  display: none;
+  align-items: center;
+  justify-content: flex-start;
   z-index: 2;
 }
 

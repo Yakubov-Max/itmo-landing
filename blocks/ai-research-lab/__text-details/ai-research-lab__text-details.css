@@ -1,12 +1,12 @@
 .ai-research-lab__text-details {
-  font-family: 'OpenSans', sans-serif;
+  position: relative;
   margin: 0;
   font-size: 18px;
   line-height: 1.44;
   font-weight: 300;
   letter-spacing: 0.1px;
   color: #000D26;
-  position: relative;
+  font-family: 'OpenSans', sans-serif;
   display: block;
 }
 

@@ -1,6 +1,6 @@
 .header__container {
-  position: relative;
   max-width: 1110px;
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

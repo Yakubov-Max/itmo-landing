@@ -1,9 +1,9 @@
 .feedback__form-item {
+  padding-left: 20px;
+  height: 100%;
   background-color: white;
   border-radius: 10px;
-  height: 100%;
   border: none;
-  padding-left: 20px;
   color: #009FAC;
 }
 
