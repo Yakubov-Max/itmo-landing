@@ -1,9 +1,9 @@
 .publications__item {
   min-height: 548px;
-  position: relative;
-  list-style: none;
   margin: 0;
   padding: 0;
+  position: relative;
+  list-style: none;
   display: flex;
   flex-direction: column;
   align-items: center;

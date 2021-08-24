@@ -1,9 +1,9 @@
 .team__cards {
+  width: 1110px;
   display: flex;
   flex-direction: row;
   position: relative;
   justify-content: space-between;
-  width: 1110px;
   flex-wrap: nowrap;
 }
 
