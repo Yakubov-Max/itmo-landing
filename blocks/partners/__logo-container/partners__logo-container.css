@@ -1,15 +1,15 @@
 /* Ширина блока logo__container на разных разрешениях согласно староиу коду */
 
 .partners__logo-container {
-  align-self: center;
   max-width: calc(1110px + 20px);
   width: calc(100% + 20px);
   padding: 0;
+  margin: 0 auto -50px;
   list-style-type: none;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin: 0 auto -50px;
+  align-self: center;
 }
 
 @media screen and (max-width: 1399px) {
