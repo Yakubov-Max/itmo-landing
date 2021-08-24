@@ -1,8 +1,8 @@
 .ai-research-lab__cards-container {
-  display: flex;
   max-width: 1110px;
   margin: 0 auto;
   flex-wrap: wrap;
+  display: flex;
 }
 
 @media screen and (max-width: 1200px) {
