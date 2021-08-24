@@ -1,4 +1,5 @@
 .feedback__submit-button {
+  height: 60px;
   grid-area: submit;
   border: 1px solid white;
   border-radius: 10px;
@@ -8,7 +9,6 @@
   font-size: 18px;
   line-height: 30px;
   cursor: pointer;
-  height: 60px;
   align-self: flex-end;
   text-transform: uppercase;
 }

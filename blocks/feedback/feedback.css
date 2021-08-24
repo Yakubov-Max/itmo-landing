@@ -1,11 +1,11 @@
 .feedback {
+  padding-top: calc(80px - 20px);
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #009FAC;
   color: white;
   overflow: hidden;
-  padding-top: calc(80px - 20px);
 }
 
 @media screen and (max-width: 768px) {
