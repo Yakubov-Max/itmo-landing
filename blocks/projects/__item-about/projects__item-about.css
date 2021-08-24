@@ -1,10 +1,10 @@
 .projects__item-about {
   margin: 0;
+  padding: 20px;
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
   letter-spacing: 0.1px;
-  padding: 20px
 }
 
 @media screen and (max-width: 810px) {
