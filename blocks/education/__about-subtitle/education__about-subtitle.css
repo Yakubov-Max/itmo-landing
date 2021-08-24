@@ -1,9 +1,9 @@
 .education__about-subtitle {
   margin-top: 0;
+  margin-bottom: 30px;
   font-size: inherit;
   line-height: inherit;
   letter-spacing: inherit;
-  margin-bottom: 30px;
 }
 
 @media screen and (max-width: 1200px) {

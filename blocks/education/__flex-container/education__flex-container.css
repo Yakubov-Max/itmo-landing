@@ -1,12 +1,12 @@
 .education__flex-container {
-  display: flex;
-  box-sizing: border-box;
   padding: 30px;
+  width: 1170px;
+  margin: 0 auto 35px;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
   background-color: #FFF;
   border-radius: 10px;
-  width: 1170px;
-  justify-content: space-between;
-  margin: 0 auto 35px;
 }
 
 @media screen and (max-width: 1200px) {
