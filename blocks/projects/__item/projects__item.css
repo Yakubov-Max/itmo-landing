@@ -1,4 +1,5 @@
 .projects__item {
+  margin-right: 29px;
   max-width: 254px;
   min-height: 307px;
   mix-blend-mode: multiply;
@@ -10,7 +11,6 @@
   border-radius: 10px;
   color: white;
   transition: all .15s ease;
-  margin-right: 29px;
 }
 
 

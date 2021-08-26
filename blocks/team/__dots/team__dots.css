@@ -1,16 +1,16 @@
 .team__dots {
-  display: flex;
-  flex-direction: row;
   margin-top: 30px;
   margin-bottom: 100px;
+  display: flex;
+  flex-direction: row;
   justify-content: space-between;
 }
 
 @media all and (max-width: 768px) {
   .team__dots {
-    display: none;
     margin-top: 24px;
     margin-bottom: 81px;
+    display: none;
   }
 }
 

@@ -154,8 +154,17 @@ $('.about__cards').slick({
     },
   ]
 });
+if (window.innerWidth <= 1122) {
+  rollToRightButton.style.display = '';
+  rollToLeftButton.style.display = '';
+}
 
-
+$(window).resize(function () {
+  if (window.innerWidth <= 1122) {
+    rollToRightButton.style.display = '';
+    rollToLeftButton.style.display = '';
+  }
+});
 /*
 for (let i = 0; i < aboutCardsMassive.length - 2; i++) {
   addDot();

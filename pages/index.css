@@ -8,7 +8,6 @@
 @import url(../scripts/slick-1.8.1/slick/slick.css);
 
 @import url(../blocks/header/header.css);
-@import url(../blocks/header/__bold-text/header__bold-text.css);
 @import url(../blocks/header/__container/header__container.css);
 @import url(../blocks/header/__logo/header__logo.css);
 @import url(../blocks/header/__link/header__link.css);
@@ -28,10 +27,12 @@
 @import url(../blocks/header/__dropbtn/header__dropbtn.css);
 @import url(../blocks/header/__dropdown/header__dropdown.css);
 @import url(../blocks/header/__educationdropdown-content/header__educationdropdown-content.css);
+@import url(../blocks/header/__educationdropdown-item/header__educationdropdown-item.css);
 @import url(../blocks/header/__dropbtn/header__dropbtn_show.css);
 @import url(../blocks/header/__mobile-menu/_active/header__mobile-menu_active.css);
 
 @import url(../blocks/about/about.css);
+@import url(../blocks/about/__bold-text/about__bold-text.css);
 @import url(../blocks/about/__cards/about__cards.css);
 @import url(../blocks/about/__card-title/about__card-title.css);
 @import url(../blocks/about/__card-niddle/about__card-niddle.css);
@@ -67,12 +68,12 @@
 @import url(../blocks/ai-research-lab/__card/ai-research-lab__card.css);
 @import url(../blocks/ai-research-lab/__card-title/ai-research-lab__card-title.css);
 @import url(../blocks/ai-research-lab/__card-circle/ai-research-lab__card-circle.css);
-@import url(../blocks/ai-research-lab/__card/_icon/ai-research-lab__card_icon_brain.css);
-@import url(../blocks/ai-research-lab/__card/_icon/ai-research-lab__card_icon_micro.css);
-@import url(../blocks/ai-research-lab/__card/_icon/ai-research-lab__card_icon_pen.css);
-@import url(../blocks/ai-research-lab/__card/_icon/ai-research-lab__card_icon_robo.css);
-@import url(../blocks/ai-research-lab/__card-text/ai-research__card-text.css);
-@import url(../blocks/ai-research-lab/__card-button/ai-research__card-button.css);
+@import url(../blocks/ai-research-lab/__card-circle/_icon/ai-research-lab__card-circle_icon_brain.css);
+@import url(../blocks/ai-research-lab/__card-circle/_icon/ai-research-lab__card-circle_icon_micro.css);
+@import url(../blocks/ai-research-lab/__card-circle/_icon/ai-research-lab__card-circle_icon_pen.css);
+@import url(../blocks/ai-research-lab/__card-circle/_icon/ai-research-lab__card-circle_icon_robo.css);
+@import url(../blocks/ai-research-lab/__card-text/ai-research-lab__card-text.css);
+@import url(../blocks/ai-research-lab/__card-button/ai-research-lab__card-button.css);
 
 @import url(../blocks/popup-ai-research/popup-ai-research.css);
 @import url(../blocks/popup-ai-research/__img/popup-ai-research__img.css);
@@ -114,9 +115,9 @@
 @import url(../blocks/projects/__title/projects__title.css);
 
 @import url(../blocks/section-background/_light-blue/section-background_light-blue.css);
-@import url(../blocks/section-title/__about/section-title__about.css);
+@import url(../blocks/section-title/_about/section-title_about.css);
 @import url(../blocks/section-title/_color/section-title_color_blue.css);
-@import url(../blocks/section-title/__team/section-title__team.css);
+@import url(../blocks/section-title/_team/section-title_team.css);
 @import url(../blocks/section-title/_color/section-title_color_white.css);
 @import url(../blocks/section-title/_color/section-title_color_dark-blue.css);
 

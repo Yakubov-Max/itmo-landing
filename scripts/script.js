@@ -20,6 +20,8 @@ const aspirantePartButton = document.querySelector('#aspirante');               
 const magistracyPartButton = document.querySelector('#magistracy');                     // Часть кнопки магистратуры.
 const aspiranteContent = document.querySelector('.education__flex-container_absolute'); // Основной меняющийся контент про обучение.
 const page = document.querySelector('.page');                                           // Блок для установки класса с блокировкой скролла приоткрытом попапе.
+const buttonChangeEducationh1 = document.querySelector('.header__list-second');
+const headerEducationdropdownContent = document.querySelector('.header__educationdropdown-content');
 
 // Остановка скролла при открытом попап AiResearch.
 const changeScrollWithPopup = () => {
@@ -117,6 +119,8 @@ buttonPopupAiReseach1.addEventListener('click', () => handleCreateAiResearchPopu
 buttonPopupAiReseach2.addEventListener('click', () => handleCreateAiResearchPopup(2));
 buttonPopupAiReseach3.addEventListener('click', () => handleCreateAiResearchPopup(3));
 buttonPopupAiReseach4.addEventListener('click', () => handleCreateAiResearchPopup(4));
+buttonChangeEducationh1.addEventListener('click', handleChangeEducation);
+headerEducationdropdownContent.addEventListener('click', handleChangeEducation);
 buttonChangeEducation.addEventListener('click', handleChangeEducation);
 window.addEventListener('click', e => {
   const target = e.target;

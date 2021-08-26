@@ -1,6 +1,7 @@
 .team__card-post {
   margin: 0;
   padding: 0;
+  margin-top: 4px;
   text-align: center;
   font-size: 14px;
   font-style: italic;
@@ -8,7 +9,6 @@
   line-height: 19px;
   letter-spacing: 0em;
   color: #009FAC;
-  margin-top: 4px;
 }
 
 @media all and (max-width:768px) {
@@ -18,7 +18,7 @@
   }
 }
 
-@media all and (max-width:320px) {
+@media all and (max-width:500px) {
   .team__card-post {
     display: none;
   }

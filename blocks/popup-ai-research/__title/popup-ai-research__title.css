@@ -1,8 +1,8 @@
 .popup-ai-research__title {
+  margin: 7px 0 0;
   font-family: 'OpenSans', serif;
   font-size: 18px;
   line-height: 1.39;
-  margin: 7px 0 0;
   font-weight: 600;
   grid-area: title;
 }

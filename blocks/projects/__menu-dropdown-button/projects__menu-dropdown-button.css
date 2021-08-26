@@ -1,9 +1,9 @@
 .projects__menu-dropdown-button {
+  height: 24px;
+  width: 24px;
   display: none;
   background-image: url(../../../images/projects/chevron-down.svg);
   background-color: transparent;
-  height: 24px;
-  width: 24px;
   background-position: center;
   border: none;
   cursor: pointer;

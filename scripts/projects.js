@@ -29,20 +29,55 @@ const projectsMenu = document.querySelector(".projects__menu");
 const projectsMenuElements = projectsMenu.querySelectorAll(
   ".projects__menu-item"
 );
+const projectsDropdownMenuElements = projectDropdownContent.querySelectorAll(
+  ".projects__dropdown-menu-item"
+);
 
 projectsMenuElements.forEach((element) => {
   element.addEventListener("click", handleHighlightProjectsMenu);
 });
 
+projectsDropdownMenuElements.forEach((element) => {
+  element.addEventListener("click", handleHighlightProjectsMenu);
+});
+
+let typeOfCard = "";
+
 // Функция хайлайта элемента меню
 function handleHighlightProjectsMenu(event) {
   event.preventDefault();
-  projectsMenuElements.forEach((element) => {
-    if (element.classList.item(1)) {
-      element.classList.remove("projects__menu-item_active");
-    }
-  });
-  event.currentTarget.classList.add("projects__menu-item_active");
+
+  if (event.currentTarget.classList.contains("projects__menu-item")) {
+    projectsMenuElements.forEach((element) => {
+      if (element.classList.item(1)) {
+        element.classList.remove("projects__menu-item_active");
+      }
+    });
+    event.currentTarget.classList.add("projects__menu-item_active");
+  } else if (
+    event.currentTarget.classList.contains("projects__dropdown-menu-item")
+  ) {
+    handleProjectsSwitchDropdown();
+    projectsMenuElements
+      .item(0)
+      .querySelector(".projects__menu-item-link").textContent =
+      event.currentTarget.textContent;
+  }
+
+  typeOfCard = getTypeCards(event.target.textContent);
+  currentPage = 1;
+  renderInitialProjectsCards();
+  updateCurrentPage();
+}
+
+function getTypeCards(type) {
+  cardTypes = {
+    "Гос. проекты": "goverment",
+    Спецпрограммы: "special",
+    "В разработке": "development",
+  };
+
+  return cardTypes[type];
 }
 
 // Селекторы элементов пагинации
@@ -70,6 +105,7 @@ const projectsCard = {
     "Направление включает в себя исследования и разработки технологий МО и КТ. Модули для внедрения в предметные сетевые программы магистратуры с элементами МО и КТ, или программы ДПО.",
   link: "#",
   test_span: 0,
+  type: "",
 };
 
 const CARDS = [];
@@ -77,6 +113,27 @@ const CARDS = [];
 for (let i = 0; i < 120; i++) {
   let copy = Object.assign({}, projectsCard);
   copy.test_span = i;
+  CARDS.push(copy);
+}
+
+for (let i = 0; i < 10; i++) {
+  let copy = Object.assign({}, projectsCard);
+  copy.test_span = i;
+  copy.type = "special";
+  CARDS.push(copy);
+}
+
+for (let i = 0; i < 10; i++) {
+  let copy = Object.assign({}, projectsCard);
+  copy.test_span = i;
+  copy.type = "development";
+  CARDS.push(copy);
+}
+
+for (let i = 0; i < 10; i++) {
+  let copy = Object.assign({}, projectsCard);
+  copy.test_span = i;
+  copy.type = "goverment";
   CARDS.push(copy);
 }
 
@@ -101,12 +158,26 @@ paginatePrevious.addEventListener("click", handlePaginatePreviousPage);
 function handlePaginateNextPage(event) {
   event.preventDefault();
   currentPage += 1;
+  let totalPages = getTotalPages();
+  if (currentPage >= totalPages) {
+    currentPage = totalPages;
+  }
+
   paginateProjectsCards(currentPage);
+}
+
+function GetCardsByType() {
+  return CARDS.filter((element) => {
+    return element.type === typeOfCard;
+  });
 }
 
 function handlePaginatePreviousPage(event) {
   event.preventDefault();
   currentPage -= 1;
+  if (currentPage <= 0) {
+    currentPage = 1;
+  }
   paginateProjectsCards(currentPage);
 }
 
@@ -129,19 +200,15 @@ function getCardsPerPage() {
 let currentPage = 1;
 
 function updateTotalPages() {
-  let totalPages = Math.ceil(CARDS.length / getCardsPerPage());
-  paginateLastPage.textContent = totalPages;
+  paginateLastPage.textContent = getTotalPages();
+}
+
+function updateCurrentPage() {
+  paginateCurrentPage.textContent = currentPage;
 }
 
 function paginateProjectsCards(currentPage) {
-  let totalPages = Math.ceil(CARDS.length / getCardsPerPage());
   let cardsPerPage = getCardsPerPage();
-  // краевые случаи пагинации
-  if (currentPage <= 0) {
-    currentPage = 1;
-  } else if (currentPage >= totalPages) {
-    currentPage = totalPages;
-  }
 
   // получение индексов карточек
   let startIndex = (currentPage - 1) * cardsPerPage;
@@ -151,13 +218,19 @@ function paginateProjectsCards(currentPage) {
   let cardsToRender = getCards(startIndex, endIndex);
 
   renderProjectsCards(cardsToRender);
-
-  paginateCurrentPage.textContent = currentPage;
+  updateCurrentPage();
 }
 
 // Функция получения элементов карточек
 function getCards(startIndex, endIndex) {
-  let cardsData = CARDS.slice(startIndex, endIndex);
+  let cardsData;
+
+  if (typeOfCard) {
+    cardsData = GetCardsByType().slice(startIndex, endIndex);
+  } else {
+    cardsData = CARDS.slice(startIndex, endIndex);
+  }
+
   let cardsDocumentElements = [];
 
   cardsData.forEach((cardData) => {
@@ -180,7 +253,25 @@ function createProjectsCard(cardData) {
   cardElement.querySelector(".projects__item-details").href = cardData.link;
   cardElement.querySelector(".projects__test-span").textContent =
     cardData.test_span;
+
+  if (cardData.type) {
+    cardElement.querySelector(".projects__type-span").textContent =
+      cardData.type;
+  } else {
+    cardElement.querySelector(".projects__type-span").textContent = "other";
+  }
+
   return cardElement;
+}
+
+function getTotalPages() {
+  let totalPages;
+  if (typeOfCard) {
+    totalPages = Math.ceil(GetCardsByType().length / getCardsPerPage());
+  } else {
+    totalPages = Math.ceil(CARDS.length / getCardsPerPage());
+  }
+  return totalPages;
 }
 
 // Функция создания начальных
