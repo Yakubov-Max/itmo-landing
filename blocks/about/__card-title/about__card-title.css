@@ -13,7 +13,7 @@
   border-bottom: 1px solid #009FAC;
 }
 
-@media all and (max-width:320px) {
+@media all and (max-width:390px) {
   .about__card-title {
     height: 57px;
     padding-bottom: 12px;

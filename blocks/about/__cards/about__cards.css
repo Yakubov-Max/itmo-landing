@@ -27,7 +27,7 @@
   }
 }
 
-@media all and (max-width: 320px) {
+@media all and (max-width: 390px) {
   .about__cards {
     left: calc(561px - 160px - 78px - 14px);
     width: 894px;
