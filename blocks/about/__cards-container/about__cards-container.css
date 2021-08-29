@@ -20,7 +20,7 @@
   }
 }
 
-@media all and (max-width: 320px) {
+@media all and (max-width: 390px) {
    .about__cards-container {
      margin-left: 12px;
      margin-right: 20px;
